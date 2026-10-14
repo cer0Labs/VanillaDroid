@@ -1,0 +1,86 @@
+-- Hermandad (fase 15): la pestaña de hermandad de la ventana social (lista, detalle del miembro, información, control
+-- de rangos), el registrador de hermandades, la cédula, el diseñador de tabardos y sus ventanas emergentes, en
+-- castellano. Traduce nuestras claves (VD_GUILD_*) y las del cliente que usa esta área y no traducen ya otros ficheros
+-- (GUILD_TOTAL, GUILD_ONLINE_LABEL, LASTONLINE_* están en social.lang). Nombres, notas, rangos y el mensaje del día
+-- vienen del servidor tal cual.
+
+-- Nuestras.
+VD_GUILD_PETITION = "Petición";
+VD_GUILD_PETITION_ERROR = "Error de petición";
+
+-- La pestaña de hermandad (GuildFrame) y sus marcos laterales.
+GUILD_STATUS = "Ver estado de la hermandad";
+PLAYER_STATUS = "Ver estado de los jugadores";
+GUILD_MOTD_LABEL = "Mensaje del día de la hermandad:";
+GUILD_MOTD_EDITLABEL = "Toca aquí para escribir el mensaje del día de la hermandad.";
+GUILD_INFORMATION = "Información de la hermandad";
+GUILD_INFO_EDITLABEL = "Toca aquí para escribir el mensaje";
+GUILDCONTROL = "Control de hermandad";
+ADDMEMBER = "Añadir miembro";
+ZONE = "Zona";
+ZONE_COLON = "Zona:";
+LEVEL = "Nivel";
+RANK = "Rango";
+LABEL_NOTE = "Nota";
+LASTONLINE = "Última conexión";
+LAST_ONLINE_COLON = "Última conexión:";
+NOTE_COLON = "Nota:";
+OFFICER_NOTE_COLON = "Nota de oficial";
+GUILD_NOTE_EDITLABEL = "Toca aquí para escribir una nota pública.";
+GUILD_OFFICERNOTE_EDITLABEL = "Toca aquí para escribir una nota de oficial.";
+GUILD_RANK0_DESC = "Maestro de la hermandad";
+MEMBERS = "Miembros";
+GUILDCONTROL_SELECTRANK = "Elige el rango que quieres modificar:";
+GUILDCONTROL_RANKLABEL = "Nombre del rango:";
+GUILDCONTROL_ALLOWRANK = "Este rango puede:";
+GUILDCONTROL_OPTION1 = "Escuchar el chat de hermandad";
+GUILDCONTROL_OPTION2 = "Hablar en el chat de hermandad";
+GUILDCONTROL_OPTION3 = "Escuchar el chat de oficiales";
+GUILDCONTROL_OPTION4 = "Hablar en el chat de oficiales";
+GUILDCONTROL_OPTION5 = "Ascender";
+GUILDCONTROL_OPTION6 = "Degradar";
+GUILDCONTROL_OPTION7 = "Invitar a miembros";
+GUILDCONTROL_OPTION8 = "Expulsar a miembros";
+GUILDCONTROL_OPTION9 = "Escribir el mensaje del día";
+GUILDCONTROL_OPTION10 = "Editar la nota pública";
+GUILDCONTROL_OPTION11 = "Ver la nota de oficial";
+GUILDCONTROL_OPTION12 = "Editar la nota de oficial";
+
+-- Ventanas emergentes de la hermandad.
+ADD_GUILDRANK_LABEL = "Añadir rango a la hermandad:";
+SET_GUILDMOTD_LABEL = "Mensaje del día de la hermandad:";
+SET_GUILDPLAYERNOTE_LABEL = "Nota del jugador:";
+SET_GUILDOFFICERNOTE_LABEL = "Nota de oficial:";
+RENAME_GUILD = "Cambiar el nombre de la hermandad";
+
+-- El registrador (GuildRegistrarFrame) y la cédula (PetitionFrame).
+AVAILABLE_SERVICES = "Servicios disponibles";
+GUILD_CHARTER_PURCHASE = "Comprar una cédula de hermandad";
+GUILD_CHARTER_REGISTER = "Registrar una cédula de hermandad";
+GUILD_NAME = "Nombre de la hermandad";
+PURCHASE = "Comprar";
+GUILD_CHARTER_TEMPLATE = "Cédula de la hermandad %s";
+GUILD_PETITION_MEMBER_INSTRUCTIONS = "Toca el botón <Firmar cédula> para ser miembro fundador de esta hermandad.";
+NOT_YET_SIGNED = "<sin firmar>";
+REQUEST_SIGNATURE = "Pedir firma";
+SIGN_CHARTER = "Firmar cédula";
+ERR_GUILD_ENTER_NAME = "Escribe un nombre para tu hermandad.";
+ERR_NO_GUILD_CHARTER = "No tienes ninguna cédula de hermandad.";
+ERR_PETITION_ALREADY_SIGNED = "Ya has firmado esa cédula de hermandad.";
+ERR_PETITION_NOT_ENOUGH_SIGNATURES = "Necesitas más firmas.";
+ERR_PETITION_NOT_SAME_SERVER = "Ese jugador no es de tu servidor";
+ERR_PETITION_OFFERED_S = "Has pedido la firma de %s.";
+ERR_PETITION_SIGNED = "Cédula de hermandad firmada.";
+ERR_PETITION_SIGNED_S = "%s ha firmado tu cédula de hermandad.";
+
+-- El diseñador de tabardos (TabardFrame).
+TABARDVENDORCOST = "Coste:";
+EMBLEM_SYMBOL = "Icono";
+EMBLEM_SYMBOL_COLOR = "Color del icono";
+EMBLEM_BORDER = "Borde";
+EMBLEM_BORDER_COLOR = "Color del borde";
+EMBLEM_BACKGROUND = "Fondo";
+ERR_GUILDEMBLEM_NOGUILD = "¡No perteneces a ninguna hermandad!";
+ERR_GUILDEMBLEM_NOTENOUGHMONEY = "No puedes permitírtelo.";
+ERR_GUILDEMBLEM_SAME = "No se ha guardado: tu tabardo ya es así.";
+ERR_GUILDEMBLEM_SUCCESS = "Emblema de hermandad guardado.";

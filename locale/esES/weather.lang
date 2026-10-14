@@ -1,0 +1,6 @@
+-- ---------------------------------------------------------------------------------------------------------------
+-- El clima (fase 11): la opción "Intensidad del clima" de las opciones de vídeo del original (WEATHER_DETAIL, la
+-- CVar weatherDensity). Clave del cliente.
+-- ---------------------------------------------------------------------------------------------------------------
+
+WEATHER_DETAIL = "Intensidad del clima";

@@ -1,0 +1,9 @@
+-- Sonido: las opciones de sonido. Claves propias (VD_AUDIO_*) y del cliente.
+
+-- Ajustes: los volúmenes del original y dos propios (voces de PNJ y criaturas, sonidos de la interfaz).
+MASTER_VOLUME = "Volumen general";
+SOUND_VOLUME = "Efectos";
+MUSIC_VOLUME = "Música";
+AMBIENCE_VOLUME = "Ambiente";
+VD_AUDIO_VOICES_VOLUME = "Voces";
+VD_AUDIO_INTERFACE_VOLUME = "Interfaz";

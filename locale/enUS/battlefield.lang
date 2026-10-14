@@ -1,0 +1,5 @@
+-- The battleground queue (phase 17): the battlemaster's BattlefieldFrame, MiniMapBattlefieldFrame with its
+-- tooltip and menu, CONFIRM_BATTLEFIELD_ENTRY, the group's ERR_GROUP_JOIN_BATTLEGROUND_* lines and the closing
+-- messages (INSTANCE_SHUTDOWN_MESSAGE, INSTANCE_COMPLETE_MESSAGE). Everything they show is a key of the original
+-- client (GlobalStrings.lua: FIRST_AVAILABLE, BATTLEFIELD_IN_QUEUE, ENTER_BATTLE...): nothing of our own is
+-- needed here yet.

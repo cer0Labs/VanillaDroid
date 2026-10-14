@@ -1,0 +1,5 @@
+-- VanillaDroid's own texts of the character creation screen (phase 18, create: app/CharCreateScreens). Everything else
+-- it shows is the original client's (GlueStrings.lua: the faction, race and class texts and abilities, the
+-- customization labels, the buttons, CHAR_CREATE_* and CHAR_NAME_*), used by its own keys. Same syntax as common.lang.
+
+VD_CREATE_NO_DATA = "The client's tables (db.vdpk) are missing: characters cannot be created.";

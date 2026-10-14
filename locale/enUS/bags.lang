@@ -1,0 +1,10 @@
+-- Phase 15 (items): the bags as ContainerFrames, the comparison tooltips, the dressing rooms and the group loot's
+-- questions. What the original client has no text for; the rest is its own (GlobalStrings.lua: KEYRING,
+-- BACKPACK_TOOLTIP, CURRENTLY_EQUIPPED, DRESSUP_FRAME, RESET, CLOSE, GIVE_LOOT, GROUP, LOOT_NO_DROP,
+-- CONFIRM_LOOT_DISTRIBUTION).
+
+-- An item tooltip's button that shows the comparison tooltips with what the player wears (ours, for touch screens; the
+-- "always compare" option shows them without it).
+VD_INV_COMPARE = "Compare";
+-- The dressing room's description line (the client's DRESSUP_FRAME_INSTRUCTIONS speaks of Ctrl + click).
+VD_DRESSUP_INSTRUCTIONS = "Tap Try On in an item's tooltip to see it on your character";

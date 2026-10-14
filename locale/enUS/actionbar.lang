@@ -1,0 +1,5 @@
+-- Action bars (parity pass): the twelve buttons, the bottom left bar, the stance bar and the tooltip of a held
+-- button (app/HudActionBar, app/CombatScreens). English, VanillaDroid's own texts only: the rest are the client's keys
+-- (SHOW_MULTIBAR1_TEXT, ITEM_COOLDOWN_TIME_*). Syntax and rules: see common.lang.
+
+VD_ACTIONBAR_EDIT = "Edit"; -- the action in a held button's tooltip: opens the button's editor

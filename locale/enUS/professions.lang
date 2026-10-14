@@ -1,0 +1,8 @@
+-- Professions area (phase 13): the TradeSkillFrame and the CraftFrame (app/TradeSkillWindows, app/TradeSkillScreens,
+-- game/TradeSkills). English, VanillaDroid's own texts only. Syntax and rules: see common.lang.
+--
+-- None yet: every word these windows show is the client's (TRADE_SKILL_TITLE, CREATE, CREATE_ALL, EXIT,
+-- REQUIRES_LABEL, SPELL_REAGENTS, COOLDOWN_REMAINING, ALL, ALL_SUBCLASSES, ALL_INVENTORY_SLOTS, the *SLOT names,
+-- NONEQUIPSLOT, TRAIN, ENSCRIBE, DISGUISE, USE, TRAINING_POINTS, TRAINING_POINTS_LABEL, COSTS_LABEL,
+-- TRAINER_PET_LEVEL, TRAINER_PET_LEVEL_RED, TRAINER_LIST_TP, PARENS_TEMPLATE) and the recipes, reagents, headers and
+-- foci come from the client's tables (Spell.dbc, ItemSubClass.dbc, SpellFocusObject.dbc) and the server's items.

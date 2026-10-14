@@ -1,0 +1,7 @@
+-- ---------------------------------------------------------------------------------------------------------------
+-- Ground clutter (phase 14): the terrain's grass, flowers, bushes and pebbles (the client's ground effects). 1.12 has
+-- no option for them (its CVar frillDensity stays at 16): this slider is ours. NONE, LOW and HIGH are the client's.
+-- ---------------------------------------------------------------------------------------------------------------
+
+VD_GROUND_CLUTTER = "Ground Clutter";
+VD_GROUND_CLUTTER_NORMAL = "Normal";

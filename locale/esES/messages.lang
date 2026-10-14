@@ -1,0 +1,15 @@
+-- Traducción al castellano de los mensajes del servidor que el cliente ya no pierde (fase 13, paso 13.9): los
+-- errores de montar y desmontar (SMSG_MOUNTRESULT / SMSG_DISMOUNTRESULT). Son claves del cliente
+-- (GlobalStrings.lua). La cuenta atrás de apagado sale de ServerMessages.dbc, que es un dato del cliente (inglés).
+
+-- Montar.
+ERR_MOUNT_TOOFARAWAY = "¡Esa montura está demasiado lejos!";
+ERR_MOUNT_ALREADYMOUNTED = "¡Ya vas montado!";
+ERR_MOUNT_NOTYOURPET = "¡Esa montura no es tu mascota!";
+ERR_MOUNT_RACECANTMOUNT = "¡No puedes montar por tu raza!";
+ERR_MOUNT_SHAPESHIFTED = "¡No puedes montar con otra forma!";
+ERR_MOUNT_FORCEDDISMOUNT = "Desmontas antes de continuar.";
+
+-- Desmontar.
+ERR_DISMOUNT_NOPET = "ERROR INTERNO: NO TIENES MASCOTA QUE DESMONTAR";
+ERR_DISMOUNT_NOTMOUNTED = "¡No vas montado!";

@@ -1,0 +1,42 @@
+-- Traducción al castellano de los textos de la fase 13 (misiones): el registro de misiones completo (cabeceras,
+-- recompensas, compartir, seguir, temporizadores: app/QuestWindows, app/QuestScreens), pescar y la opción de
+-- seguimiento automático. Son claves del cliente (GlobalStrings.lua); las que ya traduce otra área (QUEST_LOG,
+-- REWARD_CHOICES, ABANDON_QUEST, ALL...) no se repiten.
+
+-- QuestLogFrame: la pestaña "Todo", seguir, compartir, salir, el registro vacío y el detalle.
+TRACK_QUEST = "Seguir misión";
+SHARE_QUEST = "Compartir misión";
+EXIT = "Salir";
+QUESTLOG_NO_QUESTS_TEXT = "No hay misiones activas";
+REWARD_SPELL = "Aprenderás:";
+REWARD_TRADESKILL_SPELL = "Aprenderás a crear:";
+TIME_REMAINING = "Tiempo restante:";
+QUEST_ITEMS_NEEDED = "%s: %d/%d";
+QUEST_OBJECTS_FOUND = "%s: %d/%d";
+
+-- QuestWatchFrame y QuestTimerFrame.
+QUEST_TIMERS = "Temporizadores de misión";
+QUEST_WATCH_NO_OBJECTIVES = "Esta misión no tiene objetivos que seguir";
+QUEST_WATCH_TOO_MANY = "Solo puedes seguir %d misiones a la vez";
+AUTO_QUEST_WATCH_TEXT = "Seguimiento automático de misiones";
+
+-- SecondsToTime (UIParent.lua): las unidades de los temporizadores ("12 min 34 s").
+DAYS_ABBR = "día";
+DAYS_ABBR_P1 = "días";
+HOURS_ABBR = "h";
+HOURS_ABBR_P1 = "h";
+MINUTES_ABBR = "min";
+MINUTES_ABBR_P1 = "min";
+SECONDS_ABBR_P1 = "s";
+
+-- Compartir una misión con el grupo (MSG_QUEST_PUSH_RESULT).
+ERR_QUEST_PUSH_SUCCESS_S = "Compartiendo la misión con %s...";
+ERR_QUEST_PUSH_INVALID_S = "%s no puede aceptar esa misión";
+ERR_QUEST_PUSH_ACCEPTED_S = "%s ha aceptado tu misión";
+ERR_QUEST_PUSH_BUSY_S = "%s está ocupado";
+ERR_QUEST_PUSH_LOG_FULL_S = "El registro de misiones de %s está lleno";
+ERR_QUEST_PUSH_ONQUEST_S = "%s ya tiene esa misión";
+
+-- Pescar (SMSG_FISH_NOT_HOOKED, SMSG_FISH_ESCAPED).
+ERR_FISH_NOT_HOOKED = "No ha picado ningún pez.";
+ERR_FISH_ESCAPED = "¡Se te ha escapado el pez!";

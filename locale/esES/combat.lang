@@ -1,0 +1,317 @@
+-- Área de combate: libro de hechizos, instructor, talentos, mascota, botones de acción, habilidades, reputación y
+-- registro de combate. Traduce nuestras claves (VD_COMBAT_*) y las del cliente que usa esta área. Mismo orden de
+-- argumentos que el texto inglés; los posicionales (%2$s) lo cambian.
+--
+-- No se traducen aquí, a propósito, los textos que van dentro de las descripciones de los hechizos (vienen en
+-- inglés de Spell.dbc): INT_SPELL_DURATION_*, SPELL_DURATION_SEC, INT_SPELL_POINTS_SPREAD_TEMPLATE, VD_COMBAT_SPELL_HOME.
+-- Tampoco las claves del cliente que esta área comparte y ya traducen otros ficheros (una clave dos veces en un
+-- idioma es un error del baker): ACCEPT, CANCEL, SKILLS, REPUTATION, LEVEL_UP, ERR_INVALID_ATTACK_TARGET,
+-- COMBATLOG_XPGAIN_FIRSTPERSON_UNNAMED, SPELL_FAILED_* (common.lang); SPELL_SCHOOL1..6_CAP, FACTION_STANDING_LABEL1..8,
+-- ERR_NOT_ENOUGH_MONEY (inventory.lang); GENERAL (social.lang).
+
+-- Nuestras claves --------------------------------------------------------------------------------------------
+
+VD_COMBAT_COST = "%d de %s";
+VD_COMBAT_COST_PER_TIME = "%1$d de %3$s, más %2$d por segundo";
+VD_COMBAT_COST_PERCENT = "%d%% del %s base";
+VD_COMBAT_COST_PER_SEC = "%d de %s por segundo";
+VD_COMBAT_MELEE_RANGE = "Cuerpo a cuerpo";
+
+VD_COMBAT_CHOOSE_SPELL_TITLE = "Elige un hechizo";
+VD_COMBAT_BOOK_EMPTY = "No conoces hechizos de este tipo.";
+VD_COMBAT_BOOK_HINT = "Toca un hechizo para ver qué hace y ponerlo en la barra de acción.";
+VD_COMBAT_ALL_RANKS = "Todos los rangos";
+VD_COMBAT_CHOOSE = "Elegir";
+VD_COMBAT_PLACE_ON_BAR = "Poner en la barra";
+VD_COMBAT_CAST = "Lanzar";
+VD_COMBAT_PLACE_HINT = "Toca un botón para poner %s";
+VD_COMBAT_ACTION_TITLE = "Botón %d de la página %d";
+VD_COMBAT_PICK_SPELL = "Elegir hechizo";
+VD_COMBAT_PICK_ITEM = "Elegir objeto";
+VD_COMBAT_CLEAR_SLOT = "Vaciar";
+VD_COMBAT_CHOOSE_ITEM_TITLE = "Elige un objeto";
+VD_COMBAT_NO_USABLE_ITEMS = "No llevas objetos que se puedan usar.";
+
+VD_COMBAT_TRAINER = "Instructor";
+VD_COMBAT_TRAINER_EMPTY = "Nada que aprender con estos filtros.";
+VD_COMBAT_YOUR_MONEY = "Tu dinero:";
+VD_COMBAT_TWO_PROFESSIONS = "Ya tienes dos profesiones principales.";
+VD_COMBAT_TRAIN_FAIL_SKILL = "No cumples los requisitos.";
+VD_COMBAT_TRAIN_FAIL = "El instructor no puede enseñarte eso.";
+
+VD_COMBAT_TALENT_HINT = "Toca un talento para ver sus rangos.";
+VD_COMBAT_TALENT_LEVEL = "Los talentos se aprenden a partir del nivel %d: cada nivel da un punto.";
+VD_COMBAT_LEARN = "Aprender";
+VD_COMBAT_NO_TALENT_POINTS = "No te quedan puntos de talento.";
+
+VD_COMBAT_PET_MENU = "¿Qué quieres hacer con tu mascota?";
+VD_COMBAT_DISMISS_MINION = "¿Retirar a tu esbirro?";
+
+VD_COMBAT_SKILLS_EMPTY = "Todavía no se conocen tus habilidades.";
+VD_COMBAT_REPUTATION_EMPTY = "Todavía no conoces ninguna facción.";
+VD_COMBAT_REPUTATION_HINT = "Toca una facción para ver su descripción.";
+
+VD_COMBAT_LOG_EMPTY = "Nada que contar todavía.";
+VD_COMBAT_LOG_ONLY_MINE = "Solo lo mío";
+VD_COMBAT_LOG_CLEAR = "Borrar";
+
+-- Registro de combate (claves del cliente) -------------------------------------------------------------------
+
+-- Golpes cuerpo a cuerpo: SELFOTHER (víctima, cantidad, escuela), OTHERSELF (atacante, cantidad, escuela),
+-- OTHEROTHER (atacante, víctima, cantidad, escuela).
+COMBATHITSELFOTHER = "Golpeas a %s y causas %d p. de daño.";
+COMBATHITOTHERSELF = "%s te golpea y causa %d p. de daño.";
+COMBATHITOTHEROTHER = "%s golpea a %s y causa %d p. de daño.";
+COMBATHITSCHOOLSELFOTHER = "Golpeas a %s y causas %d p. de daño de %s.";
+COMBATHITSCHOOLOTHERSELF = "%s te golpea y causa %d p. de daño de %s.";
+COMBATHITSCHOOLOTHEROTHER = "%s golpea a %s y causa %d p. de daño de %s.";
+COMBATHITCRITSELFOTHER = "Golpeas críticamente a %s y causas %d p. de daño.";
+COMBATHITCRITOTHERSELF = "%s te golpea críticamente y causa %d p. de daño.";
+COMBATHITCRITOTHEROTHER = "%s golpea críticamente a %s y causa %d p. de daño.";
+COMBATHITCRITSCHOOLSELFOTHER = "Golpeas críticamente a %s y causas %d p. de daño de %s.";
+COMBATHITCRITSCHOOLOTHERSELF = "%s te golpea críticamente y causa %d p. de daño de %s.";
+COMBATHITCRITSCHOOLOTHEROTHER = "%s golpea críticamente a %s y causa %d p. de daño de %s.";
+
+-- Hechizos: SELFOTHER (hechizo, víctima, cantidad, escuela), OTHERSELF (lanzador, hechizo, cantidad, escuela),
+-- OTHEROTHER (lanzador, hechizo, víctima, cantidad, escuela), SELFSELF (hechizo, cantidad, escuela).
+SPELLLOGSELFOTHER = "Tu %s golpea a %s y causa %d p. de daño.";
+SPELLLOGOTHEROTHER = "%2$s de %1$s golpea a %3$s y causa %4$d p. de daño.";
+SPELLLOGSELFSELF = "Tu %s te golpea y causa %d p. de daño.";
+SPELLLOGSCHOOLSELFOTHER = "Tu %s golpea a %s y causa %d p. de daño de %s.";
+SPELLLOGSCHOOLOTHERSELF = "%2$s de %1$s te golpea y causa %3$d p. de daño de %4$s.";
+SPELLLOGSCHOOLOTHEROTHER = "%2$s de %1$s golpea a %3$s y causa %4$d p. de daño de %5$s.";
+SPELLLOGSCHOOLSELFSELF = "Tu %s te golpea y causa %d p. de daño de %s.";
+SPELLLOGCRITSELFOTHER = "Tu %s golpea críticamente a %s y causa %d p. de daño.";
+SPELLLOGCRITOTHERSELF = "%2$s de %1$s te golpea críticamente y causa %3$d p. de daño.";
+SPELLLOGCRITOTHEROTHER = "%2$s de %1$s golpea críticamente a %3$s y causa %4$d p. de daño.";
+SPELLLOGCRITSELFSELF = "Tu %s te golpea críticamente y causa %d p. de daño.";
+SPELLLOGCRITSCHOOLSELFOTHER = "Tu %s golpea críticamente a %s y causa %d p. de daño de %s.";
+SPELLLOGCRITSCHOOLOTHERSELF = "%2$s de %1$s te golpea críticamente y causa %3$d p. de daño de %4$s.";
+SPELLLOGCRITSCHOOLOTHEROTHER = "%2$s de %1$s golpea críticamente a %3$s y causa %4$d p. de daño de %5$s.";
+SPELLLOGCRITSCHOOLSELFSELF = "Tu %s te golpea críticamente y causa %d p. de daño de %s.";
+
+-- Daño en el tiempo: SELFOTHER (víctima, cantidad, escuela, hechizo), OTHERSELF (cantidad, escuela, lanzador,
+-- hechizo), OTHEROTHER (víctima, cantidad, escuela, lanzador, hechizo), SELFSELF (cantidad, escuela, hechizo).
+PERIODICAURADAMAGESELFOTHER = "%s sufre %d p. de daño de %s por tu %s.";
+PERIODICAURADAMAGEOTHERSELF = "Sufres %1$d p. de daño de %2$s por %4$s de %3$s.";
+PERIODICAURADAMAGEOTHEROTHER = "%1$s sufre %2$d p. de daño de %3$s por %5$s de %4$s.";
+PERIODICAURADAMAGESELFSELF = "Sufres %d p. de daño de %s por tu %s.";
+
+-- Curaciones: SELFOTHER (hechizo, objetivo, cantidad), OTHERSELF (sanador, hechizo, cantidad), OTHEROTHER (sanador,
+-- hechizo, objetivo, cantidad), SELFSELF (hechizo, cantidad).
+HEALEDSELFOTHER = "Tu %s cura a %s %d p.";
+HEALEDOTHERSELF = "%2$s de %1$s te cura %3$d p.";
+HEALEDOTHEROTHER = "%2$s de %1$s cura a %3$s %4$d p.";
+HEALEDSELFSELF = "Tu %s te cura %d p.";
+HEALEDCRITSELFOTHER = "Tu %s cura críticamente a %s %d p.";
+HEALEDCRITOTHEROTHER = "%2$s de %1$s cura críticamente a %3$s %4$d p.";
+HEALEDCRITSELFSELF = "Tu %s te cura críticamente %d p.";
+
+-- Curación en el tiempo: SELFOTHER (objetivo, cantidad, hechizo), OTHERSELF (cantidad, sanador, hechizo),
+-- OTHEROTHER (objetivo, cantidad, sanador, hechizo), SELFSELF (cantidad, hechizo).
+PERIODICAURAHEALSELFOTHER = "%s recupera %d p. de salud por tu %s.";
+PERIODICAURAHEALOTHERSELF = "Recuperas %1$d p. de salud por %3$s de %2$s.";
+PERIODICAURAHEALOTHEROTHER = "%1$s recupera %2$d p. de salud por %4$s de %3$s.";
+PERIODICAURAHEALSELFSELF = "Recuperas %d p. de salud por tu %s.";
+
+-- Poder ganado: SELFOTHER (objetivo, cantidad, poder, hechizo), OTHERSELF (cantidad, poder, lanzador, hechizo),
+-- OTHEROTHER (objetivo, cantidad, poder, lanzador, hechizo), SELFSELF (cantidad, poder, hechizo).
+POWERGAINSELFOTHER = "%s obtiene %d p. de %s por tu %s.";
+POWERGAINOTHERSELF = "Obtienes %1$d p. de %2$s por %4$s de %3$s.";
+POWERGAINOTHEROTHER = "%1$s obtiene %2$d p. de %3$s por %5$s de %4$s.";
+POWERGAINSELFSELF = "Obtienes %d p. de %s por tu %s.";
+
+-- Poder drenado: SELFOTHER (hechizo, cantidad, poder, víctima), OTHERSELF (lanzador, hechizo, cantidad, poder),
+-- OTHEROTHER (lanzador, hechizo, cantidad, poder, víctima), SELFSELF (hechizo, cantidad, poder).
+SPELLPOWERDRAINSELFOTHER = "Tu %s drena %d p. de %s a %s.";
+SPELLPOWERDRAINOTHERSELF = "%2$s de %1$s te drena %3$d p. de %4$s.";
+SPELLPOWERDRAINOTHEROTHER = "%2$s de %1$s drena %3$d p. de %4$s a %5$s.";
+SPELLPOWERDRAINSELFSELF = "Tu %s te drena %d p. de %s.";
+
+-- Interrupciones: SELFOTHER (víctima, hechizo), OTHERSELF (atacante, hechizo), OTHEROTHER (atacante, víctima,
+-- hechizo).
+SPELLINTERRUPTOTHERSELF = "%s interrumpe tu %s.";
+
+-- El entorno: _SELF (cantidad), _OTHER (víctima, cantidad).
+VSENVIRONMENTALDAMAGE_FATIGUE_SELF = "Estás agotado y pierdes %d p. de salud.";
+VSENVIRONMENTALDAMAGE_FATIGUE_OTHER = "%s está agotado y pierde %d p. de salud.";
+VSENVIRONMENTALDAMAGE_FALLING_SELF = "Caes y pierdes %d p. de salud.";
+VSENVIRONMENTALDAMAGE_FALLING_OTHER = "%s cae y pierde %d p. de salud.";
+VSENVIRONMENTALDAMAGE_FIRE_SELF = "Sufres %d p. de daño de Fuego.";
+VSENVIRONMENTALDAMAGE_FIRE_OTHER = "%s sufre %d p. de daño de Fuego.";
+
+-- Hechizos que no alcanzan: SELFOTHER (hechizo, víctima), OTHERSELF (lanzador, hechizo), OTHEROTHER (lanzador,
+-- hechizo, víctima), SELFSELF (hechizo).
+SPELLMISSSELFOTHER = "Tu %s falla a %s.";
+SPELLMISSOTHERSELF = "%2$s de %1$s te falla.";
+SPELLMISSOTHEROTHER = "%2$s de %1$s falla a %3$s.";
+SPELLMISSSELFSELF = "Tu %s te falla.";
+SPELLDODGEDSELFOTHER = "%2$s esquiva tu %1$s.";
+SPELLDODGEDOTHERSELF = "Esquivas %2$s de %1$s.";
+SPELLDODGEDSELFSELF = "Esquivas tu %s.";
+SPELLPARRIEDSELFOTHER = "%2$s para tu %1$s.";
+SPELLPARRIEDOTHERSELF = "Paras %2$s de %1$s.";
+SPELLPARRIEDOTHEROTHER = "%3$s para %2$s de %1$s.";
+SPELLPARRIEDSELFSELF = "Paras tu %s.";
+SPELLBLOCKEDSELFOTHER = "%2$s bloquea tu %1$s.";
+SPELLBLOCKEDOTHERSELF = "Bloqueas %2$s de %1$s.";
+SPELLEVADEDSELFOTHER = "%2$s evade tu %1$s.";
+SPELLEVADEDOTHERSELF = "Evades %2$s de %1$s.";
+SPELLEVADEDOTHEROTHER = "%3$s evade %2$s de %1$s.";
+SPELLEVADEDSELFSELF = "Evades tu %s.";
+SPELLIMMUNESELFOTHER = "%2$s es inmune a tu %1$s.";
+SPELLIMMUNEOTHEROTHER = "%3$s es inmune a %2$s de %1$s.";
+SPELLIMMUNESELFSELF = "Eres inmune a tu %s.";
+SPELLDEFLECTEDSELFOTHER = "%2$s desvía tu %1$s.";
+SPELLDEFLECTEDOTHERSELF = "Desvías %2$s de %1$s.";
+SPELLDEFLECTEDOTHEROTHER = "%3$s desvía %2$s de %1$s.";
+SPELLDEFLECTEDSELFSELF = "Desvías tu %s.";
+SPELLRESISTSELFOTHER = "%2$s resiste tu %1$s.";
+SPELLRESISTOTHERSELF = "Resistes %2$s de %1$s.";
+SPELLRESISTOTHEROTHER = "%3$s resiste %2$s de %1$s.";
+SPELLRESISTSELFSELF = "Resistes tu %s.";
+SPELLLOGABSORBSELFOTHER = "%2$s absorbe tu %1$s.";
+SPELLLOGABSORBOTHERSELF = "Absorbes %2$s de %1$s.";
+SPELLLOGABSORBSELFSELF = "Absorbes tu %s.";
+SPELLREFLECTSELFOTHER = "%2$s refleja tu %1$s.";
+SPELLREFLECTOTHERSELF = "Reflejas %2$s de %1$s.";
+SPELLREFLECTOTHEROTHER = "%3$s refleja %2$s de %1$s.";
+SPELLREFLECTSELFSELF = "Reflejas tu %s.";
+
+-- Ataques que no alcanzan: SELFOTHER (víctima), OTHERSELF (atacante), OTHEROTHER (atacante, víctima).
+MISSEDSELFOTHER = "Fallas a %s.";
+MISSEDOTHERSELF = "%s te falla.";
+MISSEDOTHEROTHER = "%s falla a %s.";
+VSDODGESELFOTHER = "%s esquiva tu ataque.";
+VSDODGEOTHERSELF = "Esquivas el ataque de %s.";
+VSDODGEOTHEROTHER = "%2$s esquiva el ataque de %1$s.";
+VSPARRYSELFOTHER = "%s para tu ataque.";
+VSPARRYOTHERSELF = "Paras el ataque de %s.";
+VSPARRYOTHEROTHER = "%2$s para el ataque de %1$s.";
+VSBLOCKSELFOTHER = "%s bloquea tu ataque.";
+VSBLOCKOTHERSELF = "Bloqueas el ataque de %s.";
+VSBLOCKOTHEROTHER = "%2$s bloquea el ataque de %1$s.";
+VSEVADESELFOTHER = "%s evade tu ataque.";
+VSEVADEOTHERSELF = "Evades el ataque de %s.";
+VSEVADEOTHEROTHER = "%2$s evade el ataque de %1$s.";
+VSDEFLECTSELFOTHER = "%s desvía tu ataque.";
+VSDEFLECTOTHERSELF = "Desvías el ataque de %s.";
+VSDEFLECTOTHEROTHER = "%2$s desvía el ataque de %1$s.";
+VSIMMUNESELFOTHER = "%s es inmune a tu ataque.";
+VSIMMUNEOTHERSELF = "Eres inmune al ataque de %s.";
+VSIMMUNEOTHEROTHER = "%2$s es inmune al ataque de %1$s.";
+VSRESISTSELFOTHER = "%s resiste todo el daño de tu ataque.";
+VSRESISTOTHERSELF = "Resistes todo el daño del ataque de %s.";
+VSRESISTOTHEROTHER = "%2$s resiste todo el daño del ataque de %1$s.";
+VSABSORBSELFOTHER = "%s absorbe todo el daño de tu ataque.";
+VSABSORBOTHERSELF = "Absorbes todo el daño del ataque de %s.";
+VSABSORBOTHEROTHER = "%2$s absorbe todo el daño del ataque de %1$s.";
+
+-- Lo que se pierde por el camino, tras la frase.
+GLANCING_TRAILER = " (golpe de refilón)";
+CRUSHING_TRAILER = " (golpe aplastante)";
+ABSORB_TRAILER = " (%d absorbido)";
+RESIST_TRAILER = " (%d resistido)";
+BLOCK_TRAILER = " (%d bloqueado)";
+
+-- Auras: AURAADDEDOTHER* (unidad, hechizo), AURAREMOVEDOTHER (hechizo, unidad).
+AURAADDEDSELFHELPFUL = "Obtienes %s.";
+AURAADDEDSELFHARMFUL = "Sufres los efectos de %s.";
+AURAADDEDOTHERHELPFUL = "%s obtiene %s.";
+AURAADDEDOTHERHARMFUL = "%s sufre los efectos de %s.";
+AURAREMOVEDSELF = "%s desaparece.";
+AURAREMOVEDOTHER = "%s de %s desaparece.";
+
+-- Muertes, experiencia, reputación, nivel. PARTYKILLOTHER (víctima, asesino); COMBATLOG_XPGAIN_EXHAUSTION1
+-- (víctima, experiencia, "+bonificación", estado de descanso).
+ERR_KILLED_BY_S = "%s te ha matado.";
+UNITDIESSELF = "Has muerto.";
+SELFKILLOTHER = "Has matado a %s.";
+PARTYKILLOTHER = "%2$s mata a %1$s.";
+COMBATLOG_XPGAIN_FIRSTPERSON = "%s muere, ganas %d p. de experiencia.";
+COMBATLOG_XPGAIN_EXHAUSTION1 = "%1$s muere, ganas %2$d p. de experiencia (%3$s por descanso).";
+FACTION_STANDING_INCREASED = "Tu reputación con %s ha aumentado en %d.";
+
+-- Nombres sueltos: quien no se conoce todavía, escuelas de magia (SPELL_SCHOOL<n>_CAP) y poderes.
+UNKNOWNOBJECT = "Desconocido";
+UNKNOWN = "Desconocido";
+SPELL_SCHOOL0_CAP = "Físico";
+MANA = "Maná";
+RAGE = "Ira";
+FOCUS = "Concentración";
+ENERGY = "Energía";
+HAPPINESS = "Felicidad";
+HEALTH = "Salud";
+
+-- Líneas del tooltip de un hechizo (claves del cliente) -------------------------------------------------------
+
+MANA_COST = "%d de maná";
+RAGE_COST = "%d de ira";
+FOCUS_COST = "%d de concentración";
+ENERGY_COST = "%d de energía";
+HEALTH_COST = "%d de salud";
+MANA_COST_PER_TIME = "%d de maná, más %d por segundo";
+RAGE_COST_PER_TIME = "%d de ira, más %d por segundo";
+FOCUS_COST_PER_TIME = "%d de concentración, más %d por segundo";
+ENERGY_COST_PER_TIME = "%d de energía, más %d por segundo";
+HEALTH_COST_PER_TIME = "%d de salud, más %d por segundo";
+SPELL_RANGE = "Alcance de %s m";
+SPELL_CAST_CHANNELED = "Canalizado";
+SPELL_CAST_TIME_INSTANT = "Lanzamiento instantáneo";
+SPELL_CAST_TIME_INSTANT_NO_MANA = "Instantáneo";
+SPELL_CAST_TIME_SEC = "Lanzamiento de %.3g s";
+SPELL_CAST_TIME_MIN = "Lanzamiento de %.3g min";
+SPELL_RECAST_TIME_SEC = "Reutilización de %.3g s";
+SPELL_RECAST_TIME_MIN = "Reutilización de %.3g min";
+SPELL_PASSIVE = "Pasivo";
+
+-- Ventanas (claves del cliente) ------------------------------------------------------------------------------
+
+SPELLBOOK = "Libro de hechizos";
+TRADE_SKILLS = "Profesiones";
+TRAIN = "Aprender";
+AVAILABLE = "Disponible";
+UNAVAILABLE = "No disponible";
+USED = "Ya aprendido";
+REQUIRES_LABEL = "Requiere:";
+TRAINER_REQ_LEVEL_RED = "Nivel |cffff2020%d|r";
+TALENTS = "Talentos";
+CHARACTER_POINTS1_COLON = "Puntos de talento:";
+TOOLTIP_TALENT_RANK = "Rango %d/%d";
+TOOLTIP_TALENT_NEXT_RANK = "Siguiente rango:";
+TOOLTIP_TALENT_TIER_POINTS = "Requiere %d puntos en %s";
+TOOLTIP_TALENT_PREREQ = "Requiere %d punto en %s";
+TOOLTIP_TALENT_PREREQ_P1 = "Requiere %d puntos en %s";
+CONFIRM_TALENT_WIPE = "¿Olvidar todos tus talentos? El coste aumenta cada vez que lo haces.";
+EMPTY = "Vacío";
+AT_WAR = "En guerra";
+FACTION_OTHER = "Otras";
+COMBAT_LOG = "Registro de combate";
+
+-- Mascotas (claves del cliente): ERR_PET_SPELL_<motivo> de los lanzamientos rechazados, PETTAME_* al domesticar.
+ERR_PET_BROKEN = "Tu mascota ha huido";
+ERR_PET_SPELL_DEAD = "Tu mascota está muerta.";
+ERR_PET_SPELL_OUT_OF_RANGE = "Tu mascota está fuera de alcance.";
+ERR_PET_SPELL_ROOTED = "Tu mascota no puede moverse.";
+ERR_PET_SPELL_AFFECTING_COMBAT = "Tu mascota está en combate.";
+PET_SPELL_NOPATH = "Tu mascota no encuentra el camino";
+PET_DISMISS = "Retirar";
+PET_ABANDON = "Abandonar";
+ABANDON_PET = "¿Abandonar a tu mascota para siempre? No podrás recuperarla.";
+PETTAME_INVALIDCREATURE = "No se encuentra la criatura";
+PETTAME_CREATUREALREADYOWNED = "Esa criatura ya tiene dueño";
+PETTAME_NOTTAMEABLE = "Esa criatura no se puede domesticar";
+PETTAME_ANOTHERSUMMONACTIVE = "Ya tienes otra criatura invocada";
+PETTAME_UNITSCANTTAME = "Solo los cazadores pueden domesticar";
+PETTAME_INTERNALERROR = "Error interno de la mascota";
+PETTAME_TOOHIGHLEVEL = "La criatura es de nivel demasiado alto para ti";
+PETTAME_DEAD = "Tu mascota está muerta";
+PETTAME_UNKNOWNERROR = "No se ha podido domesticar la criatura";
+ERR_TALENT_WIPE_ERROR = "No has gastado ningún punto de talento";
+
+-- Claves del cliente que otras áreas también pueden traducir (al unir ramas, dejar una sola copia) -------------
+
+ERR_NO_ATTACK_TARGET = "No hay nada que atacar.";
+
+-- Retoques (ventanas): los puntos gastados en el árbol de talentos (TalentFrameSpentPoints), del cliente.
+MASTERY_POINTS_SPENT = "Puntos gastados en talentos de %s:";

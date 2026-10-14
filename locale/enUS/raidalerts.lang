@@ -1,0 +1,5 @@
+-- Raid alerts (phase 16): the ready check (ReadyCheckFrame and the leader's lines), RaidWarningFrame and
+-- RaidBossEmoteFrame, entering a raid instance without a raid (INSTANCE_BOOT), the meeting stones
+-- (MiniMapMeetingStoneFrame, CONFIRM_LEAVE_QUEUE, the ERR_MEETING_STONE_* lines). Everything they show is a key of
+-- the original client (GlobalStrings.lua: READY_CHECK_MESSAGE, READY_CHECK_START, RAID_MEMBERS_AFK,
+-- ERR_MEETING_STONE_IN_QUEUE_S, MEETINGSTONE_TOOLTIP...): nothing of our own is needed here yet.

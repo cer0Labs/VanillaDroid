@@ -1,0 +1,9 @@
+-- Barras de acción (pase de paridad): los doce botones, la barra inferior izquierda, la barra de posturas y el
+-- tooltip de un botón mantenido. Traduce nuestras claves (VD_ACTIONBAR_*) y las del cliente que usa esta área y no
+-- traduce otro fichero.
+
+VD_ACTIONBAR_EDIT = "Editar";
+SHOW_MULTIBAR1_TEXT = "Mostrar barra de acción inferior izquierda";
+ITEM_COOLDOWN_TIME_SEC = "Tiempo de reutilización restante: %d s";
+ITEM_COOLDOWN_TIME_MIN = "Tiempo de reutilización restante: %d min";
+ITEM_COOLDOWN_TIME_HOURS_P1 = "Tiempo de reutilización restante: %d h";

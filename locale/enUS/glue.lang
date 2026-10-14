@@ -1,0 +1,7 @@
+-- Phase 18 (glue): the glue screens before the world (AccountLogin, GlueDialog, RealmList, CharacterSelect and its
+-- dialogs). Their texts are the client's (GlueStrings.lua: ACCOUNT_NAME, LOGIN_STATE_*, REALM_LIST_*, ENTER_WORLD,
+-- CONFIRM_CHAR_DELETE, CHAR_RENAME_*...); only what this client alone has is here.
+
+-- The realm server's address (1.12 reads it from realmlist.wtf): the login screen's Server button asks for it, and
+-- LOGIN without one.
+VD_GLUE_SERVER_ADDRESS = "Your server's realmlist (address or address:port)";

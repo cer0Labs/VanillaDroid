@@ -1,0 +1,2 @@
+-- Phase 14: cinematics (CinematicFrame: Escape stops them; on a phone a tap shows this button).
+VD_CINEMATIC_SKIP = "Skip";

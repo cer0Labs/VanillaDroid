@@ -1,0 +1,67 @@
+-- Preparing the game's data on the phone (phase 22, ROADMAP 22.7, ADR-0005 §8): with the WoW copied to the phone, the
+-- first-run screen bakes the packs there (app/FirstRunScreens, app/PhoneBake) in a service of its own process, with a
+-- notification (its texts travel to the service in the plan: apps/android/.../BakeService.java reads no table).
+-- English, VanillaDroid's own texts only. Syntax and rules: see common.lang.
+
+-- The first-run screen's home page
+VD_PHONE_OPTION_BAKING = "Preparing the data on this phone";
+VD_PHONE_OPTION_BAKING_NOTE = "Step %u of %u, %u%%"; -- the step, how many, the whole bake's percentage
+VD_PHONE_OPTION_RESUME = "Go on preparing the data";
+VD_PHONE_OPTION_RESUME_NOTE = "%u of %u steps done";
+VD_PHONE_OPTION_DONE = "The data is ready: play";
+VD_PHONE_OPTION_INCOMPLETE = "The WoW on this phone is incomplete (%u archives)"; -- missing or damaged
+VD_PHONE_CHECKING = "Checking the WoW on this phone...";
+
+-- Before it starts
+VD_PHONE_INTRO_TITLE = "Prepare the data on this phone";
+VD_PHONE_INTRO = "VanillaDroid prepares the game's data from the World of Warcraft 1.12.1 copied to this phone, as VanillaDroid Setup does on a PC. It takes %s on a phone like the Xiaomi Mi 11X, longer if the phone gets hot, and needs %s of free space.\n\nKeep the phone charging and somewhere cool. You can leave the app while it works: a notification shows the progress. If Android stops it, it goes on later from the last step that finished."; -- the time, the room
+VD_PHONE_ABOUT_MINUTES = "about %u min";
+VD_PHONE_ABOUT_WHOLE_HOURS = "about %u h";
+VD_PHONE_ABOUT_HOURS = "about %u h %u min";
+VD_PHONE_WOW_INCOMPLETE = "The WoW on this phone is not complete (%s). Copy it again from the PC: VanillaDroid Setup sends it (vdsetup adb send-wow, or the copy option of the download).";
+VD_PHONE_NO_SPACE = "Not enough free space: preparing the data needs %s and this phone has %s. Free some space and try again.";
+VD_PHONE_START = "Start";
+
+-- While it works
+VD_PHONE_BAKING_TITLE = "Preparing the game's data";
+VD_PHONE_STEP_OF = "%s (%u of %u)"; -- the step, its number, how many
+VD_PHONE_PERCENT = "%u%%";
+VD_PHONE_STARTING = "Starting...";
+VD_PHONE_BAKING = "You can leave VanillaDroid meanwhile: a notification shows the progress. Keep the phone charging and somewhere cool: it gets warm while it works, and slows down if it gets hot.";
+VD_PHONE_WARM = "The phone is warm: working with %u of its %u threads.";
+VD_PHONE_COOLING = "The phone is too hot: waiting for it to cool down.";
+VD_PHONE_STOP = "Stop";
+
+-- The steps (vd_baker bake --only ...)
+VD_PHONE_STEP_DB = "Game tables";
+VD_PHONE_STEP_TEXTURES = "Textures";
+VD_PHONE_STEP_MODELS = "Buildings and objects";
+VD_PHONE_STEP_ACTORS = "Characters and creatures";
+VD_PHONE_STEP_WORLD = "Terrain";
+VD_PHONE_STEP_COLLISION = "Collision";
+VD_PHONE_STEP_OBJECTS = "Ships and lifts";
+VD_PHONE_STEP_UI = "Interface";
+VD_PHONE_STEP_SOUND = "Sound";
+VD_PHONE_STEP_CINEMATICS = "Cinematics";
+VD_PHONE_STEP_GRASS = "Grass";
+VD_PHONE_STEP_WORLDSOUND = "Sounds of the world";
+VD_PHONE_STEP_BODYFX = "Shadows and footprints";
+
+-- Stopped, failed, done
+VD_PHONE_STOPPED_TITLE = "Stopped";
+VD_PHONE_START_OVER = "Start over";
+VD_PHONE_CANCELLED = "You stopped preparing the data.";
+VD_PHONE_INTERRUPTED = "Android stopped preparing the data (to save battery, because the phone got too hot, or because it restarted).";
+VD_PHONE_NOT_STARTED = "Android did not let the work start. Try again with VanillaDroid open.";
+VD_PHONE_FAILED = "Preparing \"%s\" failed: %s\n\nTry again. If it fails again, copy the WoW to the phone again, or prepare the data on a PC with VanillaDroid Setup."; -- the step, the baker's error
+VD_PHONE_KEPT = "What is finished is kept (%u of %u steps): it goes on from there.";
+VD_PHONE_DONE = "The game's data is ready on this phone. VanillaDroid starts with it now.";
+
+-- The notification (Android)
+VD_PHONE_NOTIFY_CHANNEL = "Preparing the game's data";
+VD_PHONE_NOTIFY_TITLE = "Preparing the game's data";
+VD_PHONE_NOTIFY_CANCEL = "Stop";
+VD_PHONE_NOTIFY_COOLING = "The phone is too hot: waiting for it to cool down";
+VD_PHONE_NOTIFY_DONE = "The game's data is ready: tap to play";
+VD_PHONE_NOTIFY_FAILED = "Preparing the data failed: open VanillaDroid to try again";
+VD_PHONE_NOTIFY_STOPPED = "Android stopped preparing the data: open VanillaDroid to go on";

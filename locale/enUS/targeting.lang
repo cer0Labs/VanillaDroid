@@ -1,0 +1,9 @@
+-- Spells aimed at a place or an item (phase 13: app/SpellTargetingScreens, app/TargetingWindows): the bar shown while a
+-- spell waits for its target, the touch version of the desktop's targeting cursor. English, VanillaDroid's own texts
+-- only: the questions before an enchantment are the client's (BIND_ENCHANT, REPLACE_ENCHANT), the errors too
+-- (SPELL_FAILED_BAD_TARGETS, SPELL_FAILED_OUT_OF_RANGE). Syntax and rules: see common.lang.
+
+VD_TARGETING_PLACE = "Tap the ground to place it, the circle to cast"; -- Blizzard, bombs, Flare...
+VD_TARGETING_ITEM = "Choose an item"; -- poisons, sharpening stones, enchanting, Disenchant, Feed Pet
+VD_TARGETING_LOCKED = "Choose a locked box or object"; -- Pick Lock, Disarm Trap
+VD_TARGETING_CAST = "Cast"; -- the bar's button: casts at the circle

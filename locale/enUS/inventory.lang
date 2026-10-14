@@ -1,0 +1,58 @@
+-- Items, bags, equipment, vendors, repair, bank and reading (phase 8): what the original client has no text for.
+-- Everything else these windows show is the client's (GlobalStrings.lua: ERR_* for InventoryResult and the vendor
+-- and bank errors, ITEM_* / INVTYPE_* / DAMAGE_TEMPLATE... for the tooltip, BUYBACK, KEYRING, PLAYER_LEVEL...) or
+-- comes from its tables (class, race, item subclass, skill, faction and spell names).
+
+-- Windows.
+VD_INV_BAGS = "Bags";
+VD_INV_BANK = "Bank";
+VD_INV_FREE_SLOTS = "Free: %d/%d"; -- free slots / all slots of the bags
+VD_INV_TAB_EQUIPMENT = "Equipment"; -- the character window's first tab
+VD_INV_STATS_ATTRIBUTES = "Attributes"; -- headings of the character window's stats
+VD_INV_STATS_DEFENSE = "Defense";
+VD_INV_STATS_CRIT = "Crit Chance";
+VD_INV_BUY_COUNT = "x%d"; -- items per purchase of a vendor's row
+VD_INV_NOTHING_TO_REPAIR = "Nothing to Repair";
+VD_INV_SELL_JUNK = "Sell Junk"; -- the grey items (their worth in a money frame beside it)
+VD_INV_NO_JUNK = "No Junk";
+VD_INV_BUYBACK_EMPTY = "You haven't sold anything yet.";
+VD_INV_VENDOR_EMPTY = "This merchant has nothing for sale.";
+VD_INV_PAGE_OF = "Page %d of %d";
+
+-- The buttons of an item's tooltip (USE and BUYBACK are the client's).
+VD_INV_EQUIP = "Equip";
+VD_INV_UNEQUIP = "Unequip";
+VD_INV_SET_AMMO = "Ammo"; -- use these arrows / bullets
+VD_INV_SELL = "Sell";
+VD_INV_REPAIR = "Repair";
+VD_INV_TO_BANK = "To Bank";
+VD_INV_TO_BAGS = "To Bags";
+VD_INV_SPLIT = "Split"; -- also the title of the dialog that asks how many
+VD_INV_DESTROY = "Destroy";
+VD_INV_BUY = "Buy"; -- also the vendor's first tab and the title of the dialog that asks how many
+VD_INV_BUY_SEVERAL = "Buy Several";
+VD_INV_READ = "Read";
+VD_INV_OPEN = "Open";
+VD_INV_DESTROY_STACK = "Do you want to destroy %s (x%d)?"; -- a stack; one item: DELETE_ITEM
+
+-- The tooltip.
+VD_INV_SELL_PRICE = "Sell Price:"; -- followed by the coins
+VD_INV_TAP_TO_READ = "<Tap to Read>"; -- the client's ITEM_READABLE / ITEM_OPENABLE say "Right Click"
+VD_INV_TAP_TO_OPEN = "<Tap to Open>";
+VD_INV_WEAPON_SPEED = "Speed %.2f";
+VD_INV_ITEM_DESCRIPTION = "\"%s\""; -- the flavour text
+VD_INV_INVTYPE_AMMO = "Projectile"; -- inventory types the 1.12 client has no INVTYPE_* for
+VD_INV_INVTYPE_THROWN = "Thrown";
+VD_INV_INVTYPE_QUIVER = "Quiver";
+-- Inside spell descriptions (Spell.dbc text, in the client's language like INT_SPELL_DURATION_*: not translated).
+VD_INV_SPELL_UNTIL_CANCELLED = "until cancelled"; -- $d of a spell without duration
+VD_INV_SPELL_HOME = "your home"; -- $z: the Hearthstone's bind point
+
+-- Messages.
+VD_INV_CANT_BUY = "You can't buy that."; -- a BuyResult without a text of the client
+VD_INV_BANK_SLOT_BOUGHT = "You bought a bank bag slot.";
+VD_INV_CANT_READ = "You can't read that.";
+
+-- Item actions of the mail, the auction house and the trade window (f8/exchange).
+VD_INV_ATTACH = "Attach"; -- put the item in the mail being written
+VD_INV_AUCTION = "Auction"; -- put the item up for auction

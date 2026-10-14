@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Vulkan 1.1 (0x401000) is the engine baseline. -->
+    <uses-feature
+        android:name="android.hardware.vulkan.version"
+        android:version="0x401000"
+        android:required="true" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!-- Phase 20 (assists): the touch controls' vibrations (a normal permission, granted at install). -->
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <!-- Phase 22 (phonebake): baking the packs on the phone, a foreground service (dataSync) with a notification of its
+         progress (asked for at run time on Android 13+) that keeps the CPU awake while it works. -->
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_DATA_SYNC" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <!-- Phase 22 (updates): the app installs its own updates (PackageInstaller; Android asks the player each time). -->
+    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
+
+    <application
+        android:appCategory="game"
+        android:icon="@mipmap/ic_launcher"
+        android:label="${appLabel}"
+        android:roundIcon="@mipmap/ic_launcher"
+        android:theme="@style/Theme.VanillaDroid"
+        android:usesCleartextTraffic="${vdCleartext}">
+
+        <!-- Lets AGI / Perfetto / simpleperf profile release builds without making them debuggable. -->
+        <profileable android:shell="true" />
+
+        <!-- configChanges: fold/unfold and rotation must not restart the activity (only the surface changes). -->
+        <activity
+            android:name=".MainActivity"
+            android:configChanges="orientation|screenSize|smallestScreenSize|screenLayout|density|keyboard|keyboardHidden|navigation|uiMode"
+            android:exported="true"
+            android:launchMode="singleTask"
+            android:resizeableActivity="true"
+            android:screenOrientation="sensorLandscape">
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+            <!-- phase 22 (pairing): the vanilladroid://pair link here -->
+            <!-- The "Link" button of the page VanillaDroid Setup serves the phone (vanilladroid://pair?h=<ip>:<port>&k=<key>)
+                 opens the app, or brings it back (singleTask: MainActivity.onNewIntent). -->
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data
+                    android:host="pair"
+                    android:scheme="vanilladroid" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="vanilladroid" />
+        </activity>
+        <!-- phase 22 (wave 2) components here -->
+        <!-- Phase 22 (phonebake): the baker (lib/arm64-v8a/libvdbaker.so) runs in a process of its own, never the game's:
+             MainActivity.startBake / cancelBake, the notification's Stop. -->
+        <service
+            android:name=".BakeService"
+            android:exported="false"
+            android:foregroundServiceType="dataSync"
+            android:process=":baker" />
+    </application>
+</manifest>

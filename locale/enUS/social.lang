@@ -1,0 +1,74 @@
+-- VanillaDroid's own texts of the social side (phase 8): character creation, party frames, chat, emotes, a
+-- player's sheet, the social window (friends, ignore list, who, guild, group) and duels. Only what the original
+-- client does not say itself: its strings (GlobalStrings.lua / GlueStrings.lua) are used by their own keys
+-- (game/SocialText, app/SocialScreens, app/SocialWindows). Same syntax as common.lang.
+
+-- Character creation and deletion.
+VD_SOCIAL_PLEASE_WAIT = "Please wait";
+
+-- Party frames and the group.
+VD_SOCIAL_GHOST = "Ghost";
+VD_SOCIAL_GROUP_JOINED = "You have joined a group.";
+VD_SOCIAL_GROUP_FAILED = "You can't do that with the group right now.";
+VD_SOCIAL_CONFIRM = "Are you sure?";
+
+-- Chat.
+VD_SOCIAL_CHAT_HINT = "Type a message or a /command...";
+VD_SOCIAL_CHAT_TO = "Talk in";
+VD_SOCIAL_AFK_HINT = "Away: type /afk to come back";
+VD_SOCIAL_DND_HINT = "Do not disturb: type /dnd to clear it";
+VD_SOCIAL_UNKNOWN_COMMAND = "Unknown command: /%s";
+VD_SOCIAL_WHICH_CHANNEL = "Which channel? Type its name or number.";
+VD_SOCIAL_HELP1 = "Chat: /s say, /y yell, /p party, /g guild, /o officer, /ra raid, /e emote, /1../10 channels";
+VD_SOCIAL_HELP2 = "/w <name> <text> whisper, /r reply, /join <channel> [password], /leave <channel or number>, /chatlist";
+VD_SOCIAL_HELP3 = "/invite /kick /promote [name], /leaveparty, /afk /dnd [message], /who [text or 10-20]";
+VD_SOCIAL_HELP4 = "/friend /removefriend /ignore /unignore <name>, /ginvite /gremove /gpromote /gdemote <name>";
+VD_SOCIAL_HELP5 = "/gquit, /gmotd <text>, /groster, /duel [name], /forfeit, /roll [min] [max], /wave /dance /bow...";
+
+-- The emote menu (each button sends the slash command of the same name).
+VD_SOCIAL_EMOTE_TARGET = "Target: %s";
+VD_SOCIAL_EMOTE_WAVE = "Wave";
+VD_SOCIAL_EMOTE_HELLO = "Hello";
+VD_SOCIAL_EMOTE_BOW = "Bow";
+VD_SOCIAL_EMOTE_DANCE = "Dance";
+VD_SOCIAL_EMOTE_CHEER = "Cheer";
+VD_SOCIAL_EMOTE_LAUGH = "Laugh";
+VD_SOCIAL_EMOTE_CLAP = "Clap";
+VD_SOCIAL_EMOTE_THANK = "Thank";
+VD_SOCIAL_EMOTE_NOD = "Nod";
+VD_SOCIAL_EMOTE_NO = "No";
+VD_SOCIAL_EMOTE_CRY = "Cry";
+VD_SOCIAL_EMOTE_KNEEL = "Kneel";
+VD_SOCIAL_EMOTE_SIT = "Sit";
+VD_SOCIAL_EMOTE_SLEEP = "Sleep";
+VD_SOCIAL_EMOTE_POINT = "Point";
+VD_SOCIAL_EMOTE_FLEX = "Flex";
+VD_SOCIAL_EMOTE_KISS = "Kiss";
+VD_SOCIAL_EMOTE_HUG = "Hug";
+VD_SOCIAL_EMOTE_ROAR = "Roar";
+VD_SOCIAL_EMOTE_SALUTE = "Salute";
+VD_SOCIAL_EMOTE_CHICKEN = "Chicken";
+VD_SOCIAL_EMOTE_RUDE = "Rude";
+VD_SOCIAL_EMOTE_SHY = "Shy";
+VD_SOCIAL_EMOTE_CHARGE = "Charge!";
+VD_SOCIAL_EMOTE_FLEE = "Flee!";
+VD_SOCIAL_EMOTE_HEALME = "Heal me!";
+VD_SOCIAL_EMOTE_OOM = "Out of mana";
+VD_SOCIAL_EMOTE_FOLLOW = "Follow me!";
+VD_SOCIAL_EMOTE_WAIT = "Wait";
+VD_SOCIAL_EMOTE_INCOMING = "Incoming!";
+VD_SOCIAL_EMOTE_ATTACKMYTARGET = "Attack my target!";
+VD_SOCIAL_EMOTE_TRAIN = "Train";
+
+-- A player's sheet.
+VD_SOCIAL_UNIGNORE = "Unignore";
+VD_SOCIAL_GUILD_PROMOTE = "Guild Promote";
+VD_SOCIAL_GUILD_DEMOTE = "Guild Demote";
+
+-- The social window.
+VD_SOCIAL_OFFLINE_FOR = "offline for %s";
+
+-- Duels.
+VD_SOCIAL_DUEL_NEED_TARGET = "Target a player near you to challenge them.";
+VD_SOCIAL_DUEL_FIGHT = "Fight!";
+VD_SOCIAL_DUEL_WINNER = "%s wins the duel";

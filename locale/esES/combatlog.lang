@@ -1,0 +1,77 @@
+-- Registro de combate (fase 13): las líneas de los paquetes que el cliente no leía (SMSG_SPELLLOGEXECUTE, escudos de
+-- daño, disipaciones, muertes instantáneas, encantamientos de objetos, Fingir muerte resistido), con las claves del
+-- cliente (GlobalStrings.lua) que usa UnitCombatLog_C en WoW.exe. Mismo orden de argumentos que el texto inglés; los
+-- posicionales (%2$s) lo cambian. Las demás claves del registro están en combat.lang.
+
+-- Drenar con ganancia: SELFOTHER (hechizo, cantidad, poder, víctima, ganancia, poder), OTHERSELF (lanzador, hechizo,
+-- cantidad, poder, lanzador, ganancia, poder), OTHEROTHER (lanzador, hechizo, cantidad, poder, víctima, lanzador,
+-- ganancia, poder).
+SPELLPOWERLEECHSELFOTHER = "Tu %s drena %d p. de %s a %s. Obtienes %d p. de %s.";
+SPELLPOWERLEECHOTHERSELF = "%2$s de %1$s te drena %3$d p. de %4$s. %5$s obtiene %6$d p. de %7$s.";
+SPELLHAPPINESSDRAINSELF = "Tu %s pierde %d p. de felicidad.";
+
+-- Ataques adicionales (unidad, número, hechizo).
+SPELLEXTRAATTACKSSELF = "Obtienes %d ataques adicionales gracias a %s.";
+SPELLEXTRAATTACKSOTHER = "%s obtiene %d ataques adicionales gracias a %s.";
+SPELLEXTRAATTACKSOTHER_SINGULAR = "%s obtiene %d ataque adicional gracias a %s.";
+
+-- Objetos creados y comida de la mascota.
+TRADESKILL_LOG_FIRSTPERSON = "Creas: %s.";
+TRADESKILL_LOG_THIRDPERSON = "%s crea: %s.";
+FEEDPET_LOG_FIRSTPERSON = "Tu mascota empieza a comerse: %s.";
+FEEDPET_LOG_THIRDPERSON = "La mascota de %s empieza a comerse: %s.";
+
+-- Cerraduras, durabilidad, mascotas despedidas.
+OPEN_LOCK_SELF = "Realizas %s sobre %s.";
+OPEN_LOCK_OTHER = "%s realiza %s sobre %s.";
+SPELLDURABILITYDAMAGESELFOTHER = "Lanzas %s sobre %s: %s dañado.";
+SPELLDURABILITYDAMAGEOTHEROTHER = "%s lanza %s sobre %s: %s dañado.";
+SPELLDURABILITYDAMAGEALLSELFOTHER = "Lanzas %s sobre %s: todos los objetos dañados.";
+SPELLDISMISSPETSELF = "Despides a tu %s.";
+SPELLDISMISSPETOTHER = "%2$s de %1$s es despedido.";
+
+-- La línea genérica de un efecto (con objetivo: SIMPLE*; sin él: SPELLTERSE*). "Perform" para las habilidades.
+SIMPLECASTSELFOTHER = "Lanzas %s sobre %s.";
+SIMPLECASTOTHERSELF = "%s lanza %s sobre ti.";
+SIMPLECASTOTHEROTHER = "%s lanza %s sobre %s.";
+SIMPLECASTSELFSELF = "Lanzas %s.";
+SIMPLEPERFORMSELFOTHER = "Realizas %s sobre %s.";
+SIMPLEPERFORMOTHERSELF = "%s realiza %s sobre ti.";
+SIMPLEPERFORMOTHEROTHER = "%s realiza %s sobre %s.";
+SIMPLEPERFORMSELFSELF = "Realizas %s.";
+SPELLTERSE_SELF = "Lanzas %s.";
+SPELLTERSE_OTHER = "%s lanza %s.";
+SPELLTERSEPERFORM_SELF = "Realizas %s.";
+SPELLTERSEPERFORM_OTHER = "%s realiza %s.";
+
+-- Escudos de daño (Espinas, Aura de reprensión): SELFOTHER (cantidad, escuela, víctima), OTHERSELF (portador,
+-- cantidad, escuela), OTHEROTHER (portador, cantidad, escuela, víctima).
+DAMAGESHIELDSELFOTHER = "Reflejas %d p. de daño de %s a %s.";
+DAMAGESHIELDOTHERSELF = "%s te refleja %d p. de daño de %s.";
+DAMAGESHIELDOTHEROTHER = "%s refleja %d p. de daño de %s a %s.";
+
+-- Disipaciones: AURADISPELOTHER (unidad, aura); DISPELFAILED* SELFOTHER (víctima, aura), OTHERSELF (lanzador,
+-- aura), OTHEROTHER (lanzador, víctima, aura).
+AURADISPELSELF = "Se elimina tu %s.";
+AURADISPELOTHER = "Se elimina %2$s de %1$s.";
+DISPELFAILEDSELFOTHER = "No consigues disipar %2$s de %1$s.";
+DISPELFAILEDOTHERSELF = "%s no consigue disipar tu %s.";
+DISPELFAILEDOTHEROTHER = "%1$s no consigue disipar %3$s de %2$s.";
+DISPELFAILEDSELFSELF = "No consigues disipar tu %s.";
+
+-- Muertes instantáneas (víctima, hechizo).
+INSTAKILLSELF = "%s te mata.";
+INSTAKILLOTHER = "%2$s mata a %1$s.";
+
+-- Encantamientos de objetos: ADD SELFOTHER (encantamiento, dueño, objeto), OTHERSELF (lanzador, encantamiento,
+-- objeto), OTHEROTHER (lanzador, encantamiento, dueño, objeto), SELFSELF (encantamiento, objeto); REMOVESELF
+-- (encantamiento, objeto), REMOVEOTHER (encantamiento, dueño, objeto).
+ITEMENCHANTMENTADDSELFOTHER = "Lanzas %s sobre el %3$s de %2$s.";
+ITEMENCHANTMENTADDOTHERSELF = "%s lanza %s sobre tu %s.";
+ITEMENCHANTMENTADDOTHEROTHER = "%1$s lanza %2$s sobre el %4$s de %3$s.";
+ITEMENCHANTMENTADDSELFSELF = "Lanzas %s sobre tu %s.";
+ITEMENCHANTMENTREMOVESELF = "%s ha desaparecido de tu %s.";
+ITEMENCHANTMENTREMOVEOTHER = "%1$s ha desaparecido del %3$s de %2$s.";
+
+-- Fingir muerte resistido (UIErrorsFrame).
+ERR_FEIGN_DEATH_RESISTED = "Resistido";

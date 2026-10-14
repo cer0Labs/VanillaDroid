@@ -1,0 +1,26 @@
+-- Travel: zone text, exploration, flight masters, innkeepers, the world map, the taxi map and the loading screen.
+-- Only what the original client lacks; the rest uses its keys (ERR_TAXI*, ERR_ZONE_EXPLORED*, ERR_NEWTAXIPATH,
+-- CONFIRM_BINDER, TRANSFER_ABORT_*, FACTION_CONTROLLED_TERRITORY, CONTESTED_TERRITORY, FREE_FOR_ALL_TERRITORY...).
+
+-- Zone text: the PvP line of an AREA_FLAG_SANCTUARY place (a flag of later clients; no 1.12 area has it).
+VD_TRAVEL_SANCTUARY = "Sanctuary";
+
+-- Messages, when the area is not in AreaTable.dbc (ERR_ZONE_EXPLORED*, ERR_DEATHBIND_SUCCESS_S, CONFIRM_BINDER).
+VD_TRAVEL_NEW_AREA = "a new area";
+VD_TRAVEL_THIS_PLACE = "This place";
+VD_TRAVEL_THIS_INN = "this inn";
+
+-- World map.
+VD_TRAVEL_MAP_POSITION = "Your position: %.0f, %.0f"; -- the player's coordinates on a zone map (0..100)
+VD_TRAVEL_MAP_NONE = "There is no map of this place";
+VD_TRAVEL_MAP_LOADING = "Loading the map...";
+
+-- Taxi map: stops on the way to a destination, and the button that takes the flight.
+VD_TRAVEL_TAXI_STOP = "1 stop";
+VD_TRAVEL_TAXI_STOPS = "%u stops";
+VD_TRAVEL_FLY = "Fly";
+
+-- Loading screen, under the bar.
+VD_TRAVEL_LOADING_WORLD = "Loading the world...";
+VD_TRAVEL_LOADING_TRANSFER = "Traveling...";
+VD_TRAVEL_LOADING_NO_PACK = "This map cannot be shown: its world pack is missing or was made for another version (update the game data with VanillaDroid Setup)";

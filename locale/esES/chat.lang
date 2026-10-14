@@ -1,0 +1,13 @@
+-- Castellano del chat (paridad: los marcos de chat acoplados de 1.12, app/ChatFrame y app/SocialScreens): la
+-- cabecera de la caja de texto (ChatEdit_UpdateHeader: adónde va lo que se escribe). Las pestañas usan GENERAL,
+-- COMBAT_LOG, CHAT_MSG_WHISPER_INFORM, PARTY y GUILD, ya traducidas en social.lang y combat.lang.
+
+CHAT_SAY_SEND = "Decir: ";
+CHAT_YELL_SEND = "Gritar: ";
+CHAT_PARTY_SEND = "Grupo: ";
+CHAT_RAID_SEND = "Banda: ";
+CHAT_RAID_WARNING_SEND = "Aviso de banda: ";
+CHAT_GUILD_SEND = "Hermandad: ";
+CHAT_OFFICER_SEND = "Oficial: ";
+CHAT_EMOTE_SEND = "%s ";
+CHAT_CHANNEL_SEND = "[%d. %s]: ";

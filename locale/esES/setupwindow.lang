@@ -1,0 +1,284 @@
+-- La ventana de VanillaDroid Setup (fase 22, ADR-0005 §4-§5: tools/setup/gui) y los textos del núcleo que solo
+-- muestra la ventana (tools/setup/SetupFlow). Traduce nuestras claves (VD_SETUP_GUI_*).
+
+VD_SETUP_LANGUAGE_NAME = "Español";
+
+-- Lo que dice la ventana en lugar de los textos del núcleo que hablan de la consola (fase 22, polish):
+-- VD_SETUP_WINDOW_<nombre> sustituye a VD_SETUP_<nombre> de setup.lang cuando lo muestra la ventana.
+VD_SETUP_WINDOW_ADB_NO_DEVICE = "No hay ningún móvil conectado: conéctalo en el paso 3.";
+VD_SETUP_WINDOW_ADB_MANY_DEVICES = "Hay más de un dispositivo: elige el móvil en el paso 4.";
+VD_SETUP_WINDOW_ADB_SERIAL_NOT_FOUND = "El dispositivo %s no está conectado: vuelve a buscar móviles en el paso 4.";
+VD_SETUP_WINDOW_ADB_OFFLINE = "El móvil no responde: vuelve a conectarlo (el cable, o Conectar en el paso 3).";
+VD_SETUP_WINDOW_ADB_NO_CURL = "Este sistema no tiene curl para descargar: instala tú las Platform-Tools y elige su adb con «Usar otro adb...».";
+VD_SETUP_WINDOW_ADB_NO_TAR = "Este sistema no tiene con qué descomprimir un zip: descomprímelo tú y elige su adb con «Usar otro adb...».";
+VD_SETUP_WINDOW_WOW_UNOFFICIAL = "%s no es del cliente 1.12.1 oficial (¿un parche de un servidor?): se deja fuera salvo que lo marques.";
+VD_SETUP_WINDOW_WOW_REFUSED = "Esta carpeta no sirve: arregla lo que está marcado en rojo y vuelve a comprobarla.";
+VD_SETUP_WINDOW_STATUS_UPDATE_UNKNOWN = "Aún no se ha comprobado.";
+VD_SETUP_WINDOW_STATUS_UPDATE_NONE = "Es la última versión.";
+VD_SETUP_WINDOW_STATUS_UPDATE_AVAILABLE = "Hay una versión nueva: VanillaDroid %s.";
+VD_SETUP_WINDOW_STATUS_UPDATE_TOO_NEW = "Hay una versión nueva, VanillaDroid %s, pero este Setup es demasiado antiguo para instalarla: descárgala de %s";
+
+-- El marco
+VD_SETUP_GUI_WINDOW_TITLE = "VanillaDroid Setup";
+VD_SETUP_GUI_VERSION = "Versión %s";
+VD_SETUP_GUI_NAV_HOME = "Inicio";
+VD_SETUP_GUI_NAV_LANGUAGE = "Idioma";
+VD_SETUP_GUI_NAV_WOW = "Tu WoW";
+VD_SETUP_GUI_NAV_BAKE = "Datos del juego";
+VD_SETUP_GUI_NAV_PHONE = "Móvil por Wi-Fi";
+VD_SETUP_GUI_NAV_ADB = "Móvil con ADB";
+VD_SETUP_GUI_NAV_ABOUT = "Acerca de y actualizaciones";
+VD_SETUP_GUI_LANGUAGE_LABEL = "Idioma";
+VD_SETUP_GUI_LANGUAGE_SYSTEM = "El del sistema (%s)";
+VD_SETUP_GUI_LANGUAGE_LOCKED = "El idioma se puede cambiar cuando no hay nada en marcha y el servidor está parado.";
+VD_SETUP_GUI_DIALOG_FAILED = "No se pudo abrir la ventana de carpetas: %s";
+
+-- La guía de la primera vez
+VD_SETUP_GUI_WIZARD_ITEM = "%s. %s";
+VD_SETUP_GUI_BACK = "Atrás";
+VD_SETUP_GUI_NEXT = "Siguiente";
+VD_SETUP_GUI_FINISH = "Terminar";
+VD_SETUP_GUI_SKIP_WIZARD = "Saltar la guía";
+VD_SETUP_GUI_WIZARD_AGAIN = "Volver a la guía";
+VD_SETUP_GUI_WIZARD_HINT_WOW = "Elige un WoW 1.12.1 que sirva para seguir.";
+VD_SETUP_GUI_WIZARD_HINT_BAKE = "Prepara los datos del juego para seguir.";
+
+-- Palabras comunes
+VD_SETUP_GUI_OPEN = "Abrir";
+VD_SETUP_GUI_CANCEL = "Cancelar";
+VD_SETUP_GUI_CHANGE = "Cambiar...";
+VD_SETUP_GUI_CHECK = "Comprobar";
+VD_SETUP_GUI_REMOVE = "Quitar";
+VD_SETUP_GUI_COPY = "Copiar";
+VD_SETUP_GUI_COPIED = "Copiado.";
+VD_SETUP_GUI_ADVANCED = "Avanzado";
+VD_SETUP_GUI_UNKNOWN = "desconocido";
+VD_SETUP_GUI_OPEN_FOLDER = "Abrir la carpeta";
+VD_SETUP_GUI_CHOOSE_FOLDER = "Elegir carpeta...";
+VD_SETUP_GUI_PATH_HINT = "o pega aquí la carpeta";
+VD_SETUP_GUI_PERCENT = "%s %%";
+VD_SETUP_GUI_RAW = "%s";
+VD_SETUP_GUI_ELAPSED = "Tiempo: %s";
+VD_SETUP_GUI_REMAINING = "quedan unos %s";
+VD_SETUP_GUI_TIME_HOURS = "%s h %s min";
+VD_SETUP_GUI_TIME_MINUTES = "%s min %s s";
+VD_SETUP_GUI_TIME_SECONDS = "%s s";
+VD_SETUP_GUI_COMMAND = "En la consola: %s";
+
+-- Cerrar con algo en marcha
+VD_SETUP_GUI_CLOSE_TITLE = "¿Cerrar VanillaDroid Setup?";
+VD_SETUP_GUI_CLOSE_TEXT = "Todavía hay algo en marcha (%s). Al cerrar se para; lo que ya está hecho se conserva.";
+VD_SETUP_GUI_CLOSE_YES = "Pararlo y cerrar";
+VD_SETUP_GUI_CLOSE_NO = "No cerrar";
+VD_SETUP_GUI_RUNNING_BAKE = "un horneado";
+VD_SETUP_GUI_RUNNING_ADB = "un envío con adb";
+VD_SETUP_GUI_RUNNING_SERVER = "la descarga de un móvil";
+
+-- Inicio
+VD_SETUP_GUI_HOME_TITLE = "VanillaDroid Setup";
+VD_SETUP_GUI_HOME_INTRO = "Todo lo que VanillaDroid necesita de este ordenador: tu WoW 1.12.1, los datos del juego que salen de él y el camino hasta el móvil, por Wi-Fi o con ADB.";
+VD_SETUP_GUI_HOME_CHECKING = "Comprobando...";
+VD_SETUP_GUI_HOME_WOW_NONE = "Aún no lo has elegido.";
+VD_SETUP_GUI_HOME_WOW_OK = "Versión %s, %s, %s de datos del juego.";
+VD_SETUP_GUI_HOME_WOW_BAD = "No sirve: ábrelo para ver por qué.";
+VD_SETUP_GUI_HOME_PACKS_NEED_WOW = "Primero hace falta tu WoW.";
+VD_SETUP_GUI_HOME_PACKS_NONE = "Aún sin preparar.";
+VD_SETUP_GUI_HOME_PACKS_OK = "Al día (%s).";
+VD_SETUP_GUI_HOME_PACKS_TODO = "%s pasos por hornear.";
+VD_SETUP_GUI_HOME_BAKING = "Horneando: %s %%";
+VD_SETUP_GUI_HOME_PHONE_ON = "Servidor encendido en %s.";
+VD_SETUP_GUI_HOME_PHONE_OFF = "Servidor apagado.";
+VD_SETUP_GUI_HOME_ADB_FOUND = "adb está listo.";
+VD_SETUP_GUI_HOME_ADB_MISSING = "adb no está instalado (solo hace falta para este camino).";
+
+-- Idioma
+VD_SETUP_GUI_LANGUAGE_TITLE = "Te damos la bienvenida a VanillaDroid Setup";
+VD_SETUP_GUI_LANGUAGE_INTRO = "Este programa prepara World of Warcraft 1.12.1 para VanillaDroid en tu móvil Android: comprueba tu WoW, convierte sus datos en los datos del juego del móvil y se los envía, por Wi-Fi o con un cable. Nada del juego se descarga de internet: todo sale de tu propia copia.";
+VD_SETUP_GUI_LANGUAGE_CHOOSE = "El idioma de este programa:";
+
+-- Tu WoW (vdsetup wow)
+VD_SETUP_GUI_WOW_TITLE = "Tu WoW 1.12.1";
+VD_SETUP_GUI_WOW_INTRO = "Elige la carpeta donde está instalado World of Warcraft 1.12.1 (build 5875): la que tiene WoW.exe y la carpeta Data. También sirve una copia de su carpeta Data, incluso de un cliente de Mac. No se cambia nada de ella.";
+VD_SETUP_GUI_WOW_CHECKING = "Comprobando %s...";
+VD_SETUP_GUI_WOW_NONE = "Aún no has elegido ninguna carpeta.";
+VD_SETUP_GUI_WOW_VERSION = "Versión";
+VD_SETUP_GUI_WOW_LANGUAGE = "Idioma";
+VD_SETUP_GUI_WOW_SIZE = "Datos del juego";
+VD_SETUP_GUI_WOW_USED = "De este WoW salen los datos del juego.";
+VD_SETUP_GUI_WOW_REFUSED = "Esta carpeta no sirve: arregla lo marcado en rojo y vuelve a comprobarla.";
+VD_SETUP_GUI_WOW_KEPT = "Se sigue usando el WoW elegido antes: %s";
+VD_SETUP_GUI_WOW_LOCKED_BAKING = "No se puede cambiar mientras se hornean los datos del juego.";
+VD_SETUP_GUI_WOW_UNOFFICIAL_TITLE = "Archivos que no son del cliente 1.12.1 oficial";
+VD_SETUP_GUI_WOW_UNOFFICIAL_INTRO = "Suelen venir de un servidor privado (objetos, mapas o arreglos nuevos). Se dejan fuera salvo que los marques: VanillaDroid está hecho para los datos oficiales, y el parche de un servidor puede no funcionar con él.";
+VD_SETUP_GUI_WOW_INCLUDE_NOTE = "Cambiarlos vuelve a hornear todos los datos del juego.";
+VD_SETUP_GUI_WOW_ARCHIVES = "Archivos de Data (%s)";
+VD_SETUP_GUI_ARCHIVE_OFFICIAL = "oficial";
+VD_SETUP_GUI_ARCHIVE_LAUNCHER = "oficial, solo del lanzador (no hace falta)";
+VD_SETUP_GUI_ARCHIVE_UNOFFICIAL = "no oficial";
+VD_SETUP_GUI_ARCHIVE_DAMAGED = "dañado";
+VD_SETUP_GUI_ARCHIVE_TRUNCATED = "incompleto";
+VD_SETUP_GUI_ARCHIVE_UNREADABLE = "no se puede leer";
+VD_SETUP_GUI_LOCALE_TITLE = "Un segundo cliente en otro idioma (opcional)";
+VD_SETUP_GUI_LOCALE_INTRO = "Con un WoW 1.12.1 en otro idioma (por ejemplo uno en castellano junto a uno en inglés), VanillaDroid puede cambiar el idioma del juego: sus textos, mapas y voces se hornean como packs de idioma.";
+VD_SETUP_GUI_LOCALE_NEEDS_WOW = "Elige primero tu WoW.";
+VD_SETUP_GUI_LOCALE_NONE = "Ninguno.";
+VD_SETUP_GUI_LOCALE_USED = "Segundo cliente en %s: también se hornean sus packs de idioma.";
+
+-- Datos del juego (vdsetup bake)
+VD_SETUP_GUI_BAKE_TITLE = "Datos del juego";
+VD_SETUP_GUI_BAKE_INTRO = "VanillaDroid no lee en el móvil los ficheros del WoW: se convierten en packs hechos para él (unos 4,5 GB). La primera vez tarda de 10 a 20 minutos; después solo se vuelve a hornear lo que cambia.";
+VD_SETUP_GUI_BAKE_NEEDS_WOW = "Elige primero tu WoW.";
+VD_SETUP_GUI_GO_WOW = "Elegir el WoW";
+VD_SETUP_GUI_BAKE_CHECKING = "Mirando el WoW y los packs...";
+VD_SETUP_GUI_PACKS_FOLDER = "Dónde van los datos del juego";
+VD_SETUP_GUI_PACKS_STATE = "Packs: %s (%s).";
+VD_SETUP_GUI_FREE_SPACE = "Espacio libre ahí: %s.";
+VD_SETUP_GUI_BAKE_PLAN = "Qué se va a hornear";
+VD_SETUP_GUI_BAKE_TODO = "Pasos: %s";
+VD_SETUP_GUI_BAKE_COL_STEP = "Paso";
+VD_SETUP_GUI_BAKE_COL_WHY = "Por qué";
+VD_SETUP_GUI_WHY_MISSING = "aún sin hornear";
+VD_SETUP_GUI_WHY_OUTDATED = "hecho por una versión anterior: %s";
+VD_SETUP_GUI_WHY_ALL = "se vuelve a hornear todo";
+VD_SETUP_GUI_WHY_CHOSEN = "elegido en Avanzado";
+VD_SETUP_GUI_BAKE_NO_MANIFEST = "Estos packs los horneó una versión anterior y no tienen manifiesto: se toman como están. Marca «Volver a hornear todo» en Avanzado para rehacerlos.";
+VD_SETUP_GUI_BAKE_FORCE = "Volver a hornear todo";
+VD_SETUP_GUI_BAKE_STEP_UP_TO_DATE = "%s está al día (marca «Volver a hornear todo» para hornearlo igualmente).";
+VD_SETUP_GUI_BAKE_ONLY = "Solo este paso";
+VD_SETUP_GUI_BAKE_ALL_STEPS = "Todos los pasos";
+VD_SETUP_GUI_BAKE_START = "Hornear los datos del juego";
+VD_SETUP_GUI_BAKE_CANCEL_NOTE = "Al cancelar se conservan los pasos ya hechos: al volver a hornear se sigue desde ahí.";
+VD_SETUP_GUI_BAKE_LOG = "Los mensajes del horneador";
+VD_SETUP_GUI_BAKE_DONE = "Los datos del juego están listos (%s).";
+VD_SETUP_GUI_BAKE_BAKED = "Horneado en %s: %s.";
+VD_SETUP_GUI_BAKE_CANCELLED = "Horneado parado. Al volver a hornear se sigue donde se paró: lo hecho se conserva.";
+VD_SETUP_GUI_BAKE_STEPS_FAILED = "Estos pasos terminaron con errores: %s. Los mensajes del horneador, abajo, dicen por qué.";
+VD_SETUP_GUI_BAKE_NO_BAKER = "vd_baker no está junto a VanillaDroid Setup: vuelve a instalar el Setup.";
+VD_SETUP_GUI_NEXT_PHONE = "Enviarlo al móvil";
+-- Los pasos del horneado (vd_baker bake --only <paso>)
+VD_SETUP_GUI_STEP_DB = "Tablas del juego";
+VD_SETUP_GUI_STEP_TEXTURES = "Texturas";
+VD_SETUP_GUI_STEP_MODELS = "Edificios y objetos";
+VD_SETUP_GUI_STEP_ACTORS = "Personajes y criaturas";
+VD_SETUP_GUI_STEP_WORLD = "Terreno y agua";
+VD_SETUP_GUI_STEP_COLLISION = "Colisiones";
+VD_SETUP_GUI_STEP_OBJECTS = "Barcos, zepelines y ascensores";
+VD_SETUP_GUI_STEP_UI = "Interfaz";
+VD_SETUP_GUI_STEP_SOUND = "Sonido y música";
+VD_SETUP_GUI_STEP_CINEMATICS = "Cinemáticas y escenas de acceso";
+VD_SETUP_GUI_STEP_GRASS = "Hierba";
+VD_SETUP_GUI_STEP_WORLDSOUND = "Sonidos del mundo";
+VD_SETUP_GUI_STEP_BODYFX = "Huellas, sangre y salpicaduras";
+VD_SETUP_GUI_STEP_LOCALE = "Packs de idioma";
+
+-- Móvil por Wi-Fi (vdsetup serve)
+VD_SETUP_GUI_PHONE_TITLE = "Móvil por Wi-Fi";
+VD_SETUP_GUI_PHONE_INTRO = "El móvil descarga VanillaDroid y los datos del juego de este ordenador por tu propia red: escanea un código con su cámara y hace el resto. Nada pasa por internet.";
+VD_SETUP_GUI_PHONE_NO_PACKS = "Aún no hay datos del juego: hornéalos primero (la app se puede instalar igualmente).";
+VD_SETUP_GUI_PHONE_PACKS_OUTDATED = "Los datos del juego no están al día: el móvil recibiría los packs tal como están ahora.";
+VD_SETUP_GUI_PHONE_NO_APK = "No hay un APK de VanillaDroid junto al Setup: la página del móvil no ofrecerá la app.";
+VD_SETUP_GUI_PHONE_ADDRESS = "Dirección de este ordenador en la red del móvil:";
+VD_SETUP_GUI_PHONE_ADDRESS_NOTE = "Si el móvil no conecta, prueba otra.";
+VD_SETUP_GUI_PHONE_LOOK_AGAIN = "Volver a buscar";
+VD_SETUP_GUI_PHONE_OFFER_WOW = "Ofrecer también mi WoW (%s), para que el móvil pueda hornear las actualizaciones por sí mismo";
+VD_SETUP_GUI_PHONE_START = "Conectar móvil";
+VD_SETUP_GUI_PHONE_STOP = "Parar el servidor";
+VD_SETUP_GUI_PHONE_USE_ADB = "¿Mejor con un cable o la depuración inalámbrica? Usa ADB.";
+VD_SETUP_GUI_PHONE_HOST_LABEL = "Dirección";
+VD_SETUP_GUI_PHONE_CODE_LABEL = "Código";
+VD_SETUP_GUI_PHONE_PREPARING = "Preparando los ficheros para el móvil...";
+VD_SETUP_GUI_PHONE_PHONES = "Móviles";
+VD_SETUP_GUI_PHONE_NO_PHONES = "Aún no se ha conectado ningún móvil.";
+VD_SETUP_GUI_PHONE_COL_PHONE = "Móvil";
+VD_SETUP_GUI_PHONE_COL_NOW = "Descargando";
+VD_SETUP_GUI_PHONE_COL_DONE = "Recibido";
+VD_SETUP_GUI_PHONE_IDLE = "nada ahora";
+VD_SETUP_GUI_PHONE_LINKED = "vinculado";
+VD_SETUP_GUI_PHONE_NO_KEY = "sin la clave: vuelve a escanear el código";
+VD_SETUP_GUI_PHONE_FILES = "%s ficheros, %s";
+VD_SETUP_GUI_PHONE_NEW_KEY = "Nueva clave de vinculación";
+VD_SETUP_GUI_PHONE_NEW_KEY_CONFIRM = "Los móviles vinculados antes tendrán que volver a escanear el código. ¿Crear una clave nueva?";
+VD_SETUP_GUI_PHONE_NEW_KEY_YES = "Crear una clave nueva";
+VD_SETUP_GUI_PHONE_ACTIVITY = "Actividad";
+VD_SETUP_GUI_SERVE_KEEP_OPEN = "Deja esta ventana abierta mientras el móvil descarga.";
+VD_SETUP_GUI_FIREWALL_MAC = "El móvil y este Mac tienen que estar en la misma red. Si macOS pregunta si VanillaDroid Setup puede aceptar conexiones entrantes, permítelo.";
+VD_SETUP_GUI_CODE_LOCKED = "Demasiados códigos incorrectos: el código ya no vale. Para el servidor y vuelve a conectar para tener otro (el código QR sigue valiendo).";
+VD_SETUP_GUI_LOOPBACK = "Modo de prueba: solo puede conectarse este ordenador (127.0.0.1).";
+
+-- Móvil con ADB (vdsetup adb)
+VD_SETUP_GUI_ADB_TITLE = "Móvil con ADB";
+VD_SETUP_GUI_ADB_INTRO = "Lo mismo con la conexión de depuración de Android, por cable o por depuración inalámbrica, para quien lo prefiera al servidor por Wi-Fi. Cada paso muestra la orden de consola que hace lo mismo.";
+VD_SETUP_GUI_ADB_WORKING = "Trabajando...";
+VD_SETUP_GUI_ADB_CANCELLED = "Parado. Lo enviado se conserva: al volver a enviar se sigue desde ahí.";
+VD_SETUP_GUI_ADB_STEP_DEVELOPER = "1. Opciones de desarrollador";
+VD_SETUP_GUI_ADB_DEVELOPER_TEXT = "En el móvil: Ajustes > Información del teléfono (Samsung: > Información de software) y toca siete veces Número de compilación. Xiaomi: activa también «Instalar vía USB» en las Opciones de desarrollador.";
+VD_SETUP_GUI_ADB_STEP_TOOLS = "2. adb en este ordenador";
+VD_SETUP_GUI_ADB_FOUND = "adb: %s";
+VD_SETUP_GUI_ADB_NOT_FOUND = "adb no está instalado.";
+VD_SETUP_GUI_ADB_READ_TERMS = "Leer las condiciones";
+VD_SETUP_GUI_ADB_ACCEPT = "Acepto las condiciones de las Android SDK Platform-Tools";
+VD_SETUP_GUI_ADB_DOWNLOAD = "Descargar adb";
+VD_SETUP_GUI_ADB_OTHER = "Usar otro adb...";
+VD_SETUP_GUI_ADB_STEP_CONNECT = "3. Conectar el móvil";
+VD_SETUP_GUI_ADB_WIRELESS = "Sin cable (Android 11 o posterior, en la misma Wi-Fi): Ajustes > Opciones de desarrollador > Depuración inalámbrica, actívala y ábrela. Toca «Vincular dispositivo con código de vinculación» y escribe aquí la dirección (IP:puerto) y el código de seis cifras que muestra.";
+VD_SETUP_GUI_ADB_PAIR_ADDRESS = "IP:puerto";
+VD_SETUP_GUI_ADB_PAIR_CODE = "código";
+VD_SETUP_GUI_ADB_PAIR = "Vincular";
+VD_SETUP_GUI_ADB_PAIRED_NEXT = "Ahora conecta con la «Dirección IP y puerto» de la pantalla de Depuración inalámbrica.";
+VD_SETUP_GUI_ADB_CONNECT_TEXT = "Después, la «Dirección IP y puerto» de la pantalla de Depuración inalámbrica (otro puerto):";
+VD_SETUP_GUI_ADB_CONNECT_ADDRESS = "IP:puerto";
+VD_SETUP_GUI_ADB_CONNECT = "Conectar";
+VD_SETUP_GUI_ADB_CABLE = "Con cable: Ajustes > Opciones de desarrollador > Depuración USB activada, conecta el móvil y acepta la pregunta que muestra.";
+VD_SETUP_GUI_ADB_STEP_DEVICES = "4. Elegir el móvil";
+VD_SETUP_GUI_ADB_REFRESH = "Buscar móviles";
+VD_SETUP_GUI_ADB_NO_DEVICES = "No se ha encontrado ningún móvil: revisa el paso 3.";
+VD_SETUP_GUI_ADB_CHOOSE_ONE = "Hay más de uno: elige el móvil.";
+VD_SETUP_GUI_ADB_STATE_DEVICE = "listo";
+VD_SETUP_GUI_ADB_STATE_UNAUTHORIZED = "esperando permiso: desbloquea el móvil y acepta";
+VD_SETUP_GUI_ADB_STATE_OFFLINE = "no responde: vuelve a conectarlo";
+VD_SETUP_GUI_ADB_NEED_DEVICE = "Elige un móvil listo en el paso 4.";
+VD_SETUP_GUI_ADB_STEP_INSTALL = "5. Instalar la app";
+VD_SETUP_GUI_ADB_APK = "VanillaDroid %s (%s)";
+VD_SETUP_GUI_ADB_INSTALL = "Instalar VanillaDroid";
+VD_SETUP_GUI_ADB_OPEN_ONCE = "Ábrela una vez en el móvil: así se crea la carpeta a la que van los datos del juego.";
+VD_SETUP_GUI_ADB_OTHER_APP = "Este APK es %s, pero la app elegida es %s.";
+VD_SETUP_GUI_ADB_NOT_INSTALLED = "%s no está instalada en el móvil: instálala en el paso 5 y ábrela una vez.";
+VD_SETUP_GUI_ADB_STEP_PUSH = "6. Enviar los datos del juego";
+VD_SETUP_GUI_ADB_PUSH_NOTE = "Solo se envía lo que el móvil aún no tiene.";
+VD_SETUP_GUI_ADB_PUSH = "Enviar los datos del juego";
+VD_SETUP_GUI_ADB_STEP_WOW = "7. Opcional: enviar tu WoW";
+VD_SETUP_GUI_ADB_WOW_NOTE = "Los archivos de tu WoW (%s) van al móvil, para que pueda hornear las actualizaciones por sí mismo.";
+VD_SETUP_GUI_ADB_SEND_WOW = "Enviar mi WoW";
+VD_SETUP_GUI_ADB_CMD_SETUP = "vdsetup adb setup";
+VD_SETUP_GUI_ADB_CMD_PAIR = "vdsetup adb pair <IP:puerto> <código>";
+VD_SETUP_GUI_ADB_CMD_CONNECT = "vdsetup adb connect <IP:puerto>";
+VD_SETUP_GUI_ADB_CMD_DEVICES = "vdsetup adb devices";
+VD_SETUP_GUI_ADB_CMD_INSTALL = "vdsetup adb install";
+VD_SETUP_GUI_ADB_CMD_PUSH = "vdsetup adb push";
+VD_SETUP_GUI_ADB_CMD_SEND_WOW = "vdsetup adb send-wow";
+
+-- Acerca de y actualizaciones
+VD_SETUP_GUI_ABOUT_TITLE = "Acerca de y actualizaciones";
+VD_SETUP_GUI_ABOUT_VERSIONS = "Versiones";
+VD_SETUP_GUI_ABOUT_SETUP = "VanillaDroid Setup";
+VD_SETUP_GUI_ABOUT_APP = "App que se instala";
+VD_SETUP_GUI_ABOUT_APP_NONE = "ninguna junto al Setup";
+VD_SETUP_GUI_ABOUT_APP_VERSION = "VanillaDroid %s (%s), %s";
+VD_SETUP_GUI_ABOUT_APP_ID = "App del móvil";
+VD_SETUP_GUI_ABOUT_PACKS = "Datos del juego";
+VD_SETUP_GUI_ABOUT_PACKS_BY = "horneados por la versión %s desde un cliente en %s";
+VD_SETUP_GUI_ABOUT_BAKER = "Horneador";
+VD_SETUP_GUI_ABOUT_ADB = "adb";
+VD_SETUP_GUI_CHOOSE_APK = "Elegir otro APK...";
+VD_SETUP_GUI_ABOUT_DATA = "Ajustes y datos";
+VD_SETUP_GUI_ABOUT_DATA_TEXT = "Aquí están los ajustes, los datos del juego (salvo que hayas elegido otra carpeta), adb y lo que recuerda el Setup. La herramienta de consola vdsetup usa los mismos.";
+VD_SETUP_GUI_UPDATES_TITLE = "Actualizaciones";
+VD_SETUP_GUI_UPDATES_TEXT = "VanillaDroid Setup busca versiones nuevas de sí mismo y de la app al abrirse (como mucho cada pocas horas).";
+VD_SETUP_GUI_UPDATES_DEVELOPMENT = "Es una compilación de desarrollo: solo busca versiones nuevas cuando se le pide.";
+VD_SETUP_GUI_UPDATES_CHECK = "Buscar actualizaciones";
+VD_SETUP_GUI_UPDATES_NOTES = "Novedades";
+VD_SETUP_GUI_UPDATES_PAGE = "La página de versiones";
+VD_SETUP_GUI_UPDATES_CMD = "vdsetup update";
+VD_SETUP_GUI_LICENSES = "Licencias";
+VD_SETUP_GUI_LICENSES_TEXT = "VanillaDroid está hecho con software libre de otras personas: sus licencias están en THIRD_PARTY_NOTICES.md, junto a este programa.";
+VD_SETUP_GUI_LICENSES_OPEN = "Abrir las licencias";

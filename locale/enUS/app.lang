@@ -1,0 +1,5 @@
+-- The app itself (phase 22, ADR-0005): what it shows before there is any game data (app.vdpk only: our font and
+-- art, app/AppOnlyGallery, the first-run screen). English, VanillaDroid's own texts only. Syntax and rules: see
+-- common.lang.
+
+VD_APP_NAME = "VanillaDroid"; -- the product's name, the same in every language

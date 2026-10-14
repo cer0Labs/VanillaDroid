@@ -1,0 +1,2 @@
+VanillaDroid: a test vector for core/ReleaseSignature, signed with tests/data/release-test-key.pem by
+`openssl dgst -sha256 -sign`. Its bytes are what is signed: UTF-8 (ñ, €) and LF line ends.

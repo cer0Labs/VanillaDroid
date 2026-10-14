@@ -1,0 +1,11 @@
+-- Minimapa: el MinimapCluster (barra de zona, zoom, puntos, el aviso, rastreo, la carta, el indicador de día y noche).
+-- Claves propias (VD_MINIMAP_*) y del cliente. HAVE_MAIL se traduce en exchange.lang; los textos de JcJ de la zona, en
+-- travel.lang.
+
+-- Reloj del tooltip del indicador: en castellano, de 24 horas (TwentyFourHourTime del GlobalStrings.lua del cliente).
+-- Fase 21: con un cliente esES manda el suyo, que no define TwentyFourHourTime (12 horas con «a.m.» / «p.m.»).
+VD_MINIMAP_TWENTYFOUR_HOUR_TIME = "1";
+TIME_TWENTYFOURHOURS = "%d:%02d";
+
+-- El cadáver del jugador (la flecha del minimapa al tocarla).
+CORPSE = "Cadáver";

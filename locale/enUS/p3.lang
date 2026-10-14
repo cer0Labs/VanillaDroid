@@ -1,0 +1,45 @@
+-- Phase 18 (p3): the interface's last details of 1.12 (app/TutorialScreens, the latency bar, the chat windows, the
+-- popups, the sortable columns). Everything the original shows uses its own keys (TUTORIAL_TITLE<n>, TUTORIAL<n>,
+-- ENABLE_TUTORIAL_TEXT, MAINMENUBAR_LATENCY_LABEL, DELETE_MAIL_CONFIRMATION...): only what this client says otherwise
+-- is here.
+
+-- Where a tutorial (TUTORIAL<n> of GlobalStrings.lua) teaches a mouse or keys, ours gives the same advice, in our own
+-- words, for this client's touch controls: the stick, taps (a second tap on the target is the right click), long
+-- presses (the mouse-over and the right-click menus), the context button, the action and jump buttons at the bottom
+-- right, and the menu bar.
+VD_TUTORIAL_TOUCH1 = "A yellow exclamation mark over someone's head means they have a quest for you. Walk up to them and tap them twice, or tap the context button at the bottom right, to talk.";
+VD_TUTORIAL_TOUCH2 = "To walk, put your left thumb down anywhere on the left half of the screen and slide it toward where you want to go.";
+VD_TUTORIAL_TOUCH3 = "Drag a finger across the world to turn the camera, and pinch to bring it closer or farther. While you move, your character turns to follow the camera.";
+VD_TUTORIAL_TOUCH4 = "Tap a creature or a character to make it your target. Tap the same target once more to interact with it.";
+VD_TUTORIAL_TOUCH5 = "To fight, tap your target a second time, or tap the context button at the bottom right, then get close enough to reach it. Your character attacks on its own once in range.";
+VD_TUTORIAL_TOUCH6 = "Spells and special abilities sit on the action buttons around the bottom right corner. Tap one to use it on your enemy.";
+VD_TUTORIAL_TOUCH7 = "Tap a slain creature twice to see what it carried. Tap the items in the loot window to put them in your backpack.";
+VD_TUTORIAL_TOUCH8 = "Something new is in your backpack. Tap the backpack button to open it, and hold your finger on an item to read about it.";
+VD_TUTORIAL_TOUCH9 = "Tap an item to use it. To keep a usable item at hand, hold it and drag it onto your action bar: then you will not need to open the backpack.";
+VD_TUTORIAL_TOUCH10 = "Bags go in the empty slots beside the backpack. Once there, tap a bag to open it.";
+VD_TUTORIAL_TOUCH11 = "Eating brings your health back faster. Tap the food on your action bar. It does not work while you are fighting.";
+VD_TUTORIAL_TOUCH12 = "Drinking brings your mana back faster. Tap the drink on your action bar. Using another ability or entering combat stops it.";
+VD_TUTORIAL_TOUCH13 = "You can now choose a talent. Tap the glowing talent button of the menu bar to open the talents page.";
+VD_TUTORIAL_TOUCH15 = "Open the abilities page with its button in the menu bar, hold an ability's icon and drag it onto your action bar to keep it there. A tap on the page uses the spell or ability right away.";
+VD_TUTORIAL_TOUCH17 = "To answer that player, tap their name in the chat and type your reply, or type /tell followed by their name and your message.";
+VD_TUTORIAL_TOUCH18 = "To invite a player into your group, hold your finger on their portrait and choose Invite from the menu that opens.";
+VD_TUTORIAL_TOUCH20 = "With the merchant window open, tap one of its items to buy it, if you can afford it. Tapping an item in your backpack sells it to the merchant.";
+VD_TUTORIAL_TOUCH21 = "To read about this quest again, open your quest log with the gold chalice of the menu bar.";
+VD_TUTORIAL_TOUCH22 = "Did you enjoy playing with someone? Keep in touch: tap the social button of the menu bar and put them on your friends list.";
+VD_TUTORIAL_TOUCH23 = "Tap the chat button and type to talk. Players close to you will see what you say.";
+VD_TUTORIAL_TOUCH24 = "Open your character window with its button in the menu bar, then hold an item in your backpack and drag it onto your character to wear it.";
+VD_TUTORIAL_TOUCH28 = "Swimming works like walking, but you also go up or down: just turn the camera toward where you want to swim.";
+VD_TUTORIAL_TOUCH33 = "Tap the jump button to jump. A jump gets you over small obstacles and is handy for climbing out of the water onto the shore.";
+VD_TUTORIAL_TOUCH35 = "This is a flight master: their trained flying beasts carry travellers between towns. For a small fee you can fly to any flight master you have spoken to before. Look for the flight master whenever you reach a new city, so you can come back quickly later.";
+VD_TUTORIAL_TOUCH40 = "You know a new spell or ability! Open your spellbook with the Spellbook & Abilities button of the menu bar, then hold an entry and drag it to place it on your Action Bar. The tabs along the right side of the book sort its pages by category.";
+VD_TUTORIAL_TOUCH42 = "Whenever something new comes up, a help button shows up near the bottom center of the screen. Tap it to learn how that part of the game works. The first tips cover the basics; later ones go deeper as your character grows.\n\nEnjoy the game, and good luck on your travels!";
+VD_TUTORIAL_TOUCH44 = "You now carry a ranged weapon. Equip it, open your spellbook, then hold Shoot or Throw and drag it onto your Action Bar to use it.";
+VD_TUTORIAL_TOUCH45 = "Bows and guns need ammunition. Gun and bow merchants in the cities sell it; tap it in your backpack to equip it.";
+VD_TUTORIAL_TOUCH47 = "You are in the queue of a meeting stone, waiting for a group. A bubble next to the minimap shows it: tap it to leave the queue.";
+VD_TUTORIAL_TOUCH48 = "You are queued for a battleground. Hold your finger on its icon by the minimap to see how the wait is going.";
+VD_TUTORIAL_TOUCH49 = "Your battleground is ready for you. Tap \"Enter Battle\" in the window, or hold your finger on the battleground icon by the minimap.";
+VD_TUTORIAL_TOUCH50 = "You received a keyring for your dungeon keys. It sits beside your bags and holds only the keys you keep for good.";
+
+-- The chat windows' menus (FCFOptionsDropDown: app/ChatConfigScreens). The background's opacity (OpacitySliderFrame,
+-- here its steps).
+VD_P3_CHAT_OPACITY = "Opacity: %d%%";

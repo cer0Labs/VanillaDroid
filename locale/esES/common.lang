@@ -1,0 +1,216 @@
+-- Traducción al castellano de los textos de la interfaz (locale = esES en client.cfg).
+--
+-- Un fichero por área, como en locale/enUS/. Mismo formato: CLAVE = "texto"; por línea. Puede traducir tanto
+-- nuestras claves (VD_*) como las del cliente (las de GlobalStrings.lua / GlueStrings.lua, que con un cliente enUS
+-- vienen en inglés). Lo que no esté traducido sale en inglés: así quedan, a propósito, los textos largos del cliente
+-- (historia, normas, tutoriales, descripciones), que con un cliente esES salen de su propio GlobalStrings.lua. Una
+-- clave que no existe en inglés es una errata: el baker avisa (las del cliente, el test de textos con VD_WOW_DIR). Si
+-- una traducción necesita cambiar el orden de los argumentos, usa posicionales: "%2$s ... %1$s". Se hornea en
+-- app.vdpk (`vd_baker bake --only app`, fase 22).
+
+-- ---------------------------------------------------------------------------------------------------------------
+-- Interfaz común (núcleo): acceso y personajes, misiones, botín, chat, menú, ajustes, muerte, el HUD y sus mensajes.
+-- Claves propias (VD_*) y del cliente; las del cliente que no se traducen aquí salen en inglés.
+-- ---------------------------------------------------------------------------------------------------------------
+
+-- Pantalla de acceso y lista de personajes.
+ACCOUNT_NAME = "Cuenta";
+PASSWORD = "Contraseña";
+VD_LOGIN_SERVER = "Servidor";
+VD_LOGIN_NO_SERVER = "Sin servidor";
+LOGIN = "Iniciar sesión";
+NEXT = "Siguiente";
+VD_LOGIN_OFFLINE = "Sin conexión";
+REALM_CHARACTERS = "Personajes";
+CHARACTER_SELECT_INFO = "Nivel %d · %s";
+CHARACTER_SELECT_INFO_GHOST = "Nivel %d · %s (fantasma)";
+ENTER_WORLD = "Entrar";
+DELETE = "Borrar";
+CREATE = "Crear";
+LOGOUT = "Desconectar";
+
+-- Estado de la conexión y errores de acceso.
+VD_LOGIN_RECONNECTING = "Conexión perdida: reconectando...";
+LOGIN_STATE_AUTHENTICATING = "Iniciando sesión...";
+AUTH_WAIT_QUEUE = "En cola para entrar en el reino: posición %d";
+GAME_SERVER_LOGIN = "Conectando con el reino...";
+CHAR_LOGIN_IN_PROGRESS = "Entrando en el mundo...";
+VD_LOGIN_BAD_PORT = "Puerto no válido.";
+LOGIN_ENTER_NAME = "Escribe el nombre de la cuenta.";
+LOGIN_ENTER_PASSWORD = "Escribe la contraseña.";
+VD_LOGIN_ENTER_SERVER = "Escribe la dirección del servidor.";
+VD_LOGIN_CANT_CONNECT = "No se puede conectar con %s:%d.";
+VD_LOGIN_WARDEN = "Este servidor exige Warden, el antitrampas del cliente de Windows, que VanillaDroid no puede ejecutar. El servidor tiene que desactivarlo (Warden.WinEnabled = 0) para jugar con este cliente.";
+LOGIN_FAILED = "No se puede conectar";
+LOGIN_UNKNOWN_ACCOUNT = "Los datos no son válidos: revisa el nombre de la cuenta y la contraseña.";
+LOGIN_BANNED = "Esta cuenta está cerrada y ya no se puede usar.";
+LOGIN_SUSPENDED = "Esta cuenta está suspendida temporalmente.";
+LOGIN_ALREADYONLINE = "Esta cuenta ya está conectada.";
+LOGIN_DBBUSY = "No se puede iniciar sesión ahora. Inténtalo más tarde.";
+LOGIN_BADVERSION = "No se puede validar la versión del juego.";
+LOGIN_BAD_SERVER_PROOF = "No se puede conectar: el servidor no es válido.";
+CHAR_LOGIN_NO_WORLD = "El servidor del mundo no está disponible";
+CHAR_LOGIN_FAILED = "No se pudo entrar en el mundo";
+DISCONNECTED = "Desconectado del servidor";
+AUTH_FAILED = "Error de autenticación";
+
+
+-- Conversaciones y misiones.
+GOODBYE = "Adiós";
+QUEST_OBJECTIVES = "Objetivos de la misión";
+ACCEPT = "Aceptar";
+DECLINE = "Rechazar";
+TURN_IN_ITEMS = "Objetos necesarios:";
+REQUIRED_MONEY = "Dinero necesario:";
+CONTINUE = "Continuar";
+CANCEL = "Cancelar";
+COMPLETE_QUEST = "Completar misión";
+QUEST_REWARDS = "Recompensas";
+REWARD_CHOOSE = "Elige tu recompensa:";
+REWARD_ITEMS_ONLY = "Recibirás:";
+REWARD_ITEMS = "También recibirás:";
+EXPERIENCE_COLON = "Experiencia:";
+QUEST_LOG = "Registro de misiones";
+QUEST_DESCRIPTION = "Descripción";
+QUEST_LOG_COUNT_TEMPLATE = "Misiones: |cffffffff%d/%d|r";
+QUEST_MONSTERS_KILLED = "%s asesinados: %d/%d";
+FAILED = "Fallida";
+COMPLETE = "Completa";
+ABANDON_QUEST = "Abandonar";
+CLOSE = "Cerrar";
+VD_QUEST_LOG_EMPTY = "No tienes misiones.";
+
+-- Botín y chat.
+LOOT = "Botín";
+VD_LOOT_NOTHING = "No hay nada que despojar.";
+CHAT_MSG_SAY = "Decir";
+SEND_LABEL = "Enviar";
+VD_CHAT_INPUT_HINT = "Escribe un mensaje...";
+
+-- Menú del juego y ajustes.
+MAIN_MENU = "Menú del juego";
+RETURN_TO_GAME = "Volver al juego";
+CHARACTER_BUTTON = "Personaje";
+VD_MENU_BAGS = "Bolsas";
+SPELLBOOK_BUTTON = "Hechizos";
+TALENTS_BUTTON = "Talentos";
+QUESTLOG_BUTTON = "Misiones";
+SKILLS = "Habilidades";
+REPUTATION = "Reputación";
+SOCIAL_BUTTON = "Social";
+WORLDMAP_BUTTON = "Mapa";
+OPTIONS = "Ajustes";
+VD_MENU_LOGOUT_CONFIRM = "¿Salir al menú de personajes?";
+UI_SCALE = "Escala de la interfaz";
+VD_SETTINGS_CAMERA_SPEED = "Velocidad de la cámara";
+FARCLIP = "Distancia de visión";
+VD_SETTINGS_YARDS = "%.0f yardas";
+VD_SETTINGS_INVERT_CAMERA = "Invertir la cámara";
+VD_SETTINGS_SHOW_FPS = "Mostrar FPS";
+VD_SETTINGS_QUALITY = "Calidad gráfica";
+LOW = "Baja";
+VD_QUALITY_MEDIUM = "Media";
+HIGH = "Alta";
+VD_QUALITY_ULTRA = "Ultra";
+VD_QUALITY_CUSTOM = "Personalizada";
+VD_SETTINGS_RENDER_SCALE = "Resolución del mundo";
+ENVIRONMENT_DETAIL = "Detalle del entorno";
+SPELL_DETAIL = "Detalle de los hechizos";
+VD_SETTINGS_DYNAMIC_QUALITY = "Ajustar la calidad a la temperatura";
+VD_SETTINGS_LIMIT_FPS = "Ahorro de batería (30 fps)";
+SHOW_UNIT_NAMES = "Mostrar nombres";
+
+-- Confirmaciones, muerte y resurrección.
+YES = "Sí";
+ABANDON_QUEST_CONFIRM = "¿Abandonar «%s»?";
+QUEST_ACCEPT = "%s comparte «%s». ¿Aceptarla?";
+RESURRECT_REQUEST = "%s quiere resucitarte. Quedarás debilitado un tiempo (mal de resurrección).";
+GENERIC_MIN = "%d minuto";
+GENERIC_MIN_P1 = "%d minutos";
+DEATH_RELEASE_NOTIMER = "Has muerto. ¿Liberar tu espíritu en el cementerio más cercano?";
+DEATH_RELEASE = "Liberar espíritu";
+RECOVER_CORPSE = "¿Resucitar ahora?";
+RECOVER_CORPSE_TIMER = "Espíritu: podrás resucitar en %d %s";
+SECONDS_ABBR = "s";
+VD_DEATH_CORPSE_DISTANCE = "Espíritu: tu cadáver está a %.0f m";
+
+-- Mensajes del juego (UIErrorsFrame).
+ERR_USE_TOO_FAR = "Estás demasiado lejos.";
+ERR_BADATTACKPOS = "¡Estás demasiado lejos!";
+ERR_BADATTACKFACING = "¡Tienes que estar de cara al objetivo!";
+ERR_CANTATTACK_NOTSTANDING = "¡Tienes que estar de pie para atacar!";
+ERR_LEARN_SPELL_S = "Has aprendido un hechizo nuevo: %s.";
+COMBATLOG_XPGAIN_FIRSTPERSON_UNNAMED = "Ganas %d puntos de experiencia.";
+LEVEL_UP = "¡Has alcanzado el nivel %d!";
+LOOT_ITEM_SELF = "Recibes botín: %s.";
+LOOT_ITEM_SELF_MULTIPLE = "Recibes botín: %sx%d.";
+LOOT_ITEM_PUSHED_SELF = "Recibes: %s.";
+LOOT_ITEM_PUSHED_SELF_MULTIPLE = "Recibes: %sx%d.";
+LOOT_ITEM_CREATED_SELF = "Creas: %s.";
+LOOT_ITEM_CREATED_SELF_MULTIPLE = "Creas: %sx%d.";
+YOU_LOOT_MONEY = "Recibes %s";
+ERR_LOOT_BAD_FACING = "Tienes que estar de cara al cadáver para despojarlo.";
+ERR_LOOT_LOCKED = "Alguien ya está despojando ese cadáver.";
+ERR_LOOT_NOTSTANDING = "¡Tienes que estar de pie para despojar algo!";
+ERR_LOOT_NO_UI = "No puedes despojar ahora.";
+ERR_QUEST_ACCEPTED_S = "Misión aceptada: %s";
+ERR_QUEST_OBJECTIVE_COMPLETE_S = "%s (Completa)";
+ERR_QUEST_COMPLETE_S = "Misión completada: %s";
+ERR_QUEST_FAILED_S = "Misión fallida: %s";
+ERR_QUEST_ADD_KILL_SII = "%s asesinados: %d/%d";
+ERR_QUEST_NEED_PREREQS = "No cumples los requisitos de esa misión.";
+ERR_QUEST_ONLY_ONE_TIMED = "Solo puedes tener una misión con tiempo a la vez.";
+ERR_QUEST_ALREADY_ON = "Ya tienes esa misión.";
+ERR_QUEST_FAILED_MISSING_ITEMS = "No llevas los objetos necesarios. Mira en el banco.";
+ERR_QUEST_FAILED_BAG_FULL_S = "%s fallida: el inventario está lleno.";
+ERR_QUEST_FAILED_MAX_COUNT_S = "%s fallida: objeto duplicado.";
+
+-- Errores de hechizos (SPELL_FAILED_* y falta de poder).
+SPELL_FAILED_OUT_OF_RANGE = "Fuera de alcance";
+SPELL_FAILED_NOT_READY = "Todavía no está listo";
+SPELL_FAILED_BAD_TARGETS = "Objetivo no válido";
+SPELL_FAILED_BAD_IMPLICIT_TARGETS = "No tienes objetivo";
+SPELL_FAILED_LINE_OF_SIGHT = "El objetivo no está a la vista";
+SPELL_FAILED_MOVING = "No puedes hacerlo mientras te mueves";
+SPELL_FAILED_NOT_INFRONT = "Tienes que estar de cara al objetivo";
+SPELL_FAILED_NOT_BEHIND = "Tienes que estar detrás del objetivo";
+SPELL_FAILED_TARGETS_DEAD = "Tu objetivo está muerto";
+SPELL_FAILED_INTERRUPTED = "Interrumpido";
+SPELL_FAILED_INTERRUPTED_COMBAT = "Interrumpido";
+SPELL_FAILED_SPELL_IN_PROGRESS = "Ya estás haciendo otra cosa";
+SPELL_FAILED_TOO_CLOSE = "Demasiado cerca";
+SPELL_FAILED_NOT_STANDING = "Tienes que estar de pie";
+SPELL_FAILED_CASTER_DEAD = "Estás muerto";
+SPELL_FAILED_TARGET_FRIENDLY = "El objetivo es amistoso";
+SPELL_FAILED_TARGET_ENEMY = "El objetivo es hostil";
+SPELL_FAILED_TARGET_NOT_DEAD = "El objetivo sigue vivo";
+SPELL_FAILED_ITEM_NOT_READY = "El objeto todavía no está listo";
+SPELL_FAILED_NOT_WHILE_GHOST = "No puedes hacerlo como espíritu";
+SPELL_FAILED_REAGENTS = "Falta un componente: %s";
+SPELL_FAILED_TOTEMS = "Requiere %s";
+SPELL_FAILED_REQUIRES_SPELL_FOCUS = "Requiere %s";
+SPELL_FAILED_REQUIRES_AREA = "Tienes que estar en %s";
+SPELL_FAILED_ONLY_SHAPESHIFT = "Tienes que estar en %s";
+SPELL_FAILED_EQUIPPED_ITEM = "Tienes que llevar equipado el objeto adecuado";
+SPELL_FAILED_NOT_HERE = "No puedes usar eso aquí";
+SPELL_FAILED_UNKNOWN = "Motivo desconocido";
+ERR_OUT_OF_RAGE = "No tienes suficiente ira";
+ERR_OUT_OF_FOCUS = "No tienes suficiente concentración";
+ERR_SPELL_FAILED_ALREADY_AT_FULL_HEALTH = "Ya tienes la salud al máximo.";
+ERR_SPELL_FAILED_ALREADY_AT_FULL_POWER_S = "Ya estás al máximo de %s.";
+
+-- Texto de combate flotante y HUD.
+MISS = "Fallo";
+PARRY = "Parada";
+BLOCK = "Bloqueo";
+EVADE = "Evadido";
+IMMUNE = "Inmune";
+RESIST = "Resistido";
+ABSORB = "Absorbido";
+DEAD = "Muerto";
+INTERRUPTED = "Interrumpido";
+
+-- Dinero ("1o 5p 30c").
+VD_MONEY_GOLD = "%do";
+VD_MONEY_SILVER = "%dp";
+VD_MONEY_COPPER = "%dc";

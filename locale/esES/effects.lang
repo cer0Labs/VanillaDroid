@@ -1,0 +1,6 @@
+-- ---------------------------------------------------------------------------------------------------------------
+-- Los efectos a pantalla completa del cliente (fase 11): opciones del original (OptionsFrame), claves del cliente.
+-- ---------------------------------------------------------------------------------------------------------------
+
+FULL_SCREEN_GLOW = "Efecto de resplandor a pantalla completa";
+DEATH_EFFECT = "Efecto de muerte";

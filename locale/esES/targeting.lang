@@ -1,0 +1,11 @@
+-- Traducción al castellano de los hechizos con objetivo (fase 13: app/SpellTargetingScreens, app/TargetingWindows): la
+-- barra mientras un hechizo espera su lugar o su objeto, y las preguntas del cliente antes de un encantamiento
+-- (BIND_ENCHANT, REPLACE_ENCHANT, de GlobalStrings.lua).
+
+VD_TARGETING_PLACE = "Toca el suelo para colocarlo y el círculo para lanzar";
+VD_TARGETING_ITEM = "Elige un objeto";
+VD_TARGETING_LOCKED = "Elige una caja o un objeto cerrado";
+VD_TARGETING_CAST = "Lanzar";
+
+-- Preguntas del cliente (StaticPopup: BIND_ENCHANT, REPLACE_ENCHANT y TRADE_REPLACE_ENCHANT).
+REPLACE_ENCHANT = "¿Quieres reemplazar \"%s\" por \"%s\"?";

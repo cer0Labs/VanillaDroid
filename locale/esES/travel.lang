@@ -1,0 +1,56 @@
+-- Viajes: texto de zona, exploración, maestros de vuelo, posaderos, mapa del mundo, mapa de vuelo y pantalla de
+-- carga. Claves propias (VD_TRAVEL_*) y del cliente. ACCEPT, CANCEL y WORLDMAP_BUTTON se traducen en common.lang.
+
+-- Texto de zona (PVPInfoTextString).
+FACTION_CONTROLLED_TERRITORY = "Territorio de la %s";
+FACTION_ALLIANCE = "Alianza";
+FACTION_HORDE = "Horda";
+CONTESTED_TERRITORY = "Territorio en disputa";
+FREE_FOR_ALL_TERRITORY = "Zona JcJ: todos contra todos";
+VD_TRAVEL_SANCTUARY = "Santuario";
+
+-- Exploración, rutas de vuelo, hogar.
+ERR_ZONE_EXPLORED = "Descubierto: %s";
+ERR_ZONE_EXPLORED_XP = "Descubierto: %s (+%d de experiencia)";
+VD_TRAVEL_NEW_AREA = "una zona nueva";
+ERR_NEWTAXIPATH = "¡Nueva ruta de vuelo descubierta!";
+ERR_DEATHBIND_SUCCESS_S = "Ahora tu hogar está en %s.";
+VD_TRAVEL_THIS_PLACE = "este lugar";
+CONFIRM_BINDER = "¿Quieres que %s sea tu nuevo hogar?";
+VD_TRAVEL_THIS_INN = "esta posada";
+
+-- Respuestas del maestro de vuelo (SMSG_ACTIVATETAXIREPLY).
+ERR_TAXINOSUCHPATH = "No hay ninguna ruta hasta ese destino";
+ERR_TAXITOOFARAWAY = "Estás demasiado lejos";
+ERR_TAXINOVENDORNEARBY = "No hay ningún maestro de vuelo cerca";
+ERR_TAXINOTVISITED = "Todavía no conoces ese destino";
+ERR_TAXIPLAYERBUSY = "Ahora estás demasiado ocupado para volar";
+ERR_TAXIPLAYERALREADYMOUNTED = "Ya vas montado: desmonta primero";
+ERR_TAXIPLAYERSHAPESHIFTED = "No puedes volar con otra forma";
+ERR_TAXIPLAYERMOVING = "No puedes volar mientras te mueves";
+ERR_TAXISAMENODE = "Ya estás en ese destino";
+ERR_TAXINOTSTANDING = "Tienes que estar de pie";
+ERR_TAXIUNSPECIFIEDSERVERERROR = "No se puede volar ahora";
+
+-- Teletransportes lejanos rechazados (SMSG_TRANSFER_ABORTED).
+TRANSFER_ABORT_MAX_PLAYERS = "No puedes entrar: la instancia está llena";
+TRANSFER_ABORT_NOT_FOUND = "No puedes entrar: la instancia no existe";
+TRANSFER_ABORT_TOO_MANY_INSTANCES = "Has entrado en demasiadas instancias hace poco";
+TRANSFER_ABORT_ZONE_IN_COMBAT = "No puedes entrar mientras hay un combate en curso";
+
+-- Mapa del mundo.
+CONTINENT = "Continente";
+VD_TRAVEL_MAP_POSITION = "Tu posición: %.0f, %.0f";
+VD_TRAVEL_MAP_NONE = "No hay mapa de este lugar";
+VD_TRAVEL_MAP_LOADING = "Cargando el mapa...";
+
+-- Mapa de vuelo.
+ERR_TAXINOPATHS = "Todavía no conoces otras rutas de vuelo.";
+VD_TRAVEL_TAXI_STOP = "1 parada";
+VD_TRAVEL_TAXI_STOPS = "%u paradas";
+VD_TRAVEL_FLY = "Volar";
+
+-- Pantalla de carga.
+VD_TRAVEL_LOADING_WORLD = "Cargando el mundo...";
+VD_TRAVEL_LOADING_TRANSFER = "Viajando...";
+VD_TRAVEL_LOADING_NO_PACK = "Este mapa no se puede mostrar: falta su pack de mundo o es de otra versión (actualiza los datos del juego con VanillaDroid Setup)";

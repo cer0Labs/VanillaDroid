@@ -1,0 +1,64 @@
+-- VanillaDroid's own interface texts, in English (the default language). One file per area of the interface
+-- (common, inventory, combat, social, travel...): every *.lang of this folder is read.
+--
+-- Same syntax as the client's Interface\FrameXML\GlobalStrings.lua: one KEY = "text"; per line, -- comments,
+-- escapes \n \" \\ and \ddd. Baked into app.vdpk ("ui/strings/<locale>") by `vd_baker bake --only app`, which
+-- travels inside the APK: a change here needs no re-bake of the player's packs (phase 22, ADR-0005).
+--
+-- Rules:
+--  * Code never writes a text the player reads: it asks core/Text for a key (text::get, text::format).
+--  * When the original client has the text, use its key from GlobalStrings.lua / GlueStrings.lua (ERR_INV_FULL,
+--    LOOT_ITEM_SELF, SPELLLOGSELFOTHER...): it is already there, worded as the original, in the client's language.
+--    Do not copy it here.
+--  * Only what this client alone has (touch controls, mobile settings...) goes here, with a VD_ key in English.
+--  * Formats use the client's specifiers: %s %d %u %c %.1f, and positional %1$s when a translation reorders them.
+--  * A key may also be redefined here to fix a client text; other languages translate in locale/<locale>/*.lang.
+
+
+-- ---------------------------------------------------------------------------------------------------------------
+-- Common (core) interface: login and character list, quests, loot, chat, game menu, settings, death, the HUD and
+-- its messages (app/Dialogs, DialogKit, GameScreens, Hud, GameSession, Game; ui/Widgets; net/NetClient).
+-- ---------------------------------------------------------------------------------------------------------------
+
+-- Login screen and character list (GlueStrings has the rest: ACCOUNT_NAME, PASSWORD, LOGIN_*, CHAR_LOGIN_*...).
+VD_LOGIN_SERVER = "Server"; -- the realm server's button (1.12's realmlist.wtf)
+VD_LOGIN_NO_SERVER = "No server set"; -- under it on a fresh install
+VD_LOGIN_OFFLINE = "Offline";
+VD_LOGIN_RECONNECTING = "Connection lost: reconnecting...";
+VD_LOGIN_BAD_PORT = "Invalid port.";
+VD_LOGIN_ENTER_SERVER = "Please enter the server's address.";
+VD_LOGIN_CANT_CONNECT = "Unable to connect to %s:%d."; -- host, port
+VD_LOGIN_WARDEN = "This server requires Warden, the Windows client's anti-cheat, which VanillaDroid cannot run. The server must disable it (Warden.WinEnabled = 0) to play with this client.";
+
+-- Quests and loot.
+VD_QUEST_LOG_EMPTY = "You have no quests.";
+VD_LOOT_NOTHING = "There is nothing to loot.";
+
+-- Chat window.
+VD_CHAT_INPUT_HINT = "Type a message...";
+
+-- Game menu and settings.
+VD_MENU_BAGS = "Bags";
+VD_MENU_LOGOUT_CONFIRM = "Return to the character list?";
+VD_SETTINGS_CAMERA_SPEED = "Camera Speed";
+VD_SETTINGS_YARDS = "%.0f yards";
+VD_SETTINGS_INVERT_CAMERA = "Invert Camera";
+VD_SETTINGS_SHOW_FPS = "Show FPS";
+-- Video options (phase 10): the presets (LOW and HIGH are the client's), the world's resolution under the full
+-- resolution UI, the dynamic quality (ADPF) and the 30 fps limit. ENVIRONMENT_DETAIL and SPELL_DETAIL are the client's.
+VD_SETTINGS_QUALITY = "Graphics Quality";
+VD_QUALITY_MEDIUM = "Medium";
+VD_QUALITY_ULTRA = "Ultra";
+VD_QUALITY_CUSTOM = "Custom";
+VD_SETTINGS_RENDER_SCALE = "World Resolution";
+VD_SETTINGS_DYNAMIC_QUALITY = "Adapt quality to temperature";
+VD_SETTINGS_LIMIT_FPS = "Battery saver (30 fps)";
+
+-- Death.
+VD_DEATH_CORPSE_DISTANCE = "Spirit: your corpse is %.0f yards away";
+
+-- HUD and money ("1g 5s 30c").
+VD_HUD_FPS = "%.0f fps";
+VD_MONEY_GOLD = "%dg";
+VD_MONEY_SILVER = "%ds";
+VD_MONEY_COPPER = "%dc";

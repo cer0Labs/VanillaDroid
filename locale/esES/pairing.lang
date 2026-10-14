@@ -1,0 +1,96 @@
+-- La pantalla de primera vez (fase 22, ROADMAP 22.4, ADR-0005 §5): lo que muestra un móvil sin los datos del juego,
+-- dibujado solo con app.vdpk. Traduce nuestras claves (VD_PAIR_*).
+
+-- Inicio
+VD_PAIR_INTRO = "Este móvil aún no tiene los datos del juego. VanillaDroid Setup los prepara en tu PC a partir de tu propio World of Warcraft 1.12.1, y el móvil los copia de allí (unos 4,5 GB).\n\nAbre VanillaDroid Setup en el PC y elige cómo traer los datos:";
+VD_PAIR_OPTION_QR = "Vincular con el PC";
+VD_PAIR_OPTION_QR_NOTE = "Escanea el código QR que muestra el PC";
+VD_PAIR_OPTION_ADDRESS = "Introducir dirección";
+VD_PAIR_OPTION_ADDRESS_NOTE = "La dirección del PC y un código de 6 cifras";
+VD_PAIR_OPTION_ADB = "Usar ADB";
+VD_PAIR_OPTION_ADB_NOTE = "Por cable o con depuración inalámbrica";
+VD_PAIR_OPTION_PHONE = "Preparar los datos en el móvil";
+VD_PAIR_OPTION_PHONE_NOTE = "Tu WoW está en este móvil: sin el PC, tarda un rato";
+VD_PAIR_OPTION_RESUME = "Seguir con la descarga";
+VD_PAIR_OPTION_FROM = "Desde el PC en %s";
+VD_PAIR_OPTION_DOWNLOAD = "Descargar del PC vinculado";
+VD_PAIR_OPTION_PLAY_NOW = "Jugar con lo que hay";
+VD_PAIR_OPTION_PLAY_NOW_NOTE = "Puede faltar parte de los datos";
+VD_PAIR_INTERRUPTED = "La última descarga no terminó: sigue donde se quedó.";
+
+-- Vincular con el PC (el código QR)
+VD_PAIR_QR_TITLE = "Vincular con el PC";
+VD_PAIR_QR_STEPS = "1. En tu PC, abre VanillaDroid Setup y elige «Conectar móvil» (en una consola: vdsetup serve).\n\n2. Escanea con la cámara de este móvil el código QR que muestra: se abre una página de tu PC.\n\n3. En esa página, toca «%s»: VanillaDroid vuelve a abrirse aquí y descarga los datos.\n\nEl móvil y el PC tienen que estar en la misma Wi-Fi.";
+VD_PAIR_QR_NO_CAMERA = "¿Sin cámara? Introduce la dirección";
+
+-- Introducir dirección
+VD_PAIR_ADDRESS_TITLE = "Introducir dirección";
+VD_PAIR_ADDRESS_LABEL = "Dirección del PC";
+VD_PAIR_ADDRESS_HINT = "192.168.1.20:47800";
+VD_PAIR_CODE_LABEL = "Código";
+VD_PAIR_CODE_HINT = "6 cifras";
+VD_PAIR_ADDRESS_HELP = "VanillaDroid Setup muestra las dos cosas junto a su código QR. El móvil y el PC tienen que estar en la misma Wi-Fi.";
+VD_PAIR_CONNECT = "Conectar";
+VD_PAIR_BACK = "Atrás";
+VD_PAIR_ERROR_ADDRESS = "Esa no es una dirección de tu red local: escríbela como la muestra el PC, por ejemplo 192.168.1.20:47800.";
+VD_PAIR_ERROR_CODE = "El código tiene 6 cifras.";
+
+-- Usar ADB
+VD_PAIR_ADB_TITLE = "Usar ADB";
+VD_PAIR_ADB_INTRO = "VanillaDroid Setup también puede enviar los datos por cable o con depuración inalámbrica, con adb. Estos son sus pasos, en el PC (la app ya está instalada: sáltate el paso 5). Cuando terminen, vuelve a abrir VanillaDroid.";
+
+-- Hablando con el PC
+VD_PAIR_CONTACTING = "Hablando con el PC en %s...";
+VD_PAIR_PREPARING = "El PC está preparando sus archivos para el móvil (%d%%). La primera vez tarda un minuto o dos.";
+VD_PAIR_CHECKING = "Comprobando los datos que ya tiene este móvil (%d%%)...";
+VD_PAIR_CANCEL = "Cancelar";
+
+-- Listo para descargar
+VD_PAIR_READY_TITLE = "Listo para descargar";
+VD_PAIR_LINKED = "Vinculado con el PC en %s.";
+VD_PAIR_TO_DOWNLOAD = "Por descargar: %s en %u archivos.";
+VD_PAIR_UP_TO_DATE = "Este móvil ya tiene todos los datos del juego de este PC.";
+VD_PAIR_WOW_OPTION = "Copiar también el WoW a este móvil (%s más): así el móvil puede actualizar sus datos sin el PC.";
+VD_PAIR_FREE_SPACE = "Libre en este móvil: %s.";
+VD_PAIR_NO_SPACE = "No hay espacio suficiente: la descarga necesita %s y este móvil tiene %s. Libera espacio y vuelve a intentarlo.";
+VD_PAIR_DOWNLOAD = "Descargar";
+VD_PAIR_FORGET = "Olvidar este PC";
+VD_PAIR_PLAY = "Jugar";
+
+-- Descargando
+VD_PAIR_DOWNLOADING_TITLE = "Descargando los datos del juego";
+VD_PAIR_FILE = "%s (%u de %u)";
+VD_PAIR_DONE_OF = "%s de %s";
+VD_PAIR_SPEED = "%s/s, %s";
+VD_PAIR_KEEP_OPEN = "Deja VanillaDroid abierto y el móvil cerca de la Wi-Fi; conviene enchufarlo. Si se corta la conexión, la descarga sigue donde se quedó.";
+VD_PAIR_RETRYING = "El PC no responde (%s): se vuelve a intentar dentro de %u s.";
+VD_PAIR_RETRYING_SHORT = "El PC no responde: se vuelve a intentar dentro de %u s.";
+VD_PAIR_PAUSE = "Pausar";
+VD_PAIR_PAUSED_TITLE = "Descarga en pausa";
+VD_PAIR_PAUSED = "Lo descargado se conserva: la descarga sigue desde ahí.";
+VD_PAIR_RESUME = "Seguir";
+VD_PAIR_DONE_TITLE = "Todo listo";
+VD_PAIR_DONE = "Los datos del juego ya están en este móvil. VanillaDroid arranca con ellos ahora.";
+
+-- Tamaños y tiempos
+VD_PAIR_SIZE_GB = "%u,%u GB";
+VD_PAIR_SIZE_MB = "%u MB";
+VD_PAIR_SIZE_KB = "%u KB";
+VD_PAIR_LEFT_HOURS = "quedan %u h %u min";
+VD_PAIR_LEFT_MINUTES = "quedan %u min";
+VD_PAIR_LEFT_SECONDS = "quedan %u s";
+
+-- Lo que ha fallado
+VD_PAIR_FAILED_TITLE = "Algo ha fallado";
+VD_PAIR_TRY_AGAIN = "Reintentar";
+VD_PAIR_PAIR_AGAIN = "Volver a vincular";
+VD_PAIR_ERROR_UNREACHABLE = "El PC no responde en %s. Comprueba que VanillaDroid Setup está mostrando su código QR y que el móvil y el PC están en la misma Wi-Fi.";
+VD_PAIR_ERROR_NOT_SETUP = "Algo ha respondido en %s, pero no es VanillaDroid Setup: revisa la dirección.";
+VD_PAIR_ERROR_WRONG_CODE = "El código no es correcto: escribe las 6 cifras que muestra ahora el PC.";
+VD_PAIR_ERROR_CODE_LOCKED = "Demasiados códigos incorrectos: el PC ya no acepta ese código. Vuelve a elegir «Conectar móvil» en el PC para tener otro, o escanea su código QR.";
+VD_PAIR_ERROR_UNAUTHORIZED = "El PC ya no reconoce este móvil (ha creado otra clave de vinculación): vuelve a vincularlo.";
+VD_PAIR_ERROR_NO_PACKS = "El PC aún no tiene datos del juego que enviar: prepáralos antes en VanillaDroid Setup (vdsetup bake).";
+VD_PAIR_ERROR_BAD_LIST = "El PC ha enviado una lista que esta versión de VanillaDroid no sabe leer: actualiza VanillaDroid Setup y la app a la misma versión.";
+VD_PAIR_ERROR_DAMAGED = "%s ha llegado dañado dos veces. Vuelve a intentarlo; si se repite, prepara de nuevo los datos en el PC.";
+VD_PAIR_ERROR_DISK = "No se pudieron guardar los datos en este móvil (%s). Comprueba su espacio libre y vuelve a intentarlo.";
+VD_PAIR_ERROR_LINK = "Este enlace no viene de VanillaDroid Setup en tu red local.";

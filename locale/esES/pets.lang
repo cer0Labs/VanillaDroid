@@ -1,0 +1,28 @@
+-- Castellano de las mascotas (fase 15): el libro de hechizos de la mascota, su barra, las mascotas del grupo, el
+-- establo, la pestaña Mascota de la ventana de personaje, el número de grupo en una banda y los números de daño sobre
+-- los retratos. Traduce nuestras claves (VD_PETS_*) y las del cliente que solo usa esta parte. Las que comparte con
+-- otras y ya traducen otros ficheros no se repiten (una clave dos veces en un idioma es un error del baker): COSTS_LABEL
+-- y TRAINING_POINTS (professions.lang), GROUP y UNIT_LEVEL_TEMPLATE (social.lang), MISS, RESIST, PARRY, BLOCK, EVADE,
+-- IMMUNE y ABSORB (common.lang), DODGE, ARMOR e INVTYPE_WEAPONMAINHAND (inventory.lang), SPELLBOOK y PET_DISMISS
+-- (combat.lang), ERR_NOT_ENOUGH_MONEY (exchange.lang).
+
+VD_PETS_PLACE_HINT = "Toca un hueco de la barra de la mascota para poner %s";
+
+-- La pestaña del personaje y el libro de hechizos (SpellBookFrame_SetTabType: PET_TYPE_<ficha de la clase>).
+PET = "Mascota";
+PET_TYPE_PET = "Mascota";
+PET_TYPE_DEMON = "Demonio";
+PET_DIET_TEMPLATE = "Dieta: %s";
+XP = "PX";
+
+-- El establo (PetStableFrame).
+STABLES = "Establos";
+CURRENT_PET = "Mascota actual:";
+STABLED_PETS = "Mascotas en el establo:";
+PURCHASE = "Comprar";
+EMPTY_STABLE_SLOT = "Hueco del establo vacío";
+
+-- Los números sobre los retratos (CombatFeedbackText) que no traduce common.lang.
+INTERRUPT = "Interrumpido";
+DEFLECT = "Desvío";
+REFLECT = "Reflejo";

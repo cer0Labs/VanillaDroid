@@ -1,0 +1,8 @@
+-- Minimap: the MinimapCluster (zone bar, zoom, blips, the ping, tracking, the letter, the day / night dial).
+-- Only what the original client lacks; the rest uses its keys (TIME_TWELVEHOURAM / PM, TIME_TWENTYFOURHOURS, HAVE_MAIL,
+-- CORPSE, FACTION_CONTROLLED_TERRITORY, CONTESTED_TERRITORY, FREE_FOR_ALL_TERRITORY...).
+
+-- The clock of the dial's tooltip, VD_MINIMAP_TWENTYFOUR_HOUR_TIME: "1" uses TIME_TWENTYFOURHOURS, "0"
+-- TIME_TWELVEHOURAM / PM. The client's GameTime.lua reads the global TwentyFourHourTime, which only the
+-- GlobalStrings.lua of 24-hour locales define: the baker sets it from each client (phase 21), a translation of ours
+-- may too.

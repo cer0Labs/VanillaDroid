@@ -1,0 +1,14 @@
+-- Unit frames, the unit tooltip and the experience bar (parity pass: app/UnitFrames, app/UnitScreens). Only what the
+-- original client lacks; the rest uses its keys (PLAYER_LEVEL, UNIT_TYPE_LEVEL_TEMPLATE, UNIT_SKINNABLE, PVP_ENABLED,
+-- EXHAUST_TOOLTIP1, LOOT_METHOD, PARTY_LEAVE...).
+
+-- A player's guild in the unit tooltip, as over the heads.
+VD_UNIT_GUILD = "<%s>";
+-- The button of a unit tooltip kept open on the target (the touch screen's Escape).
+VD_UNIT_CLEAR_TARGET = "Clear target";
+-- The player frame's menu (a long press): /afk and /dnd without typing.
+VD_UNIT_MENU_AFK = "Away (AFK)";
+VD_UNIT_MENU_DND = "Do not disturb (DND)";
+-- The rest states of the experience bar's tooltip (GetRestState's names, which the client keeps in its code).
+VD_REST_STATE_RESTED = "Rested";
+VD_REST_STATE_NORMAL = "Normal";

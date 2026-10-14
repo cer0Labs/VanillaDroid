@@ -1,0 +1,144 @@
+-- Fase 15 (opciones): UIOptionsFrame y SoundOptionsFrame, y los botones del menú del juego. Claves propias (VD_*) y del
+-- cliente.
+
+-- El menú del juego (GameMenuFrame) y las ventanas.
+VIDEOOPTIONS_MENU = "Opciones de vídeo";
+SOUNDOPTIONS_MENU = "Opciones de sonido";
+UIOPTIONS_MENU = "Opciones de interfaz";
+BASIC_LABEL = "Básicas";
+ADVANCED_OPTIONS = "Opciones avanzadas";
+DEFAULTS = "Predeterminado";
+
+-- Secciones.
+CONTROLS_LABEL = "Controles";
+DISPLAY = "Pantalla";
+CAMERA_LABEL = "Cámara";
+HELP_LABEL = "Ayuda";
+ACTIONBAR_LABEL = "Barras de acción";
+CHAT_LABEL = "Chat";
+RAID_AND_PARTY = "Banda y grupo";
+
+-- Controles.
+VD_OPTIONS_TIP_CAMERA_SPEED = "Ajusta lo rápido que gira la cámara al arrastrar un dedo por el mundo.";
+VD_OPTIONS_TIP_INVERT_CAMERA = "Invierte cómo arrastrar un dedo arriba y abajo cambia la inclinación de la cámara.";
+VD_OPTIONS_AUTO_LOOT = "Despojo automático";
+VD_OPTIONS_TIP_AUTO_LOOT = "Al marcarlo, abrir un cuerpo o un cofre recoge de una vez todo su dinero y sus objetos.";
+VD_OPTIONS_ALWAYS_COMPARE = "Comparar siempre los objetos";
+VD_OPTIONS_TIP_ALWAYS_COMPARE = "Al marcarlo, la descripción de un objeto muestra siempre a su lado el que llevas equipado en su lugar. Si no, toca Comparar en la descripción.";
+GAMEFIELD_DESELECT_TEXT = "Selección persistente";
+ASSIST_ATTACK = "Atacar al asistir";
+OPTION_TOOLTIP_ASSIST_ATTACK = "Ataca automáticamente al objetivo que obtienes con \"/asistir\".";
+CLEAR_AFK = "Quitar ausente automáticamente";
+OPTION_TOOLTIP_CLEAR_AFK = "Sale automáticamente del modo ausente\nal moverte o hablar.";
+BLOCK_TRADES = "Bloquear comercio";
+AUTO_SELF_CAST_TEXT = "Autolanzamiento";
+
+-- Pantalla.
+STATUS_BAR_TEXT = "Texto en las barras";
+SHOW_PLAYER_NAMES = "Nombres de jugadores";
+SHOW_GUILD_NAMES = "Nombres de hermandad";
+SHOW_PLAYER_TITLES = "Títulos de jugadores";
+SHOW_NPC_NAMES = "Nombres de PNJ";
+SHOW_OWN_NAME = "Mostrar mi nombre";
+VD_OPTIONS_TIP_NAMEPLATES = "Muestra las placas de nombre de las unidades hostiles y neutrales cercanas (la tecla V del original).";
+VD_OPTIONS_TIP_FRIENDNAMEPLATES = "Muestra las placas de nombre de las unidades amistosas cercanas (Mayús + V en el original).";
+SHOW_CLOAK = "Mostrar capa";
+SHOW_HELM = "Mostrar yelmo";
+SHOW_PARTY_BACKGROUND_TEXT = "Fondo del grupo";
+SHOW_BUFF_DURATION_TEXT = "Duración de los beneficios";
+OPTION_TOOLTIP_SHOW_BUFF_DURATION = "Muestra u oculta los contadores de duración de los beneficios.";
+HIDE_OUTDOOR_WORLD_STATE_TEXT = "Ocultar objetivos de zona";
+OPTION_TOOLTIP_HIDE_OUTDOOR_WORLD_STATE = "Al marcarlo se oculta la interfaz que sigue los objetivos de toda la zona.";
+OPTION_TOOLTIP_AUTO_QUEST_WATCH = "Las misiones se siguen automáticamente durante 5 minutos al cumplir un objetivo.";
+
+-- Cámara.
+CAMERA_FOLLOWING_STYLE = "Seguimiento de la cámara";
+CAMERA_SMART = "Inteligente";
+CAMERA_ALWAYS = "Siempre";
+CAMERA_NEVER = "Nunca";
+OPTION_TOOLTIP_CAMERA1 = "La cámara se queda donde la dejes, salvo cuando tu personaje se mueve.";
+OPTION_TOOLTIP_CAMERA2 = "La cámara prefiere estar siempre detrás de tu personaje.";
+OPTION_TOOLTIP_CAMERA3 = "La cámara se queda donde la dejes y nunca se ajusta sola.";
+FOLLOW_TERRAIN = "Seguir el terreno";
+HEAD_BOB = "Balanceo de cabeza";
+OPTION_TOOLTIP_HEAD_BOB = "Simula el balanceo de la cabeza en primera persona.";
+AUTO_FOLLOW_SPEED = "Velocidad de seguimiento";
+WATER_COLLISION = "Colisión con el agua";
+MAX_FOLLOW_DIST = "Distancia máxima de la cámara";
+OPTION_TOOLTIP_MAX_FOLLOW_DIST = "Ajusta la distancia máxima a la que la cámara te sigue.";
+
+-- Ayuda.
+SHOW_NEWBIE_TIPS_TEXT = "Mostrar descripciones detalladas";
+
+-- Barras de acción.
+OPTION_TOOLTIP_LOCK_ACTIONBAR = "Impide recoger o arrastrar hechizos de la barra de acción.";
+SHOW_MULTIBAR2_TEXT = "Mostrar barra de acción inferior derecha";
+SHOW_MULTIBAR3_TEXT = "Mostrar barra de acción derecha";
+SHOW_MULTIBAR4_TEXT = "Mostrar barra de acción derecha 2";
+ALWAYS_SHOW_MULTIBARS_TEXT = "Mostrar siempre las barras";
+
+-- Chat.
+GUILDMEMBER_ALERT = "Aviso de miembros de hermandad";
+OPTION_TOOLTIP_CHAT_BUBBLES = "Muestra lo dicho y gritado en bocadillos sobre la cabeza de los personajes.";
+SHOW_LOOT_SPAM = "Información de botín detallada";
+OPTION_TOOLTIP_SHOW_LOOT_SPAM = "Desmárcalo para ocultar cada tirada de botín y mostrar solo al ganador.";
+
+-- Banda y grupo.
+HIDE_PARTY_INTERFACE_TEXT = "Ocultar grupo en banda";
+SHOW_PARTY_PETS_TEXT = "Mostrar mascotas del grupo";
+SHOW_DISPELLABLE_DEBUFFS_TEXT = "Perjuicios disipables";
+OPTION_TOOLTIP_SHOW_DISPELLABLE_DEBUFFS = "Muestra solo los perjuicios que puedes disipar.";
+SHOW_CASTABLE_BUFFS_TEXT = "Beneficios propios";
+OPTION_TOOLTIP_SHOW_CASTABLE_BUFFS = "Muestra solo los beneficios que puedes lanzar.";
+SHOW_TARGET_OF_TARGET_TEXT = "Objetivo del objetivo";
+SOLO = "Solo";
+ALWAYS = "Siempre";
+OPTION_TOOLTIP_TARGETOFTARGET3 = "Muestra el objetivo del objetivo cuando vas solo.";
+
+-- Texto de combate flotante.
+OPTION_TOOLTIP_SHOW_COMBAT_TEXT = "Al marcarlo aparecen mensajes de combate adicionales en el campo de juego.";
+COMBAT_TEXT_FLOAT_MODE_LABEL = "Movimiento del texto";
+OPTION_TOOLTIP_COMBAT_TEXT_MODE = "Indica en qué dirección se desplaza el texto de combate.";
+COMBAT_TEXT_SCROLL_UP = "Hacia arriba";
+COMBAT_TEXT_SCROLL_DOWN = "Hacia abajo";
+COMBAT_TEXT_SCROLL_ARC = "En arco";
+COMBAT_TEXT_SHOW_LOW_HEALTH_MANA_TEXT = "Poca salud y maná";
+COMBAT_TEXT_SHOW_AURAS_TEXT = "Auras";
+COMBAT_TEXT_SHOW_AURA_FADE_TEXT = "Auras que desaparecen";
+OPTION_TOOLTIP_COMBAT_TEXT_SHOW_AURA_FADE = "Muestra un mensaje cuando un aura desaparece.";
+COMBAT_TEXT_SHOW_COMBAT_STATE_TEXT = "Estado de combate";
+COMBAT_TEXT_SHOW_DODGE_PARRY_MISS_TEXT = "Esquivas, paradas y fallos";
+OPTION_TOOLTIP_COMBAT_TEXT_SHOW_DODGE_PARRY_MISS = "Muestra los ataques contra ti que esquivas, paras o fallan.";
+COMBAT_TEXT_SHOW_RESISTANCES_TEXT = "Reducción de daño";
+COMBAT_TEXT_SHOW_REPUTATION_TEXT = "Reputación";
+COMBAT_TEXT_SHOW_REACTIVES_TEXT = "Hechizos y facultades reactivos";
+COMBAT_TEXT_SHOW_FRIENDLY_NAMES_TEXT = "Nombres de sanadores aliados";
+OPTION_TOOLTIP_COMBAT_TEXT_SHOW_FRIENDLY_NAMES = "Muestra el nombre del aliado que te lanza una sanación.";
+COMBAT_TEXT_SHOW_COMBO_POINTS_TEXT = "Puntos de combo";
+OPTION_TOOLTIP_COMBAT_TEXT_SHOW_COMBO_POINTS = "Muestra cuántos puntos de combo tienes cada vez que consigues uno.";
+COMBAT_TEXT_SHOW_MANA_TEXT = "Ganancias de energía";
+COMBAT_TEXT_SHOW_HONOR_GAINED_TEXT = "Honor obtenido";
+SHOW_DAMAGE_TEXT = "Daño en el objetivo";
+OPTION_TOOLTIP_SHOW_DAMAGE = "Muestra números de daño sobre las criaturas hostiles al dañarlas.";
+LOG_PERIODIC_EFFECTS = "Daño periódico";
+SHOW_PET_MELEE_DAMAGE = "Daño de la mascota";
+OPTION_TOOLTIP_SHOW_PET_MELEE_DAMAGE = "Muestra el daño causado por tu mascota.";
+
+-- Sonido.
+ENABLE_ALL_SOUND = "Activar todo el sonido";
+ENABLE_AMBIENCE = "Activar ambiente";
+OPTION_TOOLTIP_ENABLE_AMBIENCE = "Activa los sonidos de ambiente.";
+ENABLE_ERROR_SPEECH = "Activar voces de error";
+OPTION_TOOLTIP_ENABLE_ERROR_SPEECH = "Activa las voces de los errores (p. ej. \"El objetivo está demasiado lejos\").";
+ENABLE_MUSIC = "Activar música";
+OPTION_TOOLTIP_ENABLE_MUSIC = "Activa la música de fondo.";
+ENABLE_SOUND_AT_CHARACTER = "Sonido desde el personaje";
+ENABLE_EMOTE_SOUNDS = "Activar sonidos de emoción";
+OPTION_TOOLTIP_ENABLE_EMOTE_SOUNDS = "Activa o desactiva los sonidos de las emociones.";
+ENABLE_MUSIC_LOOPING = "Música continua";
+OPTION_TOOLTIP_ENABLE_MUSIC_LOOPING = "Actívalo para que la música de fondo suene sin pausas.";
+OPTION_TOOLTIP_MASTER_VOLUME = "Ajusta el volumen general.";
+OPTION_TOOLTIP_AMBIENCE_VOLUME = "Ajusta el volumen del sonido ambiente.";
+
+-- Comercio bloqueado (BLOCK_TRADES).
+ERR_TRADE_BLOCKED_S = "%s ha pedido comerciar. Lo has rechazado.";

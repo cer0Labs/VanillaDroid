@@ -1,0 +1,5 @@
+-- Inside the battlegrounds (phase 17, scores): WorldStateAlwaysUpFrame and the capture bars (their texts are
+-- WorldStateUI.dbc's), WorldStateScoreFrame, Blizzard_BattlefieldMinimap and the players joining and leaving. Everything
+-- they show is a key of the original client (GlobalStrings.lua: SCORE_KILLING_BLOWS, KILLING_BLOW_TOOLTIP, STAT_TEMPLATE,
+-- VICTORY_TEXT0, TIME_TO_PORT, RETURN_TO_WORLD, PLAYER_COUNT_ALLIANCE, BATTLEFIELD_MINIMAP, ERR_BG_PLAYER_JOINED_SS...):
+-- nothing of our own is needed here yet.

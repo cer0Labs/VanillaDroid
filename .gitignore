@@ -1,0 +1,57 @@
+# Build output
+/build/
+/out/
+.cxx/
+.gradle/
+apps/android/app/build/
+apps/android/build/
+apps/android/local.properties
+*.apk
+!/tests/data/updates/*.apk
+*.aab
+
+# IDEs
+.vs/
+.vscode/
+.idea/
+*.user
+*.iml
+
+# Blizzard data and anything derived from it: NEVER commit
+*.MPQ
+*.mpq
+*.blp
+*.BLP
+*.m2
+*.M2
+*.wmo
+*.WMO
+*.adt
+*.wdt
+*.wdl
+*.dbc
+*.vdpk
+/packs/
+/data/
+
+# Local configuration (may contain account names/addresses)
+/config/*.cfg
+!/config/*.example.cfg
+
+# Profiling captures
+*.tracy
+*.perfetto-trace
+*.gfxtrace
+
+# Third-party APKs tested locally
+/outputs/
+
+# Local developer tools (Tracy profiler GUI, etc.)
+/.tools/
+
+# Signing keys: NEVER commit (the release key lives outside every repository)
+*.jks
+*.keystore
+*.p12
+*.pem
+!/tests/data/release-test-key.pem

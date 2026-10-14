@@ -1,0 +1,17 @@
+-- Castellano de la pestaña de banda (fase 16): RaidFrame y RaidGroupFrame (Blizzard_RaidUI) en la ventana social, la
+-- ventana ADD_RAIDMEMBER y los avisos de la banda. Todas son claves del cliente (GlobalStrings.lua): esta parte no
+-- tiene claves propias. GROUP, EMPTY, UNKNOWN, RAID, CONVERT_TO_RAID, ACCEPT, CANCEL y ERR_RAID_MEMBER_ADDED_S /
+-- _REMOVED_S ya se traducen en otros ficheros (social.lang, combat.lang, common.lang).
+
+-- La pestaña fuera de una banda (RaidFrameRaidDescription) y sus botones.
+RAID_INFO = "Info. de banda";
+ADD_RAID_MEMBER = "Añadir miembro";
+READY_CHECK = "¿Todos listos?";
+
+-- Los botones de los miembros: líder y ayudante.
+RAID_LEADER_TOKEN = "(L)";
+RAID_ASSISTANT_TOKEN = "(A)";
+
+-- Lo que dice el chat cuando empieza y acaba la banda del jugador.
+ERR_RAID_YOU_JOINED = "Te has unido a una banda.";
+ERR_RAID_YOU_LEFT = "Has abandonado la banda.";

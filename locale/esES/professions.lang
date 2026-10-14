@@ -1,0 +1,49 @@
+-- Profesiones (fase 13): las ventanas de oficios (TradeSkillFrame) y de artesanía (CraftFrame: Encantamiento,
+-- Adiestramiento de bestias), en castellano. Esta área no tiene claves propias: traduce las del cliente que usan
+-- estas ventanas. Las recetas, los componentes, las cabeceras (subclases de objeto) y los focos (yunque, forja,
+-- fuego de cocina) vienen de los DBC del cliente y de las plantillas de objeto del servidor, en su idioma.
+--
+-- No se traducen aquí, a propósito, las claves que ya traducen otros ficheros (una clave dos veces en un idioma con
+-- textos distintos es un error del baker): CREATE (common.lang), REQUIRES_LABEL, TRAIN, TRADE_SKILLS (combat.lang),
+-- ALL (exchange.lang), USE, BAGSLOT (inventory.lang).
+
+TRADE_SKILL_TITLE = "%s";
+CREATE_ALL = "Crear todo";
+EXIT = "Salir";
+SPELL_REAGENTS = "Componentes: ";
+COOLDOWN_REMAINING = "Tiempo de reutilización restante:";
+ALL_SUBCLASSES = "Todas las subclases";
+ALL_INVENTORY_SLOTS = "Todas las ranuras";
+PARENS_TEMPLATE = "(%s)";
+
+-- Los filtros por ranura (TradeSkillInvSlotDropDown).
+HEADSLOT = "Cabeza";
+NECKSLOT = "Cuello";
+SHOULDERSLOT = "Hombros";
+SHIRTSLOT = "Camisa";
+CHESTSLOT = "Pecho";
+WAISTSLOT = "Cintura";
+LEGSSLOT = "Piernas";
+FEETSLOT = "Pies";
+WRISTSLOT = "Muñecas";
+HANDSSLOT = "Manos";
+FINGER0SLOT = "Dedo";
+FINGER1SLOT = "Dedo";
+TRINKET0SLOT = "Abalorio";
+TRINKET1SLOT = "Abalorio";
+BACKSLOT = "Espalda";
+MAINHANDSLOT = "Mano principal";
+SECONDARYHANDSLOT = "Mano secundaria";
+RANGEDSLOT = "A distancia";
+TABARDSLOT = "Tabardo";
+NONEQUIPSLOT = "No equipable.";
+
+-- CraftFrame.
+ENSCRIBE = "Encantar";
+DISGUISE = "Disfraz";
+TRAINING_POINTS = "Puntos de adiestramiento:";
+TRAINING_POINTS_LABEL = "puntos de adiestramiento";
+COSTS_LABEL = "Coste:";
+TRAINER_PET_LEVEL = "Nivel de mascota |cffffffff%d|r";
+TRAINER_PET_LEVEL_RED = "Nivel de mascota |cffff2020%d|r";
+TRAINER_LIST_TP = "%d PA";

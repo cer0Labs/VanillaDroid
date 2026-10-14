@@ -1,0 +1,115 @@
+-- Touch controls (phase 20, docs/MOBILE_CONTROLS.md): the touch cluster of action buttons, its templates, its edit
+-- mode and the drawer (app/HudTouchBar, app/TouchBarScreens, app/TouchEditScreens). English, VanillaDroid's own texts
+-- only. Syntax and rules: see common.lang.
+
+VD_TOUCH_NEW = "New"; -- over a button the client put there by itself (a spell just learned), until it is used
+VD_TOUCH_TEMPLATE_MAIN = "Main"; -- the name of a character's first template when it has no class preset
+VD_TOUCH_OPTION_CONTROLS = "Touch Action Buttons"; -- the interface options: the touch cluster instead of the bars
+VD_TOUCH_OPTION_CONTROLS_TOOLTIP = "Round action buttons around the right thumb, with templates and a layer for each stance or form. Off: the original action bars.";
+VD_TOUCH_OPTION_LEFT_HANDED = "Left-Handed Layout"; -- the touch cluster on the left, the movement stick on the right
+VD_TOUCH_OPTION_LEFT_HANDED_TOOLTIP = "The action buttons on the left side of the screen and the movement stick on the right.";
+-- phase 20 (smart) texts here
+VD_TOUCH_SMART_AUTOMATIC = "Automatic"; -- a consumable's or the mount button's list (held): the button chooses by itself
+VD_TOUCH_SMART_TARGET_ENEMY = "Nearest"; -- the Target button's fan (held): the nearest enemy
+VD_TOUCH_SMART_TARGET_ASSIST = "Assist"; -- the Target button's fan: the target's target
+-- phase 20 (edit) texts here
+-- The template list (§5.3), the edit mode (§9), the picker, the drawer (§6.9): app/TouchEditScreens, TouchEditWindows.
+VD_TOUCH_EDIT_TEMPLATES = "Templates"; -- the list of the touch layout's templates
+VD_TOUCH_EDIT_EDIT = "Edit Buttons..."; -- opens the edit mode on the template in use
+VD_TOUCH_EDIT_NEW = "New..."; -- a copy of the template in use, its name typed next
+VD_TOUCH_EDIT_RENAME = "Rename";
+VD_TOUCH_EDIT_DUPLICATE = "Duplicate";
+VD_TOUCH_EDIT_RESTORE = "Restore Class Preset"; -- the template's buttons as the class's preset fills them
+VD_TOUCH_EDIT_COPY_LAYOUT = "Copy Places to All"; -- the button places of this template to the others
+VD_TOUCH_EDIT_DELETE_ASK = "Delete the template \"%s\"?";
+VD_TOUCH_EDIT_RESTORE_ASK = "Put the class preset's actions back into \"%s\"? Its button places stay as they are.";
+VD_TOUCH_EDIT_COPY_ASK = "Copy the button places of this template (both screen shapes) to all your other templates?";
+VD_TOUCH_EDIT_PROFILE_SQUARE = "Square screen"; -- the screen shape being edited (the Fold's inner screen, tablets)
+VD_TOUCH_EDIT_PROFILE_WIDE = "Wide screen"; -- the cover screen and 20:9 phones
+VD_TOUCH_EDIT_ACTIONS = "Actions"; -- the edit mode that puts actions in the buttons
+VD_TOUCH_EDIT_LAYOUT = "Places"; -- the edit mode that moves and resizes the buttons
+VD_TOUCH_EDIT_PICK_PLACE = "Tap a button to select it";
+VD_TOUCH_EDIT_SIZE = "Size: %d%%";
+VD_TOUCH_EDIT_SCALE = "All the buttons: %d%%";
+VD_TOUCH_EDIT_TOO_SMALL = "Smaller than 7 mm: hard to hit with a finger.";
+VD_TOUCH_EDIT_USE_LAYER = "Use this layer"; -- off: the base's buttons show in that stance or form
+VD_TOUCH_EDIT_DONE = "Done";
+VD_TOUCH_EDIT_HINT_LAYOUT = "Drag a button to move it; pinch it or use the slider to resize it. Drag the big button to move them all.";
+VD_TOUCH_EDIT_HINT_ACTIONS = "Tap a button to choose what it does in this layer; drag it onto another to swap them; hold it for its tooltip. Faded buttons show the base's.";
+VD_TOUCH_EDIT_LAYER_BASE = "Base"; -- the layer shown out of any stance or form
+VD_TOUCH_EDIT_LAYER_MELEE = "Melee Range"; -- the hunter's layer near the target
+VD_TOUCH_EDIT_PLACE_MAIN = "Main Button";
+VD_TOUCH_EDIT_PLACE_RING = "Ring Button %d";
+VD_TOUCH_EDIT_PLACE_COLUMN = "Column Button %d";
+VD_TOUCH_EDIT_PLACE_CONSUMABLE = "Consumable %d";
+VD_TOUCH_EDIT_PLACE_JUMP = "Jump";
+VD_TOUCH_EDIT_PLACE_MOUNT = "Mount or Travel Form";
+VD_TOUCH_EDIT_PLACE_REACTIVE = "Reactive Ability"; -- Overpower, Revenge, Riposte... when they become usable
+VD_TOUCH_EDIT_PLACE_INTERACT = "Interaction"; -- attack, talk, loot, use
+VD_TOUCH_EDIT_PLACE_TARGET = "Next Enemy";
+VD_TOUCH_EDIT_PLACE_CLASSBAR = "Stances and Forms";
+VD_TOUCH_EDIT_PICKER_TITLE = "%s: %s"; -- the button, the layer
+VD_TOUCH_EDIT_SPECIAL = "Other"; -- the picker's tab of the client's own buttons and automatic consumables
+VD_TOUCH_EDIT_INHERIT = "Same as Base";
+VD_TOUCH_EDIT_HIDDEN = "Nothing";
+VD_TOUCH_EDIT_FIXED_RANK = "Fixed Rank"; -- cast that rank, not the highest known
+VD_TOUCH_EDIT_HIGHEST_RANK = "Always the highest rank";
+VD_TOUCH_EDIT_NEW_GROUP = "New Group";
+VD_TOUCH_EDIT_SAVE_GROUP = "Save Group";
+VD_TOUCH_EDIT_GROUP_HINT = "Tap up to 8 actions to add them; tap one here to take it out.";
+VD_TOUCH_EDIT_NOTHING = "Nothing to choose here.";
+VD_TOUCH_EDIT_NO_PET = "You have no pet.";
+VD_TOUCH_EDIT_PET_SLOT = "Pet Bar %d";
+VD_TOUCH_EDIT_CONSUMABLE_HEALTH = "Health (the best one carried)";
+VD_TOUCH_EDIT_CONSUMABLE_MANA = "Mana (the best one carried)";
+VD_TOUCH_EDIT_CONSUMABLE_RAGE = "Rage (the best one carried)";
+VD_TOUCH_EDIT_CONSUMABLE_ENERGY = "Energy (the best one carried)";
+VD_TOUCH_EDIT_CONSUMABLE_BANDAGE = "Bandage (the best one usable)";
+VD_TOUCH_EDIT_CONSUMABLE_FOOD = "Food (the best one carried)";
+VD_TOUCH_EDIT_CONSUMABLE_DRINK = "Drink (the best one carried)";
+VD_TOUCH_EDIT_KEEP_OPEN = "Keep open"; -- the drawer stays open after a button is used
+-- phase 20 (classes) texts here
+VD_TOUCH_CLASSES_SOLO = "Solo"; -- the name of a class's template for playing alone (rogue, hunter, mage, warlock, druid)
+VD_TOUCH_CLASSES_ARMS_FURY = "Arms/Fury"; -- the warrior's damage template (its two damage talent trees)
+VD_TOUCH_CLASSES_TANK = "Tank"; -- the warrior's template for holding enemies (Defensive Stance)
+VD_TOUCH_CLASSES_HEAL = "Heal"; -- a healer's template (priest, paladin, shaman, druid)
+VD_TOUCH_CLASSES_DAMAGE = "Damage"; -- the priest's damage template (Smite, Shadow)
+VD_TOUCH_CLASSES_RETRIBUTION = "Retribution"; -- the paladin's solo template (its damage talent tree)
+VD_TOUCH_CLASSES_PROTECT = "Protect"; -- the paladin's template for holding enemies
+VD_TOUCH_CLASSES_ELEMENTAL = "Elemental"; -- the shaman's solo template (its spell damage talent tree)
+VD_TOUCH_CLASSES_ENHANCEMENT = "Enhancement"; -- the shaman's melee template (its talent tree)
+-- phase 20 (assists) texts here
+-- The assists of the touch cluster (§4, §8): app/TouchAssists, the interface options' touch section.
+VD_TOUCH_ASSIST_AUTO_TARGET = "Automatic Target"; -- an option: a hostile spell without a target targets an enemy first
+VD_TOUCH_ASSIST_AUTO_TARGET_TOOLTIP = "A hostile spell used without a hostile target first targets the enemy the Target button would choose.";
+VD_TOUCH_ASSIST_START_ATTACK = "Start Attacking"; -- an option: some abilities start the auto attack
+VD_TOUCH_ASSIST_START_ATTACK_TOOLTIP = "Heroic Strike, Raptor Strike and the seals start your auto attack when you are not attacking yet.";
+VD_TOUCH_ASSIST_REPEAT = "Repeat While Held"; -- an option: a held button is used again whenever it can be
+VD_TOUCH_ASSIST_REPEAT_TOOLTIP = "Holding a hostile ability's button uses it again as soon as it is ready. Off: holding shows its tooltip.";
+VD_TOUCH_ASSIST_STANCES = "Stance Assist"; -- an option (warriors): an ability of another stance changes stance first
+VD_TOUCH_ASSIST_STANCES_TOOLTIP = "Warriors: an ability of another stance switches to that stance first and is used once you are in it.";
+VD_TOUCH_ASSIST_FORMS = "Leave Form for Spells"; -- an option (druids): a caster spell in an animal form leaves the form
+VD_TOUCH_ASSIST_FORMS_TOOLTIP = "Druids: a spell that cannot be cast in your animal form takes you out of it first.";
+VD_TOUCH_ASSIST_DRAG_FRAME = "Drag Spells onto Frames"; -- an option: a helpful spell dragged onto a unit frame
+VD_TOUCH_ASSIST_DRAG_FRAME_TOOLTIP = "Drag a helpful spell's button onto a party, raid, pet or player frame to cast it on that unit without changing your target.";
+VD_TOUCH_ASSIST_AIM_GROUND = "Aim by Dragging"; -- an option: a ground spell dragged out of its button aims
+VD_TOUCH_ASSIST_AIM_GROUND_TOOLTIP = "Drag a ground spell (Blizzard, Flamestrike, Rain of Fire...) out of its button to aim it around you; lift to cast, back on the button to cancel.";
+VD_TOUCH_ASSIST_QUEUE = "Spell Queue"; -- an option: a press just before the global cooldown ends waits for it
+VD_TOUCH_ASSIST_QUEUE_TOOLTIP = "A button pressed in the last moment of the global cooldown or of a cast is used as soon as it ends.";
+VD_TOUCH_ASSIST_HAPTICS = "Vibration"; -- an option: the phone vibrates (casts, reactive abilities, refusals)
+VD_TOUCH_ASSIST_HAPTICS_TOOLTIP = "A short vibration when you cast, a double one when a reactive ability becomes usable and a long one when a spell is refused.";
+VD_TOUCH_ASSIST_SITE_TEMPLATES = "Templates by Place"; -- an option: entering a dungeon, raid... switches template
+VD_TOUCH_ASSIST_SITE_TEMPLATES_TOOLTIP = "Entering the world, a dungeon, a raid or a battleground switches to the template set for that place in its edit mode.";
+VD_TOUCH_ASSIST_STANCE_RAGE = "Changing stance: the rage above what Tactical Mastery keeps is lost."; -- the first stance change made by the stance assist
+VD_TOUCH_ASSIST_SITE = "Use in: %s"; -- the edit mode: the place a template is switched to (a button that goes round them)
+VD_TOUCH_ASSIST_SITE_NONE = "Anywhere (by hand)"; -- the template is never switched to by itself
+VD_TOUCH_ASSIST_SITE_WORLD = "The world";
+VD_TOUCH_ASSIST_SITE_DUNGEON = "Dungeons";
+VD_TOUCH_ASSIST_SITE_RAID = "Raids";
+VD_TOUCH_ASSIST_SITE_BATTLEGROUND = "Battlegrounds";
+VD_TOUCH_ASSIST_HEALER_FRAMES = "Party frames beside the buttons"; -- the edit mode: a healer's template
+-- phase 20 (pets) texts here
+-- The pet button (§6.8: its panel, Feed Pet's list) and the option of the 1.12 pet bar: app/TouchPetScreens.
+VD_TOUCH_PETS_OPTION_PET_BAR = "Show Pet Bar"; -- the interface options: the original pet bar beside the touch action buttons
+VD_TOUCH_PETS_OPTION_PET_BAR_TOOLTIP = "The original pet action bar beside the touch action buttons. Without it, the pet button gives the pet's orders (hold it).";
+VD_TOUCH_PETS_NO_FOOD = "No food in your bags."; -- Feed Pet's list, empty

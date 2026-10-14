@@ -1,0 +1,29 @@
+{
+  "format": 1,
+  "version": "0.2.0",
+  "versionCode": 2000,
+  "date": "2026-10-20",
+  "notes": "https://github.com/cer0Labs/VanillaDroid/releases/tag/v0.2.0",
+  "apk": {
+    "url": "https://github.com/cer0Labs/VanillaDroid/releases/download/v0.2.0/VanillaDroid-0.2.0.apk",
+    "size": 300000,
+    "sha256": "e4b57a66b275e0c48a154bac263ec49265508bb4eeb0ac2671e9b1dd94f268be"
+  },
+  "setup": {
+    "windows": {
+      "url": "https://github.com/cer0Labs/VanillaDroid/releases/download/v0.2.0/VanillaDroidSetup-0.2.0-windows.zip",
+      "size": 200000,
+      "sha256": "e03d8025c1b3c69756efb81e6dcd16f643c5d35838714831cd90c21aeb7e689d"
+    },
+    "macos": {
+      "url": "https://github.com/cer0Labs/VanillaDroid/releases/download/v0.2.0/VanillaDroidSetup-0.2.0-macos.zip",
+      "size": 250000,
+      "sha256": "edad3e82db744ec696ae4383c3f4390c3caa9c5a94f002681bcf4228675edb93"
+    }
+  },
+  "packs": {
+    "actors.vdpk": "5d1e0f2a9c3b4e7f",
+    "db.esES.vdpk": "0a1b2c3d4e5f6789",
+    "world_azeroth.vdpk": "89abcdef01234567"
+  }
+}

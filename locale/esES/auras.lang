@@ -1,0 +1,11 @@
+-- Auras: los botones de beneficios y perjuicios (BuffFrame, TargetFrame, el grupo, la mascota) y su tooltip. Solo
+-- claves del cliente (GlobalStrings.lua): el tiempo que le queda a un aura del jugador.
+
+SPELL_TIME_REMAINING_DAYS = "Queda %d día";
+SPELL_TIME_REMAINING_DAYS_P1 = "Quedan %d días";
+SPELL_TIME_REMAINING_HOURS = "Queda %d hora";
+SPELL_TIME_REMAINING_HOURS_P1 = "Quedan %d horas";
+SPELL_TIME_REMAINING_MIN = "Queda %d minuto";
+SPELL_TIME_REMAINING_MIN_P1 = "Quedan %d minutos";
+SPELL_TIME_REMAINING_SEC = "Queda %d segundo";
+SPELL_TIME_REMAINING_SEC_P1 = "Quedan %d segundos";

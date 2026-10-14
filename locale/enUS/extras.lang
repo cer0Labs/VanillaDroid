@@ -1,0 +1,6 @@
+-- Phase 18 (extras): the small 1.12 behaviours of this branch. The other languages' lines use the client's own keys
+-- (CHAT_SAY_GET...) and Languages.dbc's names; only what this client says otherwise is here.
+
+-- The chat's "Say:" picker lists the languages the player speaks, as ChatMenu's Language submenu does (a touch
+-- adaptation: one list instead of a submenu).
+VD_EXTRAS_LANGUAGE_CHOICE = "Language: %s";

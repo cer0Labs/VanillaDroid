@@ -1,0 +1,154 @@
+-- Ventana de personaje (fase 15): el muñeco (PaperDollFrame), las pestañas de reputación, habilidades y honor, la
+-- ventana de inspección y la barra de la facción vigilada. Traduce nuestras claves (VD_CHAR_*) y las del cliente que
+-- usa esta área y no traducen ya otros ficheros (una clave dos veces en un idioma es un error del baker): no están aquí
+-- SPELL_STAT0..4_NAME, ARMOR, MELEE_ATTACK, RANGED_ATTACK, INVTYPE_*, PLAYER_LEVEL, CHARACTER, FACTION_STANDING_LABEL1..8,
+-- AT_WAR, FACTION_OTHER, ALL, NONE, CANCEL, REPUTATION, SKILLS (common.lang, inventory.lang, combat.lang...).
+
+-- Nuestras claves --------------------------------------------------------------------------------------------
+
+VD_CHAR_STAT_LABEL = "%s:";
+VD_CHAR_RANK_NUMBER = "(%s %d)";
+
+-- Muñeco (PaperDollFrame.lua) ------------------------------------------------------------------------------------
+
+ARMOR_COLON = "Armadura:";
+ATTACK_TOOLTIP = "Índice de ataque";
+ATTACK_POWER_COLON = "Poder:";
+DAMAGE_COLON = "Daño:";
+DAMAGE_PER_SECOND = "Daño por segundo:";
+RANGED_ATTACK_TOOLTIP = "Índice de ataque a distancia";
+NOT_APPLICABLE = "N/D";
+DEFAULT_STAMINA_TOOLTIP = "Aumenta los puntos de salud.";
+DEFAULT_INTELLECT_TOOLTIP = "Aumenta la rapidez con la que mejoran las habilidades con armas.";
+DEFAULT_SPIRIT_TOOLTIP = "Aumenta la regeneración de salud y maná.";
+RESISTANCE0_NAME = "Armadura";
+RESISTANCE1_NAME = "Resistencia a lo Sagrado";
+RESISTANCE2_NAME = "Resistencia al Fuego";
+RESISTANCE3_NAME = "Resistencia a la Naturaleza";
+RESISTANCE6_NAME = "Resistencia a lo Arcano";
+RESISTANCE_TYPE0 = "armadura";
+RESISTANCE_TYPE1 = "sagrados";
+RESISTANCE_TYPE2 = "de fuego";
+RESISTANCE_TYPE3 = "de naturaleza";
+RESISTANCE_TYPE4 = "de escarcha";
+RESISTANCE_TYPE5 = "de sombras";
+RESISTANCE_TYPE6 = "arcanos";
+RESISTANCE_EXCELLENT = "Excelente";
+RESISTANCE_VERYGOOD = "Muy buena";
+RESISTANCE_GOOD = "Buena";
+RESISTANCE_FAIR = "Regular";
+RESISTANCE_POOR = "Escasa";
+RESISTANCE_NONE = "Ninguna";
+GUILD_TITLE_TEMPLATE = "%s de %s";
+
+-- Honor (HonorFrame, InspectHonorFrame) ---------------------------------------------------------------------------
+
+HONOR = "Honor";
+HONORABLE_KILLS = "Muertes con honor";
+DISHONORABLE_KILLS = "Muertes deshonrosas";
+HONOR_CONTRIBUTION_POINTS = "Honor";
+HONOR_STANDING = "Clasificación";
+HONOR_HIGHEST_RANK = "Rango más alto";
+HONOR_THIS_SESSION = "Hoy";
+HONOR_YESTERDAY = "Ayer";
+HONOR_THISWEEK = "Esta semana";
+HONOR_LASTWEEK = "La semana pasada";
+HONOR_LIFETIME = "Total";
+RANK = "Rango";
+RANK_POSITION = "Posición en el rango";
+-- Rangos de JcJ: PVP_RANK_<rango>_<bando> (0 Horda, 1 Alianza); _FEMALE para una mujer.
+PVP_RANK_1_0 = "Paria";
+PVP_RANK_1_0_FEMALE = "Paria";
+PVP_RANK_1_1 = "Paria";
+PVP_RANK_1_1_FEMALE = "Paria";
+PVP_RANK_2_0 = "Proscrito";
+PVP_RANK_2_0_FEMALE = "Proscrita";
+PVP_RANK_2_1 = "Proscrito";
+PVP_RANK_2_1_FEMALE = "Proscrita";
+PVP_RANK_3_0 = "Exiliado";
+PVP_RANK_3_0_FEMALE = "Exiliada";
+PVP_RANK_3_1 = "Exiliado";
+PVP_RANK_3_1_FEMALE = "Exiliada";
+PVP_RANK_4_0 = "Deshonrado";
+PVP_RANK_4_0_FEMALE = "Deshonrada";
+PVP_RANK_4_1 = "Deshonrado";
+PVP_RANK_4_1_FEMALE = "Deshonrada";
+PVP_RANK_5_0 = "Explorador";
+PVP_RANK_5_0_FEMALE = "Exploradora";
+PVP_RANK_5_1 = "Soldado";
+PVP_RANK_5_1_FEMALE = "Soldado";
+PVP_RANK_6_0 = "Bruto";
+PVP_RANK_6_0_FEMALE = "Bruta";
+PVP_RANK_6_1 = "Cabo";
+PVP_RANK_6_1_FEMALE = "Cabo";
+PVP_RANK_7_0 = "Sargento";
+PVP_RANK_7_0_FEMALE = "Sargento";
+PVP_RANK_7_1 = "Sargento";
+PVP_RANK_7_1_FEMALE = "Sargento";
+PVP_RANK_8_0 = "Sargento jefe";
+PVP_RANK_8_0_FEMALE = "Sargento jefe";
+PVP_RANK_8_1 = "Sargento maestro";
+PVP_RANK_8_1_FEMALE = "Sargento maestro";
+PVP_RANK_9_0 = "Sargento primero";
+PVP_RANK_9_0_FEMALE = "Sargento primero";
+PVP_RANK_9_1 = "Sargento mayor";
+PVP_RANK_9_1_FEMALE = "Sargento mayor";
+PVP_RANK_10_0 = "Guardia de piedra";
+PVP_RANK_10_0_FEMALE = "Guardia de piedra";
+PVP_RANK_10_1 = "Caballero";
+PVP_RANK_10_1_FEMALE = "Caballero";
+PVP_RANK_11_0 = "Guardia de sangre";
+PVP_RANK_11_0_FEMALE = "Guardia de sangre";
+PVP_RANK_11_1 = "Caballero teniente";
+PVP_RANK_11_1_FEMALE = "Caballero teniente";
+PVP_RANK_12_0 = "Legionario";
+PVP_RANK_12_0_FEMALE = "Legionaria";
+PVP_RANK_12_1 = "Caballero capitán";
+PVP_RANK_12_1_FEMALE = "Caballero capitán";
+PVP_RANK_13_0 = "Centurión";
+PVP_RANK_13_0_FEMALE = "Centurión";
+PVP_RANK_13_1 = "Caballero campeón";
+PVP_RANK_13_1_FEMALE = "Caballero campeón";
+PVP_RANK_14_0 = "Campeón";
+PVP_RANK_14_0_FEMALE = "Campeona";
+PVP_RANK_14_1 = "Teniente coronel";
+PVP_RANK_14_1_FEMALE = "Teniente coronel";
+PVP_RANK_15_0 = "Teniente general";
+PVP_RANK_15_0_FEMALE = "Teniente general";
+PVP_RANK_15_1 = "Comandante";
+PVP_RANK_15_1_FEMALE = "Comandante";
+PVP_RANK_16_0 = "General";
+PVP_RANK_16_0_FEMALE = "General";
+PVP_RANK_16_1 = "Mariscal";
+PVP_RANK_16_1_FEMALE = "Mariscal";
+PVP_RANK_17_0 = "Señor de la guerra";
+PVP_RANK_17_0_FEMALE = "Señora de la guerra";
+PVP_RANK_17_1 = "Mariscal de campo";
+PVP_RANK_17_1_FEMALE = "Mariscal de campo";
+PVP_RANK_18_0 = "Gran señor de la guerra";
+PVP_RANK_18_0_FEMALE = "Gran señora de la guerra";
+PVP_RANK_18_1 = "Gran mariscal";
+PVP_RANK_18_1_FEMALE = "Gran mariscal";
+
+-- Reputación (ReputationFrame) -----------------------------------------------------------------------------------
+
+FACTION = "Facción";
+STANDING = "Reputación";
+FACTION_INACTIVE = "Inactiva";
+MOVE_TO_INACTIVE = "Mover a inactivas";
+SHOW_FACTION_ON_MAINSCREEN = "Mostrar como barra de experiencia";
+FACTION_STANDING_LABEL1_FEMALE = "Odiada";
+FACTION_STANDING_LABEL2_FEMALE = "Hostil";
+FACTION_STANDING_LABEL3_FEMALE = "Adversa";
+FACTION_STANDING_LABEL4_FEMALE = "Neutral";
+FACTION_STANDING_LABEL5_FEMALE = "Amistosa";
+FACTION_STANDING_LABEL6_FEMALE = "Honorable";
+FACTION_STANDING_LABEL7_FEMALE = "Venerada";
+FACTION_STANDING_LABEL8_FEMALE = "Exaltada";
+
+-- Habilidades (SkillFrame) -----------------------------------------------------------------------------------------
+
+SKILL_DESCRIPTION = "|cffffffff%s|r %s";
+UNLEARN = "Olvidar";
+UNLEARN_SKILL = "¿Quieres olvidar %s?";
+UNLEARN_SKILL_TOOLTIP = "Olvidar esta profesión";

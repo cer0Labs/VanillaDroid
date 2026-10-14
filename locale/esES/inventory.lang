@@ -1,0 +1,223 @@
+-- Objetos, bolsas, equipo, mercaderes, reparación, banco y lectura (fase 8), en castellano: nuestras claves (VD_INV_*)
+-- y las del cliente que usan estas ventanas. Los nombres (clases, razas, subclases de objeto, habilidades, facciones,
+-- hechizos) vienen de los DBC del cliente y salen en su idioma.
+--
+-- Sin traducir a propósito: INT_SPELL_* y VD_INV_SPELL_* (van dentro de la descripción de un hechizo, que es del DBC y
+-- sale en el idioma del cliente), los títulos de rango JcJ (PVP_RANK_*) y los formatos que no cambian (MERCHANT_STOCK,
+-- ITEM_SUFFIX_TEMPLATE, ITEM_SET_NAME, VD_INV_BUY_COUNT, VD_INV_ITEM_DESCRIPTION).
+
+-- Ventanas.
+VD_INV_BAGS = "Bolsas";
+VD_INV_BANK = "Banco";
+VD_INV_FREE_SLOTS = "Libres: %d/%d";
+VD_INV_TAB_EQUIPMENT = "Equipo";
+VD_INV_STATS_ATTRIBUTES = "Atributos";
+VD_INV_STATS_DEFENSE = "Defensa";
+VD_INV_STATS_CRIT = "Crítico";
+VD_INV_NOTHING_TO_REPAIR = "Nada que reparar";
+VD_INV_SELL_JUNK = "Vender grises";
+VD_INV_NO_JUNK = "Sin objetos grises";
+VD_INV_BUYBACK_EMPTY = "No has vendido nada todavía.";
+VD_INV_VENDOR_EMPTY = "Este mercader no tiene nada a la venta.";
+VD_INV_PAGE_OF = "Página %d de %d";
+BACKPACK_TOOLTIP = "Mochila";
+KEYRING = "Llavero";
+BAGSLOT = "Bolsa";
+BUYBACK = "Recomprar";
+PLAYER_LEVEL = "Nivel %d %s %s";
+MELEE_ATTACK = "Cuerpo a cuerpo";
+RANGED_ATTACK = "A distancia";
+ATTACK_POWER_TOOLTIP = "Poder de ataque";
+RESISTANCE_LABEL = "Resistencias";
+
+-- Botones del tooltip de un objeto y diálogos.
+VD_INV_EQUIP = "Equipar";
+VD_INV_UNEQUIP = "Quitar";
+VD_INV_SET_AMMO = "Munición";
+VD_INV_SELL = "Vender";
+VD_INV_REPAIR = "Reparar";
+VD_INV_TO_BANK = "Al banco";
+VD_INV_TO_BAGS = "A la mochila";
+VD_INV_SPLIT = "Dividir";
+VD_INV_DESTROY = "Destruir";
+VD_INV_BUY = "Comprar";
+VD_INV_BUY_SEVERAL = "Comprar varios";
+VD_INV_READ = "Leer";
+VD_INV_OPEN = "Abrir";
+VD_INV_DESTROY_STACK = "¿Destruir %s (x%d)?";
+DELETE_ITEM = "¿Destruir %s?";
+
+-- El tooltip.
+VD_INV_SELL_PRICE = "Precio de venta:";
+VD_INV_TAP_TO_READ = "<Toca para leer>";
+VD_INV_TAP_TO_OPEN = "<Toca para abrir>";
+VD_INV_WEAPON_SPEED = "Velocidad %.2f";
+VD_INV_INVTYPE_AMMO = "Proyectil";
+VD_INV_INVTYPE_THROWN = "Arrojadiza";
+VD_INV_INVTYPE_QUIVER = "Carcaj";
+ITEM_SOULBOUND = "Ligado";
+ITEM_BIND_ON_PICKUP = "Se liga al recogerlo";
+ITEM_BIND_ON_EQUIP = "Se liga al equiparlo";
+ITEM_BIND_ON_USE = "Se liga al usarlo";
+ITEM_BIND_QUEST = "Objeto de misión";
+ITEM_UNIQUE = "Único";
+ITEM_UNIQUE_MULTIPLE = "Único (%d)";
+ITEM_CONJURED = "Objeto conjurado";
+LOCKED = "Bloqueado";
+CONTAINER_SLOTS = "%2$s de %1$d casillas";
+INVTYPE_HEAD = "Cabeza";
+INVTYPE_NECK = "Cuello";
+INVTYPE_SHOULDER = "Hombros";
+INVTYPE_BODY = "Camisa";
+INVTYPE_CHEST = "Pecho";
+INVTYPE_ROBE = "Pecho";
+INVTYPE_WAIST = "Cintura";
+INVTYPE_LEGS = "Piernas";
+INVTYPE_FEET = "Pies";
+INVTYPE_WRIST = "Muñeca";
+INVTYPE_HAND = "Manos";
+INVTYPE_FINGER = "Dedo";
+INVTYPE_TRINKET = "Abalorio";
+INVTYPE_WEAPON = "Una mano";
+INVTYPE_SHIELD = "Mano izquierda";
+INVTYPE_RANGED = "A distancia";
+INVTYPE_CLOAK = "Espalda";
+INVTYPE_2HWEAPON = "Dos manos";
+INVTYPE_BAG = "Bolsa";
+INVTYPE_TABARD = "Tabardo";
+INVTYPE_WEAPONMAINHAND = "Mano derecha";
+INVTYPE_WEAPONOFFHAND = "Mano izquierda";
+INVTYPE_RELIC = "Reliquia";
+AMMO_DAMAGE_TEMPLATE = "Añade %g de daño por segundo";
+AMMO_SCHOOL_DAMAGE_TEMPLATE = "Añade %g de daño de %s por segundo";
+DAMAGE_TEMPLATE = "%d - %d de daño";
+DAMAGE_TEMPLATE_WITH_SCHOOL = "%d - %d de daño de %s";
+PLUS_DAMAGE_TEMPLATE = "+ %d - %d de daño";
+PLUS_DAMAGE_TEMPLATE_WITH_SCHOOL = "+ %d - %d de daño de %s";
+PLUS_SINGLE_DAMAGE_TEMPLATE = "+ %d de daño";
+DPS_TEMPLATE = "(%.1f de daño por segundo)";
+ARMOR_TEMPLATE = "%d de armadura";
+SHIELD_BLOCK_TEMPLATE = "%d de bloqueo";
+ITEM_MOD_MANA = "%c%d Maná";
+ITEM_MOD_HEALTH = "%c%d Salud";
+ITEM_MOD_AGILITY = "%c%d Agilidad";
+ITEM_MOD_STRENGTH = "%c%d Fuerza";
+ITEM_MOD_INTELLECT = "%c%d Intelecto";
+ITEM_MOD_SPIRIT = "%c%d Espíritu";
+ITEM_MOD_STAMINA = "%c%d Aguante";
+ITEM_RESIST_SINGLE = "%c%d Resistencia a %s";
+ITEM_ENCHANT_TIME_LEFT_DAYS = "%s (%d día)";
+ITEM_ENCHANT_TIME_LEFT_DAYS_P1 = "%s (%d días)";
+ITEM_ENCHANT_TIME_LEFT_HOURS = "%s (%d hora)";
+ITEM_ENCHANT_TIME_LEFT_HOURS_P1 = "%s (%d horas)";
+ITEM_ENCHANT_TIME_LEFT_MIN = "%s (%d min)";
+ITEM_ENCHANT_TIME_LEFT_SEC = "%s (%d s)";
+DURABILITY_TEMPLATE = "Durabilidad %d / %d";
+ITEM_DURATION_DAYS = "Duración: %d días";
+ITEM_DURATION_HOURS = "Duración: %d h";
+ITEM_DURATION_MIN = "Duración: %d min";
+ITEM_DURATION_SEC = "Duración: %d s";
+ITEM_CLASSES_ALLOWED = "Clases: %s";
+ITEM_RACES_ALLOWED = "Razas: %s";
+ITEM_MIN_LEVEL = "Requiere nivel %d";
+ITEM_MIN_SKILL = "Requiere %s (%d)";
+ITEM_REQ_SKILL = "Requiere %s";
+ITEM_REQ_REPUTATION = "Requiere %s - %s";
+ITEM_SPELL_TRIGGER_ONUSE = "Uso:";
+ITEM_SPELL_TRIGGER_ONEQUIP = "Equipar:";
+ITEM_SPELL_TRIGGER_ONPROC = "Probabilidad al golpear:";
+ITEM_SPELL_CHARGES = "%d carga";
+ITEM_SPELL_CHARGES_P1 = "%d cargas";
+ITEM_SET_BONUS = "Conjunto: %s";
+ITEM_SET_BONUS_GRAY = "(%d) Conjunto: %s";
+ITEM_CREATED_BY = "|cff00ff00<Hecho por %s>|r";
+REPAIR_COST = "Coste de reparación:";
+
+-- Mensajes: InventoryResult (los ERR_* que vMaNGOS asocia a cada valor), compra, venta, banco.
+ERR_CANT_EQUIP_LEVEL_I = "Tienes que alcanzar el nivel %d para usar ese objeto.";
+ERR_WRONG_SLOT = "Ese objeto no va en esa casilla.";
+ERR_BAG_FULL = "Esa bolsa está llena.";
+ERR_BAG_IN_BAG = "No puedes meter una bolsa que no esté vacía en otra bolsa.";
+ERR_AMMO_ONLY = "Ahí solo puede ir munición.";
+ERR_NO_SLOT_AVAILABLE = "No hay ninguna casilla de equipo libre para ese objeto.";
+ERR_CANT_EQUIP_EVER = "Nunca podrás usar ese objeto.";
+ERR_2HSKILLNOTFOUND = "No sabes llevar un arma en cada mano.";
+ERR_WRONG_BAG_TYPE = "Ese objeto no va en ese contenedor.";
+ERR_ITEM_MAX_COUNT = "No puedes llevar más de esos objetos.";
+ERR_CANT_STACK = "Ese objeto no se puede apilar.";
+ERR_NOT_EQUIPPABLE = "Ese objeto no se puede equipar.";
+ERR_CANT_SWAP = "Esos objetos no se pueden intercambiar.";
+ERR_SLOT_EMPTY = "Esa casilla está vacía.";
+ERR_DROP_BOUND_ITEM = "No puedes tirar un objeto ligado.";
+ERR_TOO_FEW_TO_SPLIT = "No hay tantos en el montón.";
+ERR_SPLIT_FAILED = "No se han podido dividir esos objetos.";
+ERR_NOT_A_BAG = "Eso no es una bolsa.";
+ERR_DESTROY_NONEMPTY_BAG = "Solo puedes hacer eso con bolsas vacías.";
+ERR_NOT_OWNER = "Ese objeto no es tuyo.";
+ERR_NO_BANK_SLOT = "Primero tienes que comprar esa casilla de bolsa.";
+ERR_INTERNAL_BAG_ERROR = "Error interno de bolsa.";
+ERR_VENDOR_SOLD_OUT = "Ese objeto está agotado.";
+ERR_NOT_WHILE_DISARMED = "No puedes hacer eso estando desarmado.";
+ERR_TOO_MANY_SPECIAL_BAGS = "No puedes equipar otra bolsa de ese tipo.";
+ERR_VENDOR_HATES_YOU = "Ese mercader no te aprecia.";
+ERR_VENDOR_TOO_FAR = "Estás demasiado lejos.";
+ERR_VENDOR_NOT_INTERESTED = "Al mercader no le interesa ese objeto.";
+ERR_BANKSLOT_FAILED_TOO_MANY = "Ya tienes todas las casillas de bolsa.";
+ERR_BANKSLOT_INSUFFICIENT_FUNDS = "No puedes permitírtelo.";
+ERR_BANKSLOT_NOTBANKER = "No es un banquero.";
+DURABILITYDAMAGE_DEATH = "Tu equipo pierde un 10%% de durabilidad.";
+VD_INV_CANT_BUY = "No puedes comprar eso.";
+VD_INV_BANK_SLOT_BOUGHT = "Has comprado una casilla de bolsa en el banco.";
+VD_INV_CANT_READ = "No puedes leer eso.";
+
+-- Claves del cliente de uso general que otras áreas (common, combat...) pueden traducir también. Una clave dos veces
+-- en un idioma es un error del baker: al integrar, que quede una sola copia.
+CANCEL = "Cancelar";
+USE = "Usar";
+NEXT = "Siguiente";
+PREV = "Anterior";
+CHARACTER = "Personaje";
+ARMOR = "Armadura";
+DAMAGE = "Daño";
+SPEED = "Velocidad";
+DODGE = "Esquivar";
+PARRY = "Parada";
+BLOCK = "Bloqueo";
+SPELL_STAT0_NAME = "Fuerza";
+SPELL_STAT1_NAME = "Agilidad";
+SPELL_STAT2_NAME = "Aguante";
+SPELL_STAT3_NAME = "Intelecto";
+SPELL_STAT4_NAME = "Espíritu";
+SPELL_SCHOOL1_CAP = "Sagrado";
+SPELL_SCHOOL2_CAP = "Fuego";
+SPELL_SCHOOL3_CAP = "Naturaleza";
+SPELL_SCHOOL4_CAP = "Escarcha";
+SPELL_SCHOOL5_CAP = "Sombras";
+SPELL_SCHOOL6_CAP = "Arcano";
+FACTION_STANDING_LABEL1 = "Odiado";
+FACTION_STANDING_LABEL2 = "Hostil";
+FACTION_STANDING_LABEL3 = "Adverso";
+FACTION_STANDING_LABEL4 = "Neutral";
+FACTION_STANDING_LABEL5 = "Amistoso";
+FACTION_STANDING_LABEL6 = "Honorable";
+FACTION_STANDING_LABEL7 = "Reverenciado";
+FACTION_STANDING_LABEL8 = "Exaltado";
+ERR_OUT_OF_RANGE = "Fuera de alcance.";
+ERR_SPELL_FAILED_REAGENTS_GENERIC = "Te faltan componentes.";
+ERR_NOT_ENOUGH_MONEY = "No tienes suficiente dinero.";
+ERR_GENERIC_STUNNED = "Estás aturdido.";
+ERR_PLAYER_DEAD = "No puedes hacer eso estando muerto.";
+ERR_CLIENT_LOCKED_OUT = "Ahora no puedes hacer eso.";
+ERR_LOOT_GONE = "Ya se ha despojado.";
+ERR_OBJECT_IS_BUSY = "Ese objeto está ocupado.";
+ERR_NOT_IN_COMBAT = "No puedes hacer eso en combate.";
+ERR_LOOT_CANT_LOOT_THAT_NOW = "Ahora no puedes despojar eso.";
+
+-- Acciones del correo, la subasta y el comercio.
+VD_INV_ATTACH = "Adjuntar";
+VD_INV_AUCTION = "Subastar";
+TRADE = "Comerciar";
+
+-- Retoques (ventanas): el botón de reparar del mercader y el de la casilla del banco, del cliente.
+REPAIR_ALL_ITEMS = "Reparar todos los objetos";
+BANKSLOTPURCHASE = "Comprar";

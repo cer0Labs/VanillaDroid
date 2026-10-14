@@ -1,0 +1,98 @@
+-- The first-run screen (phase 22, ROADMAP 22.4, ADR-0005 §5): what a phone without the game's data shows before
+-- anything else, drawn with app.vdpk alone (app/FirstRunScreens, FirstRunWindows): pairing with VanillaDroid Setup on
+-- the PC (the QR code's link, or an address and a code), the download, and the ADB way (its steps are setup.lang's
+-- VD_SETUP_ADB_GUIDE). English, VanillaDroid's own texts only. Syntax and rules: see common.lang.
+
+-- Home
+VD_PAIR_INTRO = "This phone does not have the game's data yet. VanillaDroid Setup makes it on your PC from your own World of Warcraft 1.12.1, and the phone copies it from there (about 4.5 GB).\n\nOpen VanillaDroid Setup on the PC, then choose how the data comes:";
+VD_PAIR_OPTION_QR = "Pair with the PC";
+VD_PAIR_OPTION_QR_NOTE = "Scan the QR code the PC shows";
+VD_PAIR_OPTION_ADDRESS = "Enter address";
+VD_PAIR_OPTION_ADDRESS_NOTE = "The PC's address and a 6-digit code";
+VD_PAIR_OPTION_ADB = "Use ADB instead";
+VD_PAIR_OPTION_ADB_NOTE = "By cable or wireless debugging";
+VD_PAIR_OPTION_PHONE = "Prepare the data on this phone";
+VD_PAIR_OPTION_PHONE_NOTE = "Your WoW is on this phone: no PC needed, it takes a while";
+VD_PAIR_OPTION_RESUME = "Resume the download";
+VD_PAIR_OPTION_FROM = "From the PC at %s"; -- its address
+VD_PAIR_OPTION_DOWNLOAD = "Download from the linked PC";
+VD_PAIR_OPTION_PLAY_NOW = "Play with what is here";
+VD_PAIR_OPTION_PLAY_NOW_NOTE = "Some of the data may be missing";
+VD_PAIR_INTERRUPTED = "The last download did not finish: it goes on where it stopped.";
+
+-- Pair with the PC (the QR code)
+VD_PAIR_QR_TITLE = "Pair with the PC";
+VD_PAIR_QR_STEPS = "1. On your PC, open VanillaDroid Setup and choose \"Connect phone\" (in a console: vdsetup serve).\n\n2. Scan the QR code it shows with this phone's camera: a page from your PC opens.\n\n3. On that page, tap \"%s\": VanillaDroid opens again here and downloads the data.\n\nThe phone and the PC must be on the same Wi-Fi."; -- %s: the page's button (VD_SETUP_PAGE_PAIR)
+VD_PAIR_QR_NO_CAMERA = "No camera? Enter the address";
+
+-- Enter address
+VD_PAIR_ADDRESS_TITLE = "Enter address";
+VD_PAIR_ADDRESS_LABEL = "Address of the PC";
+VD_PAIR_ADDRESS_HINT = "192.168.1.20:47800";
+VD_PAIR_CODE_LABEL = "Code";
+VD_PAIR_CODE_HINT = "6 digits";
+VD_PAIR_ADDRESS_HELP = "VanillaDroid Setup shows both next to its QR code. The phone and the PC must be on the same Wi-Fi.";
+VD_PAIR_CONNECT = "Connect";
+VD_PAIR_BACK = "Back";
+VD_PAIR_ERROR_ADDRESS = "That is not an address of your local network: type it as the PC shows it, for example 192.168.1.20:47800.";
+VD_PAIR_ERROR_CODE = "The code has 6 digits.";
+
+-- Use ADB instead
+VD_PAIR_ADB_TITLE = "Use ADB instead";
+VD_PAIR_ADB_INTRO = "VanillaDroid Setup can also send the data by cable or with wireless debugging, with adb. These are its steps, on the PC (the app is already installed: skip step 5). When they end, open VanillaDroid again.";
+
+-- Talking to the PC
+VD_PAIR_CONTACTING = "Talking to the PC at %s...";
+VD_PAIR_PREPARING = "The PC is preparing its files for the phone (%d%%). The first time it takes a minute or two.";
+VD_PAIR_CHECKING = "Checking the data already on this phone (%d%%)...";
+VD_PAIR_CANCEL = "Cancel";
+
+-- Ready to download
+VD_PAIR_READY_TITLE = "Ready to download";
+VD_PAIR_LINKED = "Linked with the PC at %s.";
+VD_PAIR_TO_DOWNLOAD = "To download: %s in %u files.";
+VD_PAIR_UP_TO_DATE = "This phone already has all the game's data from this PC.";
+VD_PAIR_WOW_OPTION = "Also copy the WoW to this phone (%s more): the phone can then update its data without the PC.";
+VD_PAIR_FREE_SPACE = "Free on this phone: %s.";
+VD_PAIR_NO_SPACE = "Not enough free space: the download needs %s and this phone has %s. Free some space and try again.";
+VD_PAIR_DOWNLOAD = "Download";
+VD_PAIR_FORGET = "Forget this PC";
+VD_PAIR_PLAY = "Play";
+
+-- Downloading
+VD_PAIR_DOWNLOADING_TITLE = "Downloading the game's data";
+VD_PAIR_FILE = "%s (%u of %u)"; -- the file, its number, how many
+VD_PAIR_DONE_OF = "%s of %s";
+VD_PAIR_SPEED = "%s/s, %s"; -- the speed, the time left
+VD_PAIR_KEEP_OPEN = "Keep VanillaDroid open and the phone near the Wi-Fi; plugging it in is a good idea. If the connection is cut, the download goes on where it stopped.";
+VD_PAIR_RETRYING = "The PC does not answer (%s): trying again in %u s.";
+VD_PAIR_RETRYING_SHORT = "The PC does not answer: trying again in %u s.";
+VD_PAIR_PAUSE = "Pause";
+VD_PAIR_PAUSED_TITLE = "Download paused";
+VD_PAIR_PAUSED = "What was downloaded is kept: the download goes on from there.";
+VD_PAIR_RESUME = "Resume";
+VD_PAIR_DONE_TITLE = "All set";
+VD_PAIR_DONE = "The game's data is on this phone. VanillaDroid starts with it now.";
+
+-- Sizes and times
+VD_PAIR_SIZE_GB = "%u.%u GB"; -- whole and tenths (the decimal sign is the translation's)
+VD_PAIR_SIZE_MB = "%u MB";
+VD_PAIR_SIZE_KB = "%u KB";
+VD_PAIR_LEFT_HOURS = "%u h %u min left";
+VD_PAIR_LEFT_MINUTES = "%u min left";
+VD_PAIR_LEFT_SECONDS = "%u s left";
+
+-- What went wrong
+VD_PAIR_FAILED_TITLE = "Something went wrong";
+VD_PAIR_TRY_AGAIN = "Try again";
+VD_PAIR_PAIR_AGAIN = "Pair again";
+VD_PAIR_ERROR_UNREACHABLE = "The PC does not answer at %s. Check that VanillaDroid Setup is showing its QR code and that the phone and the PC are on the same Wi-Fi.";
+VD_PAIR_ERROR_NOT_SETUP = "Something answered at %s, but it is not VanillaDroid Setup: check the address.";
+VD_PAIR_ERROR_WRONG_CODE = "The code is not right: type the 6 digits the PC shows now.";
+VD_PAIR_ERROR_CODE_LOCKED = "Too many wrong codes: the PC no longer takes that code. Choose \"Connect phone\" on the PC again for a new one, or scan its QR code.";
+VD_PAIR_ERROR_UNAUTHORIZED = "The PC no longer knows this phone (it made a new pairing key): pair again.";
+VD_PAIR_ERROR_NO_PACKS = "The PC has no game data to send yet: prepare it in VanillaDroid Setup first (vdsetup bake).";
+VD_PAIR_ERROR_BAD_LIST = "The PC sent a list this version of VanillaDroid cannot read: update VanillaDroid Setup and the app to the same version.";
+VD_PAIR_ERROR_DAMAGED = "%s arrived damaged twice. Try again; if it happens again, prepare the data again on the PC.";
+VD_PAIR_ERROR_DISK = "The data could not be saved on this phone (%s). Check its free space and try again.";
+VD_PAIR_ERROR_LINK = "This link does not come from VanillaDroid Setup on your local network.";

@@ -1,0 +1,50 @@
+-- Fase 18 (glue): las pantallas de antes del mundo (AccountLogin, GlueDialog, RealmList, CharacterSelect y sus
+-- ventanas). Claves propias (VD_*) y las del cliente (GlueStrings.lua) que no estaban traducidas en otro fichero.
+
+VD_GLUE_SERVER_ADDRESS = "El realmlist de tu servidor (dirección o dirección:puerto)";
+
+-- Fase 21: el aviso ESRB de AccountLogin solo lo muestra el cliente enUS (GlueLocalization.lua); el esES, no. Con un
+-- cliente esES el baker lo saca de su GlueLocalization.lua y esta línea no cuenta.
+VD_GLUE_SHOW_ESRB_RATING = "0";
+
+-- AccountLogin.
+QUIT = "Salir";
+SAVE_ACCOUNT_NAME = "Recordar la cuenta";
+VERSION_TEMPLATE = "%s %s (%s) (%s)\n%s";
+BETA_BUILD = "Versión";
+RELEASE_BUILD = "Release";
+
+-- GlueDialog: lo que va pasando al conectar.
+LOGIN_STATE_CONNECTING = "Conectando";
+LOGIN_STATE_AUTHENTICATED = "¡Correcto!";
+CHAR_LIST_RETRIEVING = "Obteniendo la lista de personajes";
+REALM_LIST_IN_PROGRESS = "Obteniendo la lista de reinos";
+
+-- RealmList.
+CHANGE_REALM = "Cambiar de reino";
+SERVER_SELECTION = "Selección de reino";
+REALM_NAME = "Nombre del reino";
+REALM_TYPE = "Tipo";
+REALM_LOAD = "Población";
+REALM_DOWN = "Fuera de línea";
+LOAD_RECOMMENDED = "Recomendado";
+LOAD_NEW = "Nuevo";
+LOAD_LOW = "Baja";
+LOAD_MEDIUM = "Media";
+LOAD_HIGH = "Alta";
+LOAD_FULL = "Lleno";
+GAMETYPE_NORMAL = "Normal";
+PVP_PARENTHESES = "(JcJ)";
+RP_PARENTHESES = "(Rol)";
+RPPVP_PARENTHESES = "(Rol JcJ)";
+
+-- CharacterSelect y sus ventanas.
+DELETE_CHARACTER = "Borrar personaje";
+CREATE_NEW_CHARACTER = "Crear personaje nuevo";
+SERVER_DOWN = "Servidor caído";
+DELETE_CONFIRM_STRING = "BORRAR";
+CHAR_RENAME_DESCRIPTION = "Tu nombre no cumple las normas de nombres";
+CHAR_RENAME_INSTRUCTIONS = "Escribe un nombre nuevo";
+CHAR_RENAME_IN_PROGRESS = "Cambiando el nombre...";
+CHAR_RENAME_FAILED = "No se pudo cambiar el nombre del personaje";
+CHAR_LOGIN_LOCKED_FOR_TRANSFER = "Tu personaje está bloqueado por un traslado de personaje de pago.";

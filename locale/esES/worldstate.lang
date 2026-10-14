@@ -1,0 +1,32 @@
+-- Traducción al castellano de lo que se ve dentro de los campos de batalla (fase 17, puntuaciones): la tabla de
+-- puntuación (WorldStateScoreFrame), el mapa de batalla (Blizzard_BattlefieldMinimap) y los jugadores que entran y
+-- salen. Son claves del cliente (GlobalStrings.lua); las que ya traduce otra área (NAME, ALL, FACTION_ALLIANCE,
+-- FACTION_HORDE, HIDE_OUTDOOR_WORLD_STATE_TEXT, MINUTE_ONELETTER_ABBR...) no se repiten. Las líneas de arriba de la
+-- pantalla y los nombres de las columnas de cada campo son de WorldStateUI.dbc (inglés, como el resto de datos).
+
+-- La tabla de puntuación.
+STAT_TEMPLATE = "Estadísticas: %s";
+SCORE_KILLING_BLOWS = "Golpes\nde gracia";
+SCORE_HONORABLE_KILLS = "Muertes\ncon honor";
+SCORE_HONOR_GAINED = "Honor\nadicional";
+DEATHS = "Muertes";
+KILLING_BLOW_TOOLTIP = "Jugadores enemigos a los que has asestado tú el golpe de gracia.";
+DEATHS_TOOLTIP = "Número de veces que te han matado.";
+HONOR_GAINED_TOOLTIP = "Honor adicional concedido por los objetivos cumplidos por el equipo.";
+FLAG_COUNT_TEMPLATE = "x %d";
+PLAYER_COUNT_ALLIANCE = "%d jugador de la Alianza";
+PLAYER_COUNT_HORDE = "%d jugador de la Horda";
+PLAYER_COUNT_HORDE_P1 = "%d jugadores de la Horda";
+TIME_ELAPSED = "Tiempo transcurrido:";
+VICTORY_TEXT0 = "Gana la Horda";
+VICTORY_TEXT1 = "Gana la Alianza";
+TIME_TO_PORT = "El campo de batalla se cierra en";
+RETURN_TO_WORLD = "Abandonar el campo de batalla";
+SECOND_ONELETTER_ABBR = "%d s";
+
+-- El mapa de batalla.
+BATTLEFIELD_MINIMAP = "Mapa de batalla";
+SHOW_BATTLEFIELDMINIMAP_PLAYERS = "Mostrar compañeros";
+LOCK_BATTLEFIELDMINIMAP = "Bloquear mapa de batalla";
+BATTLEFIELDMINIMAP_OPACITY_LABEL = "Cambiar opacidad";
+OPACITY = "Opacidad";

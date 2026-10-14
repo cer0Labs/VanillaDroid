@@ -1,0 +1,170 @@
+-- Ayuda (fase 15): la ventana de ayuda (HelpFrame: sus páginas y el ticket para un MJ), el aviso de ticket abierto, la
+-- encuesta sobre el MJ (GMSurveyFrame) y la ventana de errores y sugerencias (SuggestFrame), en castellano. Esta área
+-- no tiene claves propias: traduce las del cliente que usan estas ventanas. Las categorías del ticket y las preguntas
+-- de la encuesta vienen de los DBC del cliente (GMTicketCategory, GMSurveyQuestions), en su idioma.
+
+-- El botón del micromenú.
+HELP_BUTTON = "Solicitud de ayuda";
+
+-- HelpFrame: la portada.
+HELP_FRAME_TITLE = "Atención al cliente de WoW";
+HELPFRAME_HOME_TEXT = "Estos son los tipos de problemas con los que puede ayudarte un MJ:";
+HELPFRAME_HOME_ISSUE1_HEADER = "Pistas del juego";
+HELPFRAME_HOME_ISSUE2_HEADER = "Pistas sobre el juego";
+HELPFRAME_HOME_ISSUE3_HEADER = "JcJ";
+HELPFRAME_HOME_BUTTON_TEXT = "Problemas en los que puede ayudar un MJ";
+PETITION_GAME_MASTER = "Solicitar ayuda a un Maestro de Juego";
+
+-- Las entradas de errores y sugerencias (abren SuggestFrame).
+HELPFRAME_BUG_BUTTON_TEXT = "Informar de un error:";
+HELPFRAME_BUG_BUTTON_DESCRIPTION = "Informa de un fallo o error del juego";
+HELPFRAME_SUGGESTION_BUTTON_TEXT = "Enviar una sugerencia:";
+HELPFRAME_SUGGESTION_BUTTON_DESCRIPTION = "Sugerencias y opiniones generales sobre el juego";
+
+-- Atascado.
+STUCK_OPTION = "Opción de atasco";
+STUCK_BUTTON_TEXT = "Desatasco automático";
+STUCK_BUTTON2_TEXT = "Sigo atascado, avisar a un MJ";
+
+-- Acoso.
+HARASSMENT_TEXT = "Elige una de estas opciones:";
+VERBAL_HARASSMENT = "Acoso verbal";
+VERBAL_HARASSMENT_DESCRIPTION = "Insultos o agresiones verbales de un jugador a otro.";
+VERBAL_HARASSMENT_TEXT1 = "Algunos consejos para enfrentarte al acoso verbal:";
+VERBAL_HARASSMENT_TEXT2 = "Pide al jugador que te acosa que pare y añádelo a tu lista de ignorados.";
+VERBAL_HARASSMENT_TEXT3 = "Asegúrate de no provocar más acoso.";
+REPORT_VERBAL_HARASSMENT = "Informar de acoso verbal";
+PHYSICAL_HARASSMENT = "Acoso físico";
+PHYSICAL_HARASSMENT_TEXT1 = "Estas situaciones NO se consideran acoso físico:";
+PHYSICAL_HARASSMENT_TEXT2 = "Atacar a una criatura o PNJ con la que ya está luchando otro jugador";
+PHYSICAL_HARASSMENT_TEXT3 = "Atacar o matar continuamente a un PNJ";
+PHYSICAL_HARASSMENT_TEXT6 = "«Tren» (llevar enemigos hasta otro jugador para obligarle a luchar)";
+REPORT_PHYSICAL_HARASSMENT = "Informar de acoso físico";
+
+-- Las páginas generales de cada categoría (GENERAL_HELPFRAME).
+HELPFRAME_GUILD_TITLE = "Hermandad";
+HELPFRAME_GUILD_TEXT = "Cualquier problema con la creación o el funcionamiento de una hermandad";
+HELPFRAME_GUILD_BULLET_TITLE1 = "Estos son ejemplos de problemas de hermandad:";
+HELPFRAME_GUILD_BULLET1 = "No se pueden añadir o expulsar miembros";
+HELPFRAME_GUILD_BUTTON_TEXT = "Informar de un problema de hermandad";
+HELPFRAME_ITEM_TITLE = "Objeto";
+HELPFRAME_ITEM_TEXT = "Problemas con el funcionamiento o la posesión de un objeto";
+HELPFRAME_ITEM_BULLET_TITLE1 = "Estos son ejemplos de problemas con objetos:";
+HELPFRAME_ITEM_BULLET1 = "Objeto perdido tras un cierre inesperado";
+HELPFRAME_ITEM_BULLET2 = "El efecto de un arma no se activa";
+HELPFRAME_ITEM_BULLET3 = "Encantamientos o añadidos que no funcionan como deben";
+HELPFRAME_ITEM_BULLET4 = "Objetos perdidos por una estafa";
+HELPFRAME_ITEM_BULLET5 = "Objeto vendido por error a un vendedor que no se pudo recomprar";
+HELPFRAME_ITEM_BULLET_TITLE2 = "Estos NO se consideran problemas con objetos:";
+HELPFRAME_ITEM_BULLET6 = "Preguntas sobre cómo conseguir un objeto";
+HELPFRAME_ITEM_BULLET7 = "Peticiones de objetos";
+HELPFRAME_ITEM_BUTTON_TEXT = "Informar de un problema con un objeto";
+HELPFRAME_ENVIRONMENTAL_TITLE = "Entorno";
+HELPFRAME_ENVIRONMENTAL_BULLET_TITLE1 = "Estos son ejemplos de problemas del entorno:";
+HELPFRAME_ENVIRONMENTAL_BULLET1 = "No se puede usar una forja";
+HELPFRAME_ENVIRONMENTAL_BULLET2 = "Se puede atravesar una pared andando o saltando";
+HELPFRAME_ENVIRONMENTAL_BULLET3 = "Te llevan al cementerio equivocado";
+HELPFRAME_ENVIRONMENTAL_BULLET4 = "Caer a través del mundo";
+HELPFRAME_ENVIRONMENTAL_BULLET_TITLE2 = "Estos no se consideran problemas del entorno:";
+HELPFRAME_ENVIRONMENTAL_BULLET5 = "El jugador murió y quiere volver a donde estaba";
+HELPFRAME_ENVIRONMENTAL_BUTTON_TEXT = "Informar de un problema del entorno";
+HELPFRAME_NONQUEST_TITLE = "PNJ/criatura sin misión";
+HELPFRAME_NONQUEST_TEXT = "Problemas de PNJ y criaturas que no funcionan o no interactúan como deben";
+HELPFRAME_NONQUEST_BULLET_TITLE1 = "Estos son ejemplos de problemas con PNJ/criaturas sin misión:";
+HELPFRAME_NONQUEST_BULLET1 = "Criaturas que evaden sin parar";
+HELPFRAME_NONQUEST_BULLET2 = "Un PNJ no sigue bien su camino";
+HELPFRAME_NONQUEST_BULLET3 = "Aparecen demasiadas criaturas o demasiado pocas";
+HELPFRAME_NONQUEST_BULLET4 = "Un vendedor no tiene objetos o no responde";
+HELPFRAME_NONQUEST_BULLET_TITLE2 = "Estos NO se consideran problemas con PNJ/criaturas sin misión:";
+HELPFRAME_NONQUEST_BULLET5 = "Peticiones de que aparezca o desaparezca un PNJ o criatura sin misión";
+HELPFRAME_NONQUEST_BULLET6 = "Peticiones de información sobre un PNJ o criatura sin misión";
+HELPFRAME_NONQUEST_BULLET7 = "Problemas con PNJ o criaturas de misión";
+HELPFRAME_NONQUEST_BUTTON_TEXT = "Informar de un problema con un PNJ/criatura sin misión";
+HELPFRAME_QUEST_TITLE = "Misión/PNJ de misión";
+HELPFRAME_QUEST_TEXT = "Un problema que impide empezar o completar una misión";
+HELPFRAME_QUEST_BULLET_TITLE1 = "Estos son ejemplos de problemas de misión/PNJ de misión:";
+HELPFRAME_QUEST_BULLET1 = "Un PNJ u objeto de una misión no funciona como debe";
+HELPFRAME_QUEST_BULLET2 = "No se pueden conseguir los objetos de una misión";
+HELPFRAME_QUEST_BULLET3 = "Una criatura de misión no suelta el objeto que pide la misión";
+HELPFRAME_QUEST_BULLET_TITLE2 = "Estos NO se consideran problemas de misión/PNJ de misión:";
+HELPFRAME_QUEST_BULLET4 = "Peticiones de información sobre un PNJ o criatura de misión";
+HELPFRAME_QUEST_BULLET5 = "Peticiones de información que facilitaría una misión";
+HELPFRAME_QUEST_BUTTON_TEXT = "Informar de un problema de misión/PNJ";
+HELPFRAME_TECHNICAL_TITLE = "Asistencia técnica";
+HELPFRAME_TECHNICAL_BULLET_TITLE1 = "Estos son ejemplos de problemas técnicos:";
+HELPFRAME_TECHNICAL_BULLET1 = "El juego va peor (lento o a saltos)";
+HELPFRAME_TECHNICAL_BULLET2 = "Errores de imagen (cuadros negros, objetos que parpadean, deformaciones, etc.)";
+HELPFRAME_TECHNICAL_BULLET3 = "Las cinemáticas o vídeos del juego no se reproducen bien";
+HELPFRAME_TECHNICAL_BULLET4 = "Problemas de sonido (sin sonido o música, ruido, efectos que se repiten, etc.)";
+HELPFRAME_TECHNICAL_BULLET5 = "Problemas de conexión o desconexiones";
+HELPFRAME_TECHNICAL_BULLET6 = "Cierres inesperados o mensajes de error de cualquier tipo durante el juego";
+HELPFRAME_ACCOUNT_TITLE = "Facturación y cuentas";
+HELPFRAME_ACCOUNT_TEXT = "¿Tienes problemas para crear tu cuenta o necesitas cambiar tus opciones de pago?";
+HELPFRAME_ACCOUNT_BULLET_TITLE1 = "El servicio de facturación y cuentas puede ayudarte con problemas como estos:";
+HELPFRAME_ACCOUNT_BULLET1 = "Ayuda para crear cuentas nuevas o cambiar las que ya tienes";
+HELPFRAME_ACCOUNT_BULLET2 = "Cancelar tu cuenta de World of Warcraft";
+HELPFRAME_CHARACTER_TITLE = "Personaje";
+HELPFRAME_CHARACTER_BULLET_TITLE1 = "Estos son ejemplos de problemas del personaje:";
+HELPFRAME_CHARACTER_BULLET1 = "Pérdida o alteración de habilidades o atributos";
+HELPFRAME_CHARACTER_BULLET2 = "No se puede entrar en World of Warcraft";
+HELPFRAME_CHARACTER_BULLET3 = "El nivel de una habilidad aparece negativo";
+HELPFRAME_CHARACTER_BULLET4 = "Una profesión ya no aparece en la lista";
+HELPFRAME_CHARACTER_BULLET5 = "Talentos que fallan o que faltan";
+HELPFRAME_CHARACTER_BUTTON_TEXT = "Informar de un problema del personaje";
+
+-- El ticket.
+HELPFRAME_OPENTICKET_TEXT = "Describe tu pregunta:";
+HELPFRAME_OPENTICKET_EDITTEXT = "Tu pregunta actual:";
+SUBMIT = "Enviar";
+EDIT_TICKET = "Guardar cambios";
+TICKET_STATUS1 = "Tienes un ticket abierto.";
+GM_TICKET_HIGH_VOLUME = "Ahora mismo estamos recibiendo muchas peticiones.";
+GM_TICKET_SERVICE_SOON = "Atenderemos tu ticket pronto.";
+GM_TICKET_ESCALATED = "Tu ticket se ha pasado a un nivel superior.";
+HELP_TICKET_EDIT = "Editar mi ticket";
+HELP_TICKET_ABANDON = "Abandonar mi ticket";
+HELP_TICKET_ABANDON_CONFIRM = "¿Seguro que quieres abandonar el ticket para el MJ?";
+HELP_TICKET_QUEUE_DISABLED = "Los tickets de ayuda de los MJ no están disponibles ahora mismo.";
+ERR_TICKET_ALREADY_EXISTS = "Ya tienes un ticket para un MJ.";
+ERR_TICKET_CREATE_ERROR = "Error al crear el ticket para el MJ.";
+ERR_TICKET_DB_ERROR = "Error al recuperar el ticket para el MJ.";
+ERR_TICKET_NO_TEXT = "Tienes que escribir un texto para tu ticket.";
+ERR_TICKET_UPDATE_ERROR = "Error al actualizar el ticket para el MJ.";
+
+-- La encuesta sobre el MJ (Blizzard_GMSurveyUI).
+CHOSEN_FOR_GMSURVEY = "Te hemos elegido para rellenar una encuesta sobre un MJ.";
+GMSURVEY_REQUEST_TEXT = "Responde a estas preguntas:";
+GM_SURVEY_NOT_APPLICABLE = "N/D";
+GMSURVEYRATING1 = "Mala";
+GMSURVEYRATING2 = "Floja";
+GMSURVEYRATING3 = "Normal";
+GMSURVEYRATING4 = "Buena";
+GMSURVEYRATING5 = "Excelente";
+ADDITIONAL_COMMENTS = "Comentarios adicionales:";
+GMSURVEY_SUBMITTED = "Tu encuesta se ha enviado";
+
+-- Errores y sugerencias (SuggestFrame).
+SUGGESTFRAME_TITLE = "Sugerencias y errores";
+SEND_BUG = "Enviar error";
+SEND_SUGGEST = "Enviar sugerencia";
+SUGGEST_SUBMITTED = "Sugerencia enviada";
+BUG_CATEGORY_CHOOSE = "--> Elige una categoría";
+BUG_CATEGORY_ERROR = "Tienes que elegir una categoría para enviar tu error o sugerencia.";
+BUG_CATEGORY1 = "Clases de personaje";
+BUG_CATEGORY2 = "Zonas exteriores";
+BUG_CATEGORY3 = "Mazmorras";
+BUG_CATEGORY4 = "Ciudades";
+BUG_CATEGORY5 = "Interfaz";
+BUG_CATEGORY6 = "Monstruos: equilibrio y habilidades";
+BUG_CATEGORY7 = "Monstruos: ubicación";
+BUG_CATEGORY8 = "Misiones e historia";
+BUG_CATEGORY9 = "Arte";
+BUG_CATEGORY10 = "Sonido";
+BUG_CATEGORY11 = "Objetos";
+BUG_CATEGORY12 = "Profesiones";
+BUG_CATEGORY13 = "Varios";
+BUG_CATEGORY14 = "Jugador contra jugador";
+BUG_CATEGORY15 = "Traducción";
+MALE = "Hombre";
+FEMALE = "Mujer";
+LOCATION_COLON = "Lugar:";

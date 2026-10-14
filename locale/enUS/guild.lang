@@ -1,0 +1,14 @@
+-- Guild area (phase 15): the social window's guild tab (GuildFrame, GuildMemberDetailFrame, GuildInfoFrame,
+-- GuildControlPopupFrame), the registrar (GuildRegistrarFrame), the charter (PetitionFrame), the tabard designer
+-- (TabardFrame) and their popups (app/GuildWindows, app/GuildScreens, game/GuildControl, game/Petitions,
+-- game/TabardDesigner). English, VanillaDroid's own texts only. Syntax and rules: see common.lang.
+--
+-- Almost every word these windows show is the client's (GUILD_*, GUILDCONTROL_*, EMBLEM_*, TABARDVENDOR*, the
+-- ERR_GUILD* / ERR_PETITION_* lines, the StaticPopups' *_LABEL texts); names, notes, ranks and the message of the day
+-- are the server's.
+
+-- PetitionFrame's title for a petition that is not a guild charter (1.12.1 only sells guild charters).
+VD_GUILD_PETITION = "Petition";
+-- SMSG_PETITION_SIGN_RESULTS / SMSG_TURN_IN_PETITION_RESULTS with a code the client has no string for: WoW.exe prints
+-- this text, hard-coded, not from GlobalStrings.
+VD_GUILD_PETITION_ERROR = "Petition error";

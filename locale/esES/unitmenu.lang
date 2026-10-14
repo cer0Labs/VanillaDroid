@@ -1,0 +1,36 @@
+-- Menús de los jugadores, iconos de objetivo de banda, seguir e inspeccionar (fase 13: game/UnitPopup,
+-- app/UnitMenuScreens). Claves del cliente que no traduce otra área.
+
+-- Los botones de UnitPopup.lua.
+INSPECT = "Inspeccionar";
+FOLLOW = "Seguir";
+GUILD_PROMOTE = "Ascender a Maestro de hermandad";
+PET_PAPERDOLL = "Detalles de la mascota";
+PET_RENAME = "Renombrar";
+RESET_INSTANCES = "Reiniciar todas las instancias";
+NEW_LEADER = "Nuevo líder";
+PROMOTE = "Ascender";
+DEMOTE = "Degradar";
+REMOVE = "Expulsar";
+NONE = "Ninguno";
+-- Los iconos de objetivo de banda.
+RAID_TARGET_1 = "Estrella";
+RAID_TARGET_2 = "Círculo";
+RAID_TARGET_3 = "Diamante";
+RAID_TARGET_4 = "Triángulo";
+RAID_TARGET_5 = "Luna";
+RAID_TARGET_6 = "Cuadrado";
+RAID_TARGET_7 = "Cruz";
+RAID_TARGET_8 = "Calavera";
+
+-- Seguir (AutoFollowStatus) y los errores de FollowUnit, TargetByName y CanInspect.
+AUTOFOLLOWSTART = "Siguiendo a %s.";
+AUTOFOLLOWSTOP = "Dejas de seguir a %s.";
+ERR_INVALID_FOLLOW_TARGET = "No puedes seguir a esa unidad.";
+ERR_UNIT_NOT_FOUND = "Unidad desconocida.";
+ERR_GENERIC_NO_TARGET = "No tienes objetivo.";
+ERR_INVALID_INSPECT_TARGET = "No puedes inspeccionar a esa unidad.";
+
+-- Las ventanas emergentes de la hermandad y de la mascota.
+PET_RENAME_CONFIRMATION = "¿Llamar '%s' a tu mascota?";
+ERR_INVALID_PETNAME = "Error: has escrito un nombre no válido.";

@@ -1,0 +1,6 @@
+-- Audio: the sound options. Only what the original client lacks; the rest uses its keys (MASTER_VOLUME,
+-- SOUND_VOLUME, MUSIC_VOLUME, AMBIENCE_VOLUME).
+
+-- Settings: two volumes of our own on top of the original's four (NPC and creature voices, interface sounds).
+VD_AUDIO_VOICES_VOLUME = "Voice Volume";
+VD_AUDIO_INTERFACE_VOLUME = "Interface Volume";

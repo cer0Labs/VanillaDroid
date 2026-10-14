@@ -1,0 +1,30 @@
+-- Marcos de unidad, tooltip de unidad y barra de experiencia (pase de paridad: app/UnitFrames, app/UnitScreens).
+-- Claves propias (VD_UNIT_*, VD_REST_STATE_*) y del cliente que no traduce otra área.
+
+VD_UNIT_GUILD = "<%s>";
+VD_UNIT_CLEAR_TARGET = "Quitar objetivo";
+VD_UNIT_MENU_AFK = "Ausente (AUS)";
+VD_UNIT_MENU_DND = "No molestar (NM)";
+VD_REST_STATE_RESTED = "Descansado";
+VD_REST_STATE_NORMAL = "Normal";
+
+-- El tooltip de una unidad (GameTooltip:SetUnit).
+UNITNAME_TITLE = "%s";
+UNITNAME_TITLE_PET = "Mascota de %s";
+UNITNAME_TITLE_CHARM = "Esbirro de %s";
+UNIT_PVP_NAME = "%s %s";
+UNIT_TYPE_LEVEL_TEMPLATE = "Nivel %d %s";
+UNIT_TYPE_PLUS_LEVEL_TEMPLATE = "Nivel %d %s élite";
+UNIT_TYPE_LETHAL_LEVEL_TEMPLATE = "Nivel ?? %s";
+UNIT_PLUS_LEVEL_TEMPLATE = "Nivel %d élite";
+UNIT_LETHAL_LEVEL_TEMPLATE = "Nivel ??";
+UNIT_LEVEL_DEAD_TEMPLATE = "Nivel %d Cadáver";
+UNIT_LETHAL_LEVEL_DEAD_TEMPLATE = "Nivel ?? Cadáver";
+UNIT_SKINNABLE = "Desollable";
+PVP_ENABLED = "JcJ";
+
+-- La insignia JcJ del marco del jugador.
+PVPFFA = "JcJ libre para todos";
+
+-- El menú del marco del jugador (UnitPopup "SELF").
+LOOT_THRESHOLD = "Umbral de botín";

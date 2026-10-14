@@ -1,0 +1,425 @@
+# Phase 22 (distribution, ADR-0005 sections 6-7): a tag vX.Y.Z publishes the release vX.Y.Z of this repository (the
+# APK, the Setups and the signed manifest; never game data).
+#
+#   prepare  (Linux)    the tag, the release files of its commit, the release key is not the test key
+#   windows  (Windows)  vd_baker, vdsetup and the Setup's window (VS 2022, static CRT, no PDB), app.vdpk (no WoW)
+#   android  (Linux)    the dist APK signed with the release key, app.vdpk inside; unstripped symbols kept private
+#   macos    (macOS)    VanillaDroid Setup.app with the APK inside (only once the Setup builds on macOS)
+#   publish  (Linux)    the Setup zips, manifest.json signed with RELEASE_SIGNING_KEY and the release (a draft until
+#                       every file is up)
+#
+# scripts/release.ps1 makes the tag (with release/packs.json and release/notes/vX.Y.Z.md); the CI never sees data of
+# Blizzard: app.vdpk is baked from the repository alone. Repository secrets (Settings > Secrets and variables >
+# Actions):
+#   RELEASE_SIGNING_KEY   the release key in PEM (scripts/release-key.ps1); its public point is release/release-key.pub.hex
+#   ANDROID_KEYSTORE_B64  the APK's release keystore, in base64
+#   VD_KEYSTORE_PASSWORD, VD_KEY_ALIAS, VD_KEY_PASSWORD
+# Installed apps and Setups look for updates in cer0Labs/VanillaDroid's latest release (pack/ReleaseManifest.h): a
+# release made in a fork is never offered to them, and a fork has neither secret.
+name: release
+
+on:
+  push:
+    tags: ['v*']
+
+permissions:
+  contents: read
+
+concurrency:
+  group: release
+  cancel-in-progress: false
+
+env:
+  # Where the Setup looks for the APK it serves to the phone and installs by ADB (next to its programs).
+  MACOS_APK_DIR: Contents/MacOS
+  # The macOS Setup's architectures: "arm64;x86_64" (universal) once its CMake builds a universal astc-encoder.
+  MACOS_ARCHITECTURES: arm64
+
+jobs:
+  prepare:
+    name: Check the tag
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    outputs:
+      version: ${{ steps.tag.outputs.version }}
+      macos: ${{ steps.platforms.outputs.macos }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Version from the tag
+        id: tag
+        run: |
+          if [[ ! "$GITHUB_REF_NAME" =~ ^v([0-9]{1,3})\.([0-9]{1,3})\.([0-9]{1,3})$ ]]; then
+            echo "::error::The tag must be vX.Y.Z, not $GITHUB_REF_NAME"
+            exit 1
+          fi
+          echo "version=${GITHUB_REF_NAME#v}" >> "$GITHUB_OUTPUT"
+
+      - name: Release files of the tagged commit
+        run: |
+          # Releases come from main (scripts/release.ps1 refuses other branches).
+          if ! git merge-base --is-ancestor "$GITHUB_SHA" origin/main; then
+            echo "::error::$GITHUB_REF_NAME is not on main"
+            exit 1
+          fi
+          notes="release/notes/$GITHUB_REF_NAME.md"
+          if [ ! -s "$notes" ]; then
+            echo "::error::$notes is missing: scripts/release.ps1 writes it with the release"
+            exit 1
+          fi
+          packs=$(jq '.packs | length' release/packs.json)
+          if [ "$(jq '.format' release/packs.json)" != "1" ] || [ "$packs" -lt 1 ]; then
+            echo "::error::release/packs.json has no recipes: scripts/release.ps1 writes them (vd_baker digest)"
+            exit 1
+          fi
+          # The test key's private half is in the repository: anyone could sign a manifest the programs accept.
+          if [ "$(tr -d '\r\n' < release/release-key.pub.hex)" = "$(tr -d '\r\n' < tests/data/release-test-key.pub.hex)" ]; then
+            echo "::error::release/release-key.pub.hex is the TEST key: make the real one with scripts/release-key.ps1"
+            exit 1
+          fi
+          echo "$packs pack recipes, notes in $notes"
+
+      - name: Platforms of VanillaDroid Setup
+        id: platforms
+        run: |
+          # macOS: the Setup's window builds "VanillaDroid Setup.app" (tools/setup/gui, phase 22.6) with an install
+          # component "setup"; before that the macOS release has no Setup and the manifest no "macos" entry.
+          if grep -qs 'MACOSX_BUNDLE' tools/setup/gui/CMakeLists.txt && grep -qs 'COMPONENT setup' tools/setup/gui/CMakeLists.txt; then
+            echo "macos=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "macos=false" >> "$GITHUB_OUTPUT"
+            echo "::notice::VanillaDroid Setup does not build on macOS yet: this release has no macOS Setup"
+          fi
+
+  windows:
+    name: Windows tools and app.vdpk
+    needs: prepare
+    runs-on: windows-latest
+    timeout-minutes: 60
+    env:
+      VERSION: ${{ needs.prepare.outputs.version }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Cache the C++ dependency sources
+        id: deps
+        uses: actions/cache@v4
+        with:
+          path: .deps/*-src
+          key: deps-windows-${{ hashFiles('cmake/Dependencies.cmake') }}
+
+      - name: Configure (windows-vs2022)
+        shell: pwsh
+        run: |
+          # The runner's Visual Studio decides the generator: windows-latest moved from 2022 to 2026 in June 2026, and
+          # the preset's "Visual Studio 17 2022" then stops CMake at once.
+          $vswhere = "${env:ProgramFiles(x86)}\Microsoft Visual Studio\Installer\vswhere.exe"
+          $vsMajor = ((& $vswhere -latest -property installationVersion) -split '\.')[0]
+          $generator = switch ($vsMajor) { '18' { 'Visual Studio 18 2026' } '17' { 'Visual Studio 17 2022' } default { throw "Visual Studio $vsMajor not supported" } }
+          Write-Host "Visual Studio $vsMajor -> $generator; $(cmake --version | Select-Object -First 1)"
+          $arguments = @('--preset', 'windows-vs2022', '-G', $generator, "-DVD_VERSION=$env:VERSION",
+                         "-DFETCHCONTENT_BASE_DIR=$env:GITHUB_WORKSPACE/.deps".Replace('\', '/'))
+          if ('${{ steps.deps.outputs.cache-hit }}' -eq 'true') { $arguments += '-DFETCHCONTENT_FULLY_DISCONNECTED=ON' }
+          # Before VD_BUILD_GAME (tools/setup/gui) the whole project is configured: its shaders need glslc, which
+          # the runner's NDK carries.
+          if ($env:ANDROID_NDK_LATEST_HOME) {
+            $glslc = Join-Path $env:ANDROID_NDK_LATEST_HOME 'shader-tools/windows-x86_64/glslc.exe'
+            if (Test-Path $glslc) { $arguments += "-DVD_GLSLC=$($glslc.Replace('\', '/'))" }
+          }
+          cmake @arguments
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+
+      - name: Build vd_baker, vdsetup and the Setup's window
+        shell: pwsh
+        run: |
+          $targets = @('vd_baker', 'vdsetup')
+          if (Test-Path tools/setup/gui/CMakeLists.txt) { $targets += 'VanillaDroidSetup' }
+          cmake --build --preset windows-vs2022-release --target @targets -- /m /v:minimal
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+
+      - name: Bake app.vdpk (our texts, art and font; no WoW)
+        shell: pwsh
+        run: |
+          $baker = Get-ChildItem build/windows-vs2022 -Recurse -Filter vd_baker.exe | Where-Object FullName -match '\\Release\\' | Select-Object -First 1
+          # A published baker names no folder of the build machine (VD_DIST): the repository's are given here.
+          & $baker.FullName bake --only app --out out/app --locale-dir locale --art-dir art
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+          Get-Item out/app/app.vdpk | Format-Table Name, Length
+
+      - name: Stage the Setup (no PDB, no runtime DLL needed)
+        shell: pwsh
+        run: |
+          $stage = 'out/setup-windows'
+          cmake --install build/windows-vs2022 --config Release --component setup --prefix $stage
+          if (-not (Get-ChildItem $stage -Filter *.exe -ErrorAction SilentlyContinue)) {
+            # Before the Setup's window and its install rules: the console tool and the baker it runs.
+            New-Item -ItemType Directory -Force $stage | Out-Null
+            Get-ChildItem build/windows-vs2022 -Recurse -Include vdsetup.exe, vd_baker.exe |
+              Where-Object FullName -match '\\Release\\' | Copy-Item -Destination $stage
+          }
+          # The licence and the one notices file (CMake installs them with the Setup; copied here for the console
+          # tools alone).
+          foreach ($file in @('LICENSE', 'THIRD_PARTY_NOTICES.md')) {
+            if (-not (Test-Path "$stage/$file")) { Copy-Item $file $stage }
+          }
+          Get-ChildItem $stage -Recurse -Include *.pdb, *.ilk, *.lib, *.exp | Remove-Item -Force
+          # Static C runtime (CMAKE_MSVC_RUNTIME_LIBRARY): a PC without the Visual C++ redistributable runs them.
+          $vswhere = "${env:ProgramFiles(x86)}\Microsoft Visual Studio\Installer\vswhere.exe"
+          $dumpbin = & $vswhere -latest -find 'VC\Tools\MSVC\**\bin\Hostx64\x64\dumpbin.exe' | Select-Object -First 1
+          foreach ($exe in Get-ChildItem $stage -Filter *.exe) {
+            $dependents = & $dumpbin /nologo /dependents $exe.FullName
+            if ($dependents -match '(?i)(vcruntime|msvcp)\d+\.dll') { throw "$($exe.Name) needs the Visual C++ runtime" }
+            "{0} ({1:N0} bytes)" -f $exe.Name, $exe.Length
+          }
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: app-vdpk
+          path: out/app/app.vdpk
+          if-no-files-found: error
+      - uses: actions/upload-artifact@v4
+        with:
+          name: setup-windows
+          path: out/setup-windows
+          if-no-files-found: error
+
+  android:
+    name: Android dist APK
+    needs: [prepare, windows]
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    env:
+      VERSION: ${{ needs.prepare.outputs.version }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '21'
+          cache: gradle
+
+      - name: Android SDK packages (NDK 28.2, CMake 3.22.1)
+        run: |
+          sdkmanager="$ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager"
+          (yes || true) | "$sdkmanager" --licenses > /dev/null
+          "$sdkmanager" --install "ndk;28.2.13676358" "cmake;3.22.1" > /dev/null
+
+      - name: Cache the C++ dependency sources
+        id: deps
+        uses: actions/cache@v4
+        with:
+          path: .deps
+          key: deps-android-${{ hashFiles('cmake/Dependencies.cmake') }}
+
+      - uses: actions/download-artifact@v4
+        with:
+          name: app-vdpk
+          path: apps/android/app/build/generated/vdassets
+
+      - name: Build the dist APK
+        env:
+          ANDROID_KEYSTORE_B64: ${{ secrets.ANDROID_KEYSTORE_B64 }}
+          VD_KEYSTORE_PASSWORD: ${{ secrets.VD_KEYSTORE_PASSWORD }}
+          VD_KEY_ALIAS: ${{ secrets.VD_KEY_ALIAS }}
+          VD_KEY_PASSWORD: ${{ secrets.VD_KEY_PASSWORD }}
+        run: |
+          # Without the release key Gradle would sign dist with a debug key: an APK that cannot update itself.
+          for secret in ANDROID_KEYSTORE_B64 VD_KEYSTORE_PASSWORD VD_KEY_ALIAS VD_KEY_PASSWORD; do
+            if [ -z "${!secret}" ]; then echo "::error::The secret $secret of the repository is missing"; exit 1; fi
+          done
+          export VD_KEYSTORE="$RUNNER_TEMP/release.keystore"
+          printf '%s' "$ANDROID_KEYSTORE_B64" | base64 --decode > "$VD_KEYSTORE"
+          deps=()
+          if [ "${{ steps.deps.outputs.cache-hit }}" = "true" ]; then deps=("-PvdDepsDir=$GITHUB_WORKSPACE/.deps"); fi
+          cd apps/android
+          chmod +x gradlew
+          ./gradlew assembleDist "-PvdVersion=$VERSION" "${deps[@]}" --no-daemon --stacktrace
+          rm -f "$VD_KEYSTORE"
+
+      - name: Check the APK
+        run: |
+          apk=apps/android/app/build/outputs/apk/dist/app-dist.apk
+          tools=$(ls -d "$ANDROID_HOME"/build-tools/* | sort -V | tail -n 1)
+          badging=$("$tools/aapt2" dump badging "$apk" | head -n 1)
+          echo "$badging"
+          code=$(echo "$VERSION" | awk -F. '{ print $1 * 1000000 + $2 * 1000 + $3 }')
+          echo "$badging" | grep -q "name='com.cer0labs.vanilladroid' versionCode='$code' versionName='$VERSION'" ||
+            { echo "::error::The APK is not com.cer0labs.vanilladroid $VERSION ($code)"; exit 1; }
+          certificate=$("$tools/apksigner" verify --print-certs "$apk")
+          echo "$certificate" | grep -m 2 -E 'certificate (DN|SHA-256 digest)'
+          if echo "$certificate" | grep -q 'CN=Android Debug'; then echo "::error::The APK is signed with a debug key"; exit 1; fi
+          # Nothing of Blizzard and no pack but ours (rule 1): the APK only carries code and app.vdpk.
+          entries=$(unzip -Z1 "$apk")
+          if echo "$entries" | grep -iE '\.(mpq|blp|m2|wmo|adt|wdt|wdl|dbc|wav|mp3)$|\.vdpk$' | grep -v '^assets/app\.vdpk$'; then
+            echo "::error::The APK carries game data"; exit 1
+          fi
+          mkdir -p out
+          cp "$apk" "out/VanillaDroid-$VERSION.apk"
+          ls -l out
+
+      - name: Unstripped native library (crash symbols)
+        run: |
+          mkdir -p out/symbols
+          find apps/android/app/build/intermediates/cxx -path '*/obj/arm64-v8a/libvanilladroid.so' -exec cp {} out/symbols/ \;
+          test -s out/symbols/libvanilladroid.so
+          file out/symbols/libvanilladroid.so
+
+      - name: Keep the dependency sources for the next run
+        if: steps.deps.outputs.cache-hit != 'true'
+        run: |
+          mkdir -p .deps
+          find apps/android/app/.cxx -type d -path '*/_deps/*-src' -prune -exec cp -r {} .deps/ \;
+          ls .deps
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: apk
+          path: out/VanillaDroid-${{ env.VERSION }}.apk
+          if-no-files-found: error
+      # The crash symbols of this release (not a release file).
+      - uses: actions/upload-artifact@v4
+        with:
+          name: symbols-${{ env.VERSION }}
+          path: out/symbols
+          if-no-files-found: error
+          retention-days: 90
+
+  macos:
+    name: macOS Setup
+    needs: [prepare, android]
+    if: needs.prepare.outputs.macos == 'true'
+    runs-on: macos-latest
+    timeout-minutes: 45
+    env:
+      VERSION: ${{ needs.prepare.outputs.version }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Cache the C++ dependency sources
+        id: deps
+        uses: actions/cache@v4
+        with:
+          path: .deps/*-src
+          key: deps-macos-${{ hashFiles('cmake/Dependencies.cmake') }}
+
+      - name: Build VanillaDroid Setup.app
+        run: |
+          disconnected=OFF
+          if [ "${{ steps.deps.outputs.cache-hit }}" = "true" ]; then disconnected=ON; fi
+          cmake -S . -B build/macos -G Ninja -DCMAKE_BUILD_TYPE=Release -DVD_VERSION="$VERSION" \
+            -DVD_BUILD_GAME=OFF -DVD_BUILD_TESTS=OFF -DVD_DIST=ON -DVD_WOW_DIR= -DVD_WOW_LOCALE_DIRS= \
+            "-DCMAKE_OSX_ARCHITECTURES=$MACOS_ARCHITECTURES" -DCMAKE_OSX_DEPLOYMENT_TARGET=11.0 \
+            -DFETCHCONTENT_BASE_DIR="$GITHUB_WORKSPACE/.deps" -DFETCHCONTENT_FULLY_DISCONNECTED=$disconnected
+          cmake --build build/macos --target VanillaDroidSetup
+          cmake --install build/macos --component setup --prefix out/setup-macos
+
+      - uses: actions/download-artifact@v4
+        with:
+          name: apk
+          path: out/apk
+
+      - name: Zip the Setup with the APK
+        run: |
+          app="out/setup-macos/VanillaDroid Setup.app"
+          test -d "$app"
+          cp "out/apk/VanillaDroid-$VERSION.apk" "$app/$MACOS_APK_DIR/VanillaDroid.apk"
+          cp LICENSE out/setup-macos/
+          find "$app/Contents/MacOS" -type f -perm -u+x -exec lipo -info {} \;
+          # zip -y keeps symbolic links; the files keep their permissions (the programs stay executable).
+          (cd out/setup-macos && zip -r -y -X "../VanillaDroidSetup-$VERSION-macos.zip" .)
+          ls -l out
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: setup-macos
+          path: out/VanillaDroidSetup-${{ env.VERSION }}-macos.zip
+          if-no-files-found: error
+
+  publish:
+    name: Publish the release
+    needs: [prepare, windows, android, macos]
+    # The macOS job may be skipped (no macOS Setup yet); everything else must have worked.
+    if: >-
+      always() && needs.prepare.result == 'success' && needs.windows.result == 'success' &&
+      needs.android.result == 'success' && (needs.macos.result == 'success' || needs.macos.result == 'skipped')
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    permissions:
+      contents: write
+    env:
+      VERSION: ${{ needs.prepare.outputs.version }}
+      TAG: ${{ github.ref_name }}
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/download-artifact@v4
+        with:
+          name: apk
+          path: dist
+      - uses: actions/download-artifact@v4
+        with:
+          name: setup-windows
+          path: out/setup-windows
+      - uses: actions/download-artifact@v4
+        if: needs.macos.result == 'success'
+        with:
+          name: setup-macos
+          path: dist
+
+      - name: Zip the Windows Setup with the APK
+        run: |
+          cp "dist/VanillaDroid-$VERSION.apk" out/setup-windows/VanillaDroid.apk
+          (cd out/setup-windows && zip -r -X "../../dist/VanillaDroidSetup-$VERSION-windows.zip" .)
+          cp THIRD_PARTY_NOTICES.md dist/
+          ls -l dist
+
+      - name: Write and sign manifest.json
+        shell: pwsh
+        env:
+          RELEASE_SIGNING_KEY: ${{ secrets.RELEASE_SIGNING_KEY }}
+        run: |
+          if (-not $env:RELEASE_SIGNING_KEY) { throw "The secret RELEASE_SIGNING_KEY of the repository is missing" }
+          $key = Join-Path $env:RUNNER_TEMP 'release-key.pem'
+          New-Item -ItemType File -Path $key -Force | Out-Null
+          chmod 600 $key
+          Set-Content -LiteralPath $key -Value $env:RELEASE_SIGNING_KEY
+          try {
+            $arguments = @{
+              Version      = $env:VERSION
+              Apk          = "dist/VanillaDroid-$env:VERSION.apk"
+              SetupWindows = "dist/VanillaDroidSetup-$env:VERSION-windows.zip"
+              Out          = 'dist/manifest.json'
+              SigningKey   = $key
+              Repository   = $env:GITHUB_REPOSITORY
+            }
+            $macos = "dist/VanillaDroidSetup-$env:VERSION-macos.zip"
+            if (Test-Path $macos) { $arguments.SetupMacos = $macos }
+            ./scripts/release-manifest.ps1 @arguments
+          } finally {
+            Remove-Item -LiteralPath $key -Force
+          }
+          Get-Content dist/manifest.json
+
+      - name: Create the release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          assets=(dist/VanillaDroid-$VERSION.apk dist/VanillaDroidSetup-$VERSION-*.zip dist/manifest.json
+                  dist/manifest.json.sig dist/THIRD_PARTY_NOTICES.md)
+          ls -l "${assets[@]}"
+          if state=$(gh release view "$TAG" --repo "$GITHUB_REPOSITORY" --json isDraft --jq .isDraft 2>/dev/null); then
+            # A run that failed after creating the draft: finish it. A published release is never replaced.
+            if [ "$state" != "true" ]; then echo "::error::$TAG is already published"; exit 1; fi
+            gh release upload "$TAG" "${assets[@]}" --repo "$GITHUB_REPOSITORY" --clobber
+          else
+            # The notes without the template's HTML comment (instructions for whoever writes them).
+            perl -0pe 's/<!--.*?-->\s*//gs' "release/notes/$TAG.md" > dist/notes.md
+            gh release create "$TAG" "${assets[@]}" --repo "$GITHUB_REPOSITORY" --draft \
+              --title "VanillaDroid $VERSION" --notes-file dist/notes.md
+          fi
+          # Published only now, with every file up: releases/latest/download/manifest.json switches at once.
+          gh release edit "$TAG" --repo "$GITHUB_REPOSITORY" --draft=false --latest
+          echo "https://github.com/$GITHUB_REPOSITORY/releases/tag/$TAG" >> "$GITHUB_STEP_SUMMARY"

@@ -1,0 +1,13 @@
+-- The slash commands of phase 13 (game/ChatCommands, app/SocialScreens): /follow, /assist, /target, /inspect,
+-- /trade, /pvp, /played, /time, /cast, /gleader, /gdisband, /readycheck, /ffa, /roundrobin, /master and the chat
+-- channels' moderation (/password, /owner, /mod, /mute, /ban, /ckick, /cinvite, /announce, /moderate). Their lines
+-- are the client's (TIME_PLAYED_TOTAL, ERR_PVP_TOGGLE_ON, CHAT_HELP_TEXT_LINE1..16, CHAT_*_NOTICE...); only these
+-- are ours.
+
+-- /ginfo prints GUILD_NAME_TEMPLATE and GUILD_INFO_TEMPLATE (month-day-year, players, accounts) when the server
+-- answers, as WoW.exe's SMSG_GUILD_INFO handler does.
+
+-- /script and /run: the client runs Lua there; this one has no Lua.
+VD_SLASH_NO_SCRIPT = "Scripts are not available in this client.";
+-- /help's last line: the commands phase 13 added (the other lines are VD_SOCIAL_HELP1..5).
+VD_SLASH_HELP = "/follow /assist /target /inspect /trade [name], /pvp, /played, /time, /cast <spell>, /readycheck, /gleader <name>, /gdisband, /chat (channel commands)";

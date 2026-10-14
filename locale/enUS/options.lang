@@ -1,0 +1,15 @@
+-- Phase 15 (options): UIOptionsFrame and SoundOptionsFrame. Only what the original client lacks: the rest uses its keys
+-- (the options' labels, their OPTION_TOOLTIP_* and the sections' titles).
+
+-- Controls: the touch counterparts of Mouse Sensitivity and Invert Mouse (a finger dragged over the world turns the
+-- camera), and the V / Shift-V keys' name plates, options here without keys.
+VD_OPTIONS_TIP_CAMERA_SPEED = "Adjust how fast the camera turns when you drag a finger across the world.";
+VD_OPTIONS_TIP_INVERT_CAMERA = "Invert the way that dragging a finger up and down affects camera pitch.";
+VD_OPTIONS_TIP_NAMEPLATES = "Show the name plates of hostile and neutral units near you (the V key of the original).";
+VD_OPTIONS_TIP_FRIENDNAMEPLATES = "Show the name plates of friendly units near you (Shift-V in the original).";
+-- Auto loot (the original only has Shift + click): the loot window opens and everything goes to the bags.
+VD_OPTIONS_AUTO_LOOT = "Auto Loot";
+VD_OPTIONS_TIP_AUTO_LOOT = "When checked, opening a corpse or a chest takes all its money and items at once.";
+-- Always compare: an item's tooltip shows what you wear in its place beside it (else its "Compare" button does).
+VD_OPTIONS_ALWAYS_COMPARE = "Always Compare Items";
+VD_OPTIONS_TIP_ALWAYS_COMPARE = "When checked, an item's tooltip always shows the item you have equipped in its place beside it. Otherwise tap Compare in the tooltip.";

@@ -1,0 +1,15 @@
+-- Fase 15 (opciones): las macros (Blizzard_MacroUI, /macro, /macrohelp). Claves del cliente.
+CREATE_MACROS = "Crear macros";
+GENERAL_MACROS = "Macros generales";
+CHARACTER_SPECIFIC_MACROS = "Macros de %s";
+CHANGE_MACRO_NAME_ICON = "Cambiar nombre/icono";
+ENTER_MACRO_LABEL = "Escribe las órdenes de la macro:";
+MACROFRAME_CHAR_LIMIT = "%d/255 caracteres usados";
+MACRO_POPUP_TEXT = "Nombre de la macro (16 caracteres como máximo):";
+MACRO_POPUP_CHOOSE_ICON = "Elige un icono:";
+MACROS = "Macros";
+MACRO = "Macro";
+NEW = "Nueva";
+MACRO_HELP_TEXT_LINE1 = "Ayuda de las macros:";
+MACRO_HELP_TEXT_LINE4 = "- Para lanzar un hechizo desde una macro usa: /cast <nombre> (<rango>)";
+MACRO_HELP_TEXT_LINE5 = "- Mientras escribes una macro, toca un hechizo del libro para añadirlo a ella";

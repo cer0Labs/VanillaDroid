@@ -1,0 +1,8 @@
+-- Pets area (phase 15): the pet's spell book, the pet bar, party members' pets, the stable, the character window's
+-- Pet tab, the raid group number and the portraits' damage numbers (app/PetScreens, app/PetWindows, app/CombatScreens'
+-- pet book and bar). English, VanillaDroid's own texts only: the windows use the client's keys (STABLES, CURRENT_PET,
+-- STABLED_PETS, PET_DIET_TEMPLATE, TRAINING_POINTS, PET_TYPE_PET, CONFIRM_PET_UNLEARN, GROUP...). Syntax and rules:
+-- see common.lang.
+
+-- The pet bar while a spell of the pet's book is being put on it (the touch screen's PickupSpell(id, "pet")).
+VD_PETS_PLACE_HINT = "Tap a slot of the pet bar to put %s there"; -- the spell's name

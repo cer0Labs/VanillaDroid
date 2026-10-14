@@ -1,0 +1,56 @@
+-- Combat area: spell book, trainer, talents, pet, action bar editor, skills, reputation, combat log
+-- (app/CombatScreens, app/CombatWindows, game/CombatText, game/SpellText). English, VanillaDroid's own texts only:
+-- the combat log, the tooltip lines and most labels use the client's keys (SPELLLOG*, COMBATHIT*, MANA_COST,
+-- SPELL_RANGE, TRAIN, AT_WAR...). Syntax and rules: see common.lang.
+
+-- Spell tooltip lines (game/SpellText).
+VD_COMBAT_COST = "%d %s"; -- a cost in a power without a client text (happiness): amount, power
+VD_COMBAT_COST_PER_TIME = "%1$d %3$s, plus %2$d per sec"; -- amount, per second, power
+VD_COMBAT_COST_PERCENT = "%d%% of base %s"; -- percent, power
+VD_COMBAT_COST_PER_SEC = "%d %s per sec"; -- channeled costs only paid per second: amount, power
+VD_COMBAT_MELEE_RANGE = "Melee Range";
+VD_COMBAT_SPELL_HOME = "your home"; -- $z in a description (the hearthstone's inn)
+
+-- Spell book and action buttons.
+VD_COMBAT_CHOOSE_SPELL_TITLE = "Choose a Spell";
+VD_COMBAT_BOOK_EMPTY = "You know no spells of this kind.";
+VD_COMBAT_BOOK_HINT = "Tap a spell to see what it does and to put it on your action bar.";
+VD_COMBAT_ALL_RANKS = "All Ranks";
+VD_COMBAT_CHOOSE = "Choose";
+VD_COMBAT_PLACE_ON_BAR = "Put on Bar";
+VD_COMBAT_CAST = "Cast";
+VD_COMBAT_PLACE_HINT = "Tap a button to place %s";
+VD_COMBAT_ACTION_TITLE = "Button %d of Page %d";
+VD_COMBAT_PICK_SPELL = "Choose Spell";
+VD_COMBAT_PICK_ITEM = "Choose Item";
+VD_COMBAT_CLEAR_SLOT = "Clear";
+VD_COMBAT_CHOOSE_ITEM_TITLE = "Choose an Item";
+VD_COMBAT_NO_USABLE_ITEMS = "You carry no items that can be used.";
+
+-- Trainer.
+VD_COMBAT_TRAINER = "Trainer"; -- the window's title when the trainer's name is not known yet
+VD_COMBAT_TRAINER_EMPTY = "Nothing to learn with these filters.";
+VD_COMBAT_YOUR_MONEY = "Your money:";
+VD_COMBAT_TWO_PROFESSIONS = "You already know two professions.";
+VD_COMBAT_TRAIN_FAIL_SKILL = "You do not meet the requirements.";
+VD_COMBAT_TRAIN_FAIL = "The trainer cannot teach you that.";
+
+-- Talents.
+VD_COMBAT_TALENT_HINT = "Tap a talent to see its ranks.";
+VD_COMBAT_TALENT_LEVEL = "Talents can be learned from level %d on: every level gives one point.";
+VD_COMBAT_LEARN = "Learn";
+VD_COMBAT_NO_TALENT_POINTS = "You have no talent points left.";
+
+-- Pet.
+VD_COMBAT_PET_MENU = "What do you want to do with your pet?";
+VD_COMBAT_DISMISS_MINION = "Dismiss your minion?";
+
+-- Skills and reputation.
+VD_COMBAT_SKILLS_EMPTY = "Your skills are not known yet.";
+VD_COMBAT_REPUTATION_EMPTY = "You do not know any faction yet.";
+VD_COMBAT_REPUTATION_HINT = "Tap a faction to read about it.";
+
+-- Combat log window.
+VD_COMBAT_LOG_EMPTY = "Nothing to report yet.";
+VD_COMBAT_LOG_ONLY_MINE = "Only mine";
+VD_COMBAT_LOG_CLEAR = "Clear";

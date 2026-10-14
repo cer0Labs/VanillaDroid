@@ -1,0 +1,30 @@
+-- Actualizaciones (fase 22, ADR-0005 §7): los avisos de una versión nueva en las pantallas de acceso y cada paso de
+-- instalarla (app/AppUpdates, app/UpdateScreens), y los datos del juego horneados para otra versión. Traduce nuestras
+-- claves (VD_UPDATES_*).
+
+VD_UPDATES_AVAILABLE = "Hay una versión nueva: VanillaDroid %s.";
+VD_UPDATES_DATA_SAME = "Solo cambia la app: tus datos del juego se quedan como están.";
+VD_UPDATES_DATA_CHANGES_PC = "También cambia parte de los datos del juego (%s): después de actualizar, actualízalos con VanillaDroid Setup en tu PC. Mientras tanto puedes seguir jugando.";
+VD_UPDATES_DATA_CHANGES_PHONE = "También cambia parte de los datos del juego (%s): después de actualizar, VanillaDroid los prepara en este móvil con tu WoW.";
+VD_UPDATES_REFUSED = "No se ha instalado la actualización.";
+VD_UPDATES_UPDATE = "Actualizar";
+VD_UPDATES_NOTES = "Novedades";
+VD_UPDATES_LATER = "Más tarde";
+VD_UPDATES_TOO_NEW = "Hay una versión nueva, VanillaDroid %s, pero esta versión no puede instalarla: descárgala de la página de versiones de VanillaDroid.";
+VD_UPDATES_PERMISSION = "Para instalar actualizaciones, Android tiene que dejar que VanillaDroid instale aplicaciones. En la pantalla que se abre, activa «Permitir de esta fuente» y vuelve.";
+VD_UPDATES_OPEN_SETTINGS = "Abrir ajustes";
+VD_UPDATES_DOWNLOAD_TITLE = "VanillaDroid %s";
+VD_UPDATES_DOWNLOADING = "Descargando VanillaDroid %s...";
+VD_UPDATES_PROGRESS = "%.1f MB de %.1f MB";
+VD_UPDATES_VERIFYING = "Comprobando la descarga...";
+VD_UPDATES_CONFIRMING = "Android te pide que confirmes la actualización: toca Actualizar en su ventana. Después VanillaDroid vuelve a arrancar, ya actualizada.";
+VD_UPDATES_FAILED_NETWORK = "Falló la descarga. Comprueba la conexión y vuelve a intentarlo.";
+VD_UPDATES_FAILED_MISMATCH = "Lo descargado no es la VanillaDroid publicada (cortado o cambiado por el camino): se ha borrado. Vuelve a intentarlo.";
+VD_UPDATES_FAILED_INSTALL = "Android no pudo instalar la actualización.";
+VD_UPDATES_FAILED_UNSUPPORTED = "Esta versión no se puede instalar desde la app: consíguela con VanillaDroid Setup en tu PC.";
+VD_UPDATES_RETRY = "Reintentar";
+VD_UPDATES_DOWNLOADED = "VanillaDroid %s se ha descargado y comprobado (un APK se instala en el móvil):";
+VD_UPDATES_DATA_OUTDATED = "Parte de los datos del juego se preparó para otra versión de VanillaDroid (%s): lo que ha cambiado puede faltar o verse mal hasta que se actualicen.";
+VD_UPDATES_DATA_SETUP = "Actualízalos con VanillaDroid Setup en tu PC (vdsetup bake) y vuelve a enviarlos al móvil. Mientras tanto puedes seguir jugando.";
+VD_UPDATES_DATA_PHONE = "Tu WoW está en este móvil: VanillaDroid puede preparar aquí los datos (tarda un rato: deja el móvil cargando).";
+VD_UPDATES_DATA_PREPARE = "Preparar ahora";

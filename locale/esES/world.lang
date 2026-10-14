@@ -1,0 +1,11 @@
+-- ---------------------------------------------------------------------------------------------------------------
+-- Lo que el motor del cliente escribe sobre las unidades del mundo (paridad): bocadillos de chat, placas de nombre
+-- (teclas V / Mayús-V del original) y el dueño de una mascota bajo su nombre. Todas son claves del cliente.
+-- ---------------------------------------------------------------------------------------------------------------
+
+CHAT_BUBBLES_TEXT = "Mostrar bocadillos de chat";
+PARTY_CHAT_BUBBLES_TEXT = "Mostrar bocadillos de chat de grupo";
+BINDING_NAME_NAMEPLATES = "Mostrar placas de nombre";
+BINDING_NAME_FRIENDNAMEPLATES = "Mostrar placas de nombre amistosas";
+UNITNAME_TITLE_PET = "Mascota de %s";
+UNITNAME_TITLE_MINION = "Esbirro de %s";

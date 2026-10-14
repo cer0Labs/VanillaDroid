@@ -1,0 +1,2 @@
+-- Fase 14: cinemáticas (CinematicFrame: Escape las corta; en el móvil un toque muestra este botón).
+VD_CINEMATIC_SKIP = "Saltar";

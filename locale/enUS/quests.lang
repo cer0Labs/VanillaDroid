@@ -1,0 +1,5 @@
+-- Phase 13 (quests): the full quest log (zone headers, rewards, sharing, watching, timers: app/QuestWindows,
+-- app/QuestScreens), fishing and the living world objects. Everything they show has a key of the client
+-- (GlobalStrings.lua: QUEST_LOG, TRACK_QUEST, SHARE_QUEST, REWARD_SPELL, QUEST_TIMERS, ERR_QUEST_PUSH_*_S,
+-- ERR_FISH_*, QUEST_WATCH_*, AUTO_QUEST_WATCH_TEXT...), so this area has no VD_ keys of its own yet; the
+-- Spanish of those keys is in locale/esES/quests.lang.

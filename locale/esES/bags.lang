@@ -1,0 +1,14 @@
+-- Fase 15 (objetos): traducción al castellano de las bolsas como ContainerFrame, las comparaciones, los probadores y
+-- las preguntas del botín en grupo. Las claves del cliente que ya traduce otra área (KEYRING, BACKPACK_TOOLTIP,
+-- CLOSE, GIVE_LOOT, GROUP, LOOT_NO_DROP) no se repiten.
+
+-- Las nuestras.
+VD_INV_COMPARE = "Comparar";
+VD_DRESSUP_INSTRUCTIONS = "Toca Probar en la descripción de un objeto para verlo puesto en tu personaje";
+
+-- Del cliente (GlobalStrings.lua).
+CURRENTLY_EQUIPPED = "Equipado actualmente";
+DRESSUP_FRAME = "Probador";
+DRESSUP_FRAME_INSTRUCTIONS = "Ctrl-clic izquierdo en otros objetos para verlos puestos en tu personaje";
+RESET = "Restablecer";
+CONFIRM_LOOT_DISTRIBUTION = "Vas a asignar %s a %s. ¿Es correcto?";

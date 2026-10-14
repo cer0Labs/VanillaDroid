@@ -1,0 +1,5 @@
+-- PvP (phase 17, honor): the battleground graveyards' area spirit healer (AREA_SPIRIT_HEAL), the insignia
+-- taken (DEATH_CORPSE_SKINNED), honor (COMBATLOG_HONORGAIN, COMBATLOG_DISHONORGAIN, COMBATLOG_HONORAWARD,
+-- the PVP_RANK_* titles, HK / DK over the player, COMBAT_TEXT_HONOR_GAINED) and the defense channels'
+-- messages (ZONE_UNDER_ATTACK). Everything they show is a key of the original client (GlobalStrings.lua):
+-- nothing of our own is needed here.

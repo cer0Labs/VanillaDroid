@@ -1,0 +1,168 @@
+-- Intercambio: tiradas de botín en grupo y maestro despojador, correo, comercio entre jugadores y casa de subastas.
+-- Claves propias (VD_EXCHANGE_*) y las del cliente que usa el área. Las que también traducen otras áreas
+-- (ACCEPT, CANCEL, NAME, ITEM_QUALITY*_DESC...) llevan aquí el mismo texto.
+
+-- Tiradas de botín (LootFrame, GroupLootFrame). Los LOOT_ROLL_* llevan el enlace del objeto:
+-- "%s|Hitem:%d:%d:%d:%d|h[%s]|h%s" (color, entrada, encantamiento, propiedad, id único, nombre y "|r").
+NEED = "Necesidad";
+GREED = "Codicia";
+PASS = "Pasar";
+LOOT_ROLL_WON = "%s gana: %s|Hitem:%d:%d:%d:%d|h[%s]|h%s";
+ERR_LOOT_ROLL_PENDING = "Todavía se está sorteando ese objeto";
+ERR_LOOT_CANT_LOOT_THAT_NOW = "Ahora no puedes despojar eso.";
+GIVE_LOOT = "Dar botín a:";
+VD_EXCHANGE_LOOT_ROLLING = "En sorteo";
+VD_EXCHANGE_MASTER_LOOTER_ONLY = "Solo el maestro despojador puede repartir ese objeto.";
+
+-- Correo (MailFrame, OpenMailFrame).
+MAIL_LABEL = "Correo";
+INBOX = "Bandeja de entrada";
+SENDMAIL = "Enviar correo";
+FROM = "De:";
+MAIL_TO_LABEL = "Para:";
+MAIL_SUBJECT_LABEL = "Asunto:";
+MAIL_REPLY_PREFIX = "RE:";
+TAKE_ATTACHMENTS = "Recoger adjuntos:";
+REPLY_MESSAGE = "Responder";
+MAIL_RETURN = "Devolver";
+DELETE = "Borrar";
+SEND_LABEL = "Enviar";
+SEND_MONEY = "Enviar dinero";
+COD = "Contra reembolso";
+SEND_MAIL_COST = "Franqueo:";
+ATTACHMENT_TEXT = "Arrastra un objeto aquí para adjuntarlo a tu correo";
+HAVE_MAIL = "Tienes correo sin leer";
+COD_CONFIRMATION = "Aceptar este objeto te costará:";
+ERR_MAIL_SENT = "Correo enviado.";
+ERR_MAIL_TO_SELF = "No puedes enviarte correo a ti mismo.";
+ERR_MAIL_TARGET_NOT_FOUND = "No se encuentra al destinatario.";
+ERR_MAIL_REACHED_CAP = "Has alcanzado el límite de destinatarios distintos";
+ERR_PLAYER_WRONG_FACTION = "Ese jugador es de la otra facción.";
+ERR_RESTRICTED_ACCOUNT = "Las cuentas de prueba no pueden hacer eso";
+ERR_NOT_ENOUGH_MONEY = "No tienes suficiente dinero.";
+UNKNOWN = "Desconocido";
+-- Las cartas de la casa de subastas (%s: el objeto) y su factura.
+AUCTION_OUTBID_MAIL_SUBJECT = "Puja superada: %s";
+AUCTION_WON_MAIL_SUBJECT = "Subasta ganada: %s";
+AUCTION_SOLD_MAIL_SUBJECT = "Subasta completada: %s";
+AUCTION_EXPIRED_MAIL_SUBJECT = "Subasta caducada: %s";
+AUCTION_REMOVED_MAIL_SUBJECT = "Subasta cancelada: %s";
+SALE_PRICE_COLON = "Precio de venta:";
+DEPOSIT_COLON = "Depósito:";
+AUCTION_HOUSE_CUT_COLON = "Comisión de la casa:";
+AMOUNT_RECEIVED_COLON = "Cantidad recibida:";
+AMOUNT_PAID_COLON = "Cantidad pagada:";
+-- Lo que queda de una carta.
+DAY_ONELETTER_ABBR = "%d d";
+HOUR_ONELETTER_ABBR = "%d h";
+MINUTE_ONELETTER_ABBR = "%d min";
+-- El editor de dinero.
+GOLD = "Oro";
+SILVER = "Plata";
+COPPER = "Cobre";
+VD_EXCHANGE_NO_MAILBOX = "Tienes que estar en un buzón.";
+VD_EXCHANGE_MAIL_SENDING = "Enviando...";
+VD_EXCHANGE_MAIL_NO_RECIPIENT = "Escribe un destinatario.";
+VD_EXCHANGE_MAIL_NO_SUBJECT = "Escribe un asunto.";
+VD_EXCHANGE_MAIL_SUBJECT_TOO_LONG = "El asunto es demasiado largo.";
+VD_EXCHANGE_MAIL_BODY_TOO_LONG = "El mensaje es demasiado largo.";
+VD_EXCHANGE_MAIL_COD_NEEDS_ITEM = "El contra reembolso necesita un objeto adjunto.";
+VD_EXCHANGE_MAIL_NOT_IN_BAGS = "Solo puedes adjuntar objetos de tus bolsas.";
+VD_EXCHANGE_TAKE_MONEY = "Recoger dinero";
+VD_EXCHANGE_TAKE_ITEM = "Recoger objeto";
+VD_EXCHANGE_PAY_COD = "Pagar reembolso";
+VD_EXCHANGE_MAKE_COPY = "Hacer copia";
+VD_EXCHANGE_MESSAGE = "Mensaje";
+VD_EXCHANGE_NO_MAIL = "No hay correo.";
+VD_EXCHANGE_MAIL_SALE_PENDING = "Venta pendiente: %s";
+VD_EXCHANGE_AUCTION_HOUSE = "Casa de subastas";
+
+-- Comercio (TradeFrame).
+TRADE = "Comerciar";
+CANCEL = "Cancelar";
+ACCEPT = "Aceptar";
+DECLINE = "Rechazar";
+YOU = "Tú";
+TRADEFRAME_ENCHANT_SLOT_LABEL = "No se comerciará";
+ERR_TRADE_REQUEST_S = "%s quiere comerciar contigo.";
+ERR_ALREADY_TRADING = "Ya estás comerciando";
+ERR_TRADE_CANCELLED = "Comercio cancelado.";
+ERR_TRADE_COMPLETE = "Comercio completado.";
+ERR_TRADE_TOO_FAR = "El otro jugador está demasiado lejos para comerciar.";
+ERR_TRADE_WRONG_REALM = "Solo puedes dar objetos conjurados a jugadores de otros reinos";
+ERR_PLAYER_BUSY_S = "%s está ocupado ahora mismo.";
+ERR_IGNORING_YOU_S = "%s te está ignorando.";
+ERR_GENERIC_STUNNED = "Estás aturdido.";
+ERR_PLAYER_DEAD = "No puedes hacer eso estando muerto.";
+ERR_LOGGING_OUT = "Te estás desconectando";
+ERR_TARGET_LOGGING_OUT = "Ese jugador se está desconectando";
+VD_EXCHANGE_TRADE_CHANGE = "Cambiar";
+VD_EXCHANGE_TRADE_WAITING = "Esperando a %s...";
+
+-- Casa de subastas (AuctionFrame).
+BROWSE = "Explorar";
+BIDS = "Pujas";
+AUCTIONS = "Subastas";
+NAME = "Nombre";
+LEVEL_RANGE = "Niveles";
+LEVEL_ABBR = "Niv.";
+USABLE_ITEMS = "Utilizables";
+SEARCH = "Buscar";
+SEARCHING_FOR_ITEMS = "Buscando objetos";
+ALL = "Todo";
+QUALITY = "Calidad";
+ITEM_QUALITY0_DESC = "Pobre";
+ITEM_QUALITY1_DESC = "Común";
+ITEM_QUALITY2_DESC = "Poco común";
+ITEM_QUALITY3_DESC = "Rara";
+ITEM_QUALITY4_DESC = "Épica";
+AUCTION_TIME_LEFT1 = "Corto";
+AUCTION_TIME_LEFT2 = "Medio";
+AUCTION_TIME_LEFT3 = "Largo";
+AUCTION_TIME_LEFT4 = "Muy largo";
+BID = "Pujar";
+BUYOUT = "Comprar ya";
+HIGH_BIDDER = "Puja más alta";
+OUTBID = "Superada";
+NO_BIDS = "Sin pujas";
+PREV = "Anterior";
+NEXT = "Siguiente";
+PAGE_NUMBER = "Página %d";
+CANCEL_AUCTION = "Cancelar subasta";
+CREATE_AUCTION = "Crear subasta";
+AUCTION_ITEM = "Objeto en subasta";
+AUCTION_ITEM_TEXT = "Arrastra un objeto aquí para subastarlo";
+STARTING_PRICE = "Precio de salida";
+BUYOUT_PRICE = "Precio de compra";
+AUCTION_DURATION = "Duración de la subasta";
+-- "2 horas": el número delante, como lo escribe AuctionFrame.
+HOURS_P1 = "horas";
+AUCTION_BUYOUT_ERROR = "(Debe ser >= que el precio de salida)";
+ERR_AUCTION_STARTED = "Subasta creada.";
+ERR_AUCTION_REMOVED = "Subasta cancelada.";
+ERR_AUCTION_BID_PLACED = "Puja aceptada.";
+ERR_AUCTION_DATABASE_ERROR = "Error interno de la subasta.";
+ERR_AUCTION_HIGHER_BID = "Ya hay una puja más alta por ese objeto.";
+ERR_AUCTION_BOUND_ITEM = "No puedes vender un objeto ligado.";
+ERR_AUCTION_CONJURED_ITEM = "No puedes subastar un objeto conjurado.";
+ERR_AUCTION_OUTBID_S = "Han superado tu puja por %s.";
+ERR_AUCTION_WON_S = "Has ganado una subasta por %s";
+ERR_AUCTION_SOLD_S = "Se ha vendido tu subasta de %s.";
+VD_EXCHANGE_NO_AUCTIONEER = "Tienes que estar con un subastador.";
+VD_EXCHANGE_AUCTION_NO_START_PRICE = "Escribe un precio de salida.";
+VD_EXCHANGE_AUCTION_PRICE_TOO_HIGH = "Ese precio es demasiado alto.";
+VD_EXCHANGE_AUCTION_NOT_IN_BAGS = "Elige un objeto de tus bolsas.";
+VD_EXCHANGE_AUCTION_BID_ON_YOURS = "Han pujado en tu subasta de %s.";
+VD_EXCHANGE_NO_BIDS_YET = "No tienes pujas.";
+VD_EXCHANGE_NO_AUCTIONS = "No tienes subastas.";
+VD_EXCHANGE_CATEGORY = "Categoría";
+
+-- La mochila del panel de bolsas (también en inventory.lang) y el botón del editor compacto.
+BACKPACK_TOOLTIP = "Mochila";
+OKAY = "Aceptar";
+
+-- Retoques (ventanas): la factura de la casa de subastas (OpenMailInvoiceFrame), del cliente.
+ITEM_SOLD_COLON = "Objeto vendido:";
+PURCHASED_BY_COLON = "Comprado por:";
+ITEM_PURCHASED_COLON = "Objeto comprado:";
+SOLD_BY_COLON = "Vendido por:";

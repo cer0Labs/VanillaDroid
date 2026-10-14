@@ -1,0 +1,19 @@
+-- JcJ (fase 17, honor): el sanador espiritual de área de los cementerios de los campos de batalla, la
+-- insignia arrebatada, el honor (las líneas del registro de combate, los títulos de rango, MH / MD sobre el
+-- jugador, el texto de combate flotante) y los mensajes de los canales de defensa. Traduce las claves del
+-- cliente que usa esta área y no traduce otro fichero (los PVP_RANK_1..18 están en character.lang).
+
+AREA_SPIRIT_HEAL = "Resurrección en %d %s";
+DEATH_CORPSE_SKINNED = "Insignia arrebatada: solo puedes resucitar en el cementerio";
+COMBATLOG_DISHONORGAIN = "%s muere, muerte deshonrosa.";
+COMBATLOG_HONORAWARD = "Se te han concedido %d puntos de honor.";
+COMBAT_TEXT_HONOR_GAINED = "Honor %s";
+HK = "MH";
+DK = "MD";
+PVP_RANK_CIVILIAN = "Civil";
+PVP_RANK_CIVILIAN_FEMALE = "Civil";
+PVP_RANK_19_0 = "Líder";
+PVP_RANK_19_0_FEMALE = "Líder";
+PVP_RANK_19_1 = "Líder";
+PVP_RANK_19_1_FEMALE = "Líder";
+ZONE_UNDER_ATTACK = "|cffffff00¡%s está bajo ataque!|r";

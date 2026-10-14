@@ -1,0 +1,8 @@
+-- Help area (phase 15): HelpFrame (the help pages and the GM ticket), TicketStatusFrame, GMSurveyFrame and SuggestFrame
+-- (app/HelpWindows, app/HelpScreens, game/HelpDesk, game/HelpData). It has no texts of its own yet. Syntax and rules:
+-- see common.lang.
+--
+-- Almost every word these windows show is the client's (HELP_FRAME_TITLE, HELPFRAME_*, the harassment pages'
+-- VERBAL_* / PHYSICAL_* texts, GM_TICKET_*, TICKET_STATUS1, HELP_TICKET_*, ERR_TICKET_*, Blizzard_GMSurveyUI's
+-- GMSURVEY_* and GMSURVEYRATING*, SUGGESTFRAME_TITLE, BUG_CATEGORY*, SEND_BUG, SEND_SUGGEST); the ticket categories
+-- and the survey's questions come from the client's tables (GMTicketCategory.dbc, GMSurveyQuestions.dbc).

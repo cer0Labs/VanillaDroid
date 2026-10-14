@@ -1,0 +1,23 @@
+{
+  "format": 1,
+  "version": "999.0.0",
+  "versionCode": 999000000,
+  "date": "2026-10-08",
+  "notes": "https://github.com/cer0Labs/VanillaDroid/releases/tag/v999.0.0",
+  "apk": {
+    "url": "http://127.0.0.1:47931/VanillaDroid-999.0.0.apk",
+    "size": 3500,
+    "sha256": "b5b48a8f2becc8673fa0e128615880aeae48879d71b1000c8601cddef92c2b3e"
+  },
+  "setup": {
+    "windows": {
+      "url": "http://127.0.0.1:47931/VanillaDroidSetup-999.0.0-windows.zip",
+      "size": 497,
+      "sha256": "e79823576fa03a97f0df75ab461e2d1326f40767c6cb3eb99fdee98664f133b2"
+    }
+  },
+  "packs": {
+    "models.vdpk": "recipe-of-999",
+    "world_azeroth.vdpk": "recipe-of-999"
+  }
+}

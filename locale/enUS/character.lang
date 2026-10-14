@@ -1,0 +1,8 @@
+-- Character window (phase 15): the paper doll, the reputation, skills and honor tabs, the InspectFrame and the
+-- watched faction's bar (app/CharacterScreens, app/CharacterWindows, game/PaperDoll). English, VanillaDroid's own
+-- texts only: the window uses the client's keys (PaperDollFrame's, HonorFrame's, ReputationFrame's and SkillFrame's
+-- GlobalStrings: ARMOR_TOOLTIP, HONOR_LIFETIME, SHOW_FACTION_ON_MAINSCREEN, UNLEARN_SKILL...). Syntax and rules: see
+-- common.lang.
+
+VD_CHAR_STAT_LABEL = "%s:"; -- PaperDollFrame_SetStats: a stat's name and its colon ("Strength:")
+VD_CHAR_RANK_NUMBER = "(%s %d)"; -- HonorFrame_Update: "(" .. RANK .. " " .. rankNumber .. ")"

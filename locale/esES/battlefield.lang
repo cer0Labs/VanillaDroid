@@ -1,0 +1,32 @@
+-- Traducción al castellano de la cola de los campos de batalla (fase 17): BattlefieldFrame (el maestro de
+-- batalla), el botón del minimapa con su tooltip y su menú, CONFIRM_BATTLEFIELD_ENTRY, las líneas del grupo y
+-- los avisos de cierre. Son claves del cliente (GlobalStrings.lua); las que ya traduce otra área (CANCEL,
+-- ACCEPT, MINUTES_ABBR...) no se repiten.
+
+-- BattlefieldFrame.
+BATTLEFIELDS = "Campos de batalla";
+BATTLEFIELD_NAME = "Instancia del campo de batalla:";
+FIRST_AVAILABLE = "Primera disponible";
+BATTLEFIELD_QUEUE_STATUS = "(En cola)";
+BATTLEFIELD_CONFIRM_STATUS = "(Lista para entrar)";
+BATTLEFIELD_JOIN = "Unirse a la batalla";
+BATTLEFIELD_GROUP_JOIN = "Unirse en grupo";
+
+-- MiniMapBattlefieldFrame y su menú.
+BATTLEFIELD_QUEUE_CONFIRM = "Puedes entrar en %s\nSaldrás de la cola dentro de %s";
+QUEUE_TIME_UNAVAILABLE = "No disponible";
+LESS_THAN_ONE_MINUTE = "< 1 minuto";
+RIGHT_CLICK_MESSAGE = "|cffffffff<Clic derecho> para las opciones JcJ|r";
+CHANGE_INSTANCE = "Cambiar de instancia";
+LEAVE_QUEUE = "Salir de la cola";
+ENTER_BATTLE = "Entrar en la batalla";
+
+-- CONFIRM_BATTLEFIELD_ENTRY.
+HIDE = "Ocultar";
+
+-- Las líneas del grupo (UIErrorsFrame) y los avisos de cierre (chat).
+ERR_GROUP_JOIN_BATTLEGROUND_S = "Tu grupo ha entrado en la cola de %s";
+INSTANCE_SHUTDOWN_MESSAGE = "No hay suficientes jugadores. La partida terminará dentro de %s";
+
+-- El chat del campo de batalla (/bg).
+CHAT_BATTLEGROUND_SEND = "Campo de batalla: ";

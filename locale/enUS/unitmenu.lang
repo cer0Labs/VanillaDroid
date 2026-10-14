@@ -1,0 +1,6 @@
+-- The players' menus, the raid target icons, following and inspecting (phase 13: game/UnitPopup,
+-- app/UnitMenuScreens). Everything they say is the original client's: UnitPopup.lua's buttons (TRADE, INSPECT,
+-- FOLLOW, RAID_TARGET_1..8, PET_RENAME, NEW_LEADER...), AUTOFOLLOWSTART / AUTOFOLLOWSTOP, the errors of FollowUnit,
+-- TargetByName and CanInspect (ERR_INVALID_FOLLOW_TARGET, ERR_UNIT_NOT_FOUND, ERR_INVALID_INSPECT_TARGET...) and the
+-- popups CONFIRM_GUILD_PROMOTE, CONFIRM_GUILD_LEAVE, RENAME_PET (PET_RENAME_LABEL) and PETRENAMECONFIRM. Nothing of
+-- ours yet: translations of those keys go in locale/<language>/unitmenu.lang.

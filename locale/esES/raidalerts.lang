@@ -1,0 +1,26 @@
+-- Traducción al castellano de los avisos de banda (fase 16): la comprobación de listos (ReadyCheckFrame y las líneas
+-- del líder), entrar en una instancia de banda sin banda (INSTANCE_BOOT) y las piedras de encuentro. Son claves del
+-- cliente (GlobalStrings.lua); las que ya traduce otra área (YES, NO, ACCEPT, CANCEL, UNKNOWN, CHAT_RAID_WARNING_GET)
+-- no se repiten.
+
+-- Comprobación de listos.
+READY_CHECK_MESSAGE = "%s ha iniciado una comprobación de listos.\n|cffffffff¿Estás listo?|r";
+READY_CHECK_START = "Iniciando la comprobación de listos...";
+READY_CHECK_NO_AFK = "No hay nadie ausente";
+RAID_MEMBER_NOT_READY = "%s no está listo";
+ERR_RAID_LEADER_READY_CHECK_START_S = "%s ha iniciado una comprobación de listos";
+ERR_READY_CHECK_IN_PROGRESS = "Ya tienes una comprobación de listos en marcha";
+
+-- Instancias de banda.
+ERR_RAID_GROUP_ONLY = "Tienes que estar en una banda para entrar en esta instancia";
+ERR_RAID_GROUP_FULL = "La instancia está llena";
+
+-- Piedras de encuentro.
+MEETINGSTONE_LEVEL = "Nivel %d-%d";
+MEETINGSTONE_TOOLTIP = "Buscando más jugadores para %s";
+ERR_MEETING_STONE_GROUP_FULL = "Ya estás en un grupo completo";
+ERR_MEETING_STONE_IN_PROGRESS = "Sigues buscando más miembros con la piedra de encuentro.";
+ERR_MEETING_STONE_MEMBER_ADDED_S = "La piedra de encuentro ha añadido a %s al grupo.";
+ERR_MEETING_STONE_MEMBER_STILL_IN_QUEUE = "Buscando un grupo nuevo en la cola de la piedra de encuentro.";
+ERR_MEETING_STONE_MUST_BE_LEADER = "Tienes que ser el líder del grupo para usar la piedra de encuentro";
+ERR_MEETING_STONE_NO_RAID_GROUP = "No puedes usar una piedra de encuentro estando en una banda";

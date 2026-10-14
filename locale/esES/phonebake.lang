@@ -1,0 +1,64 @@
+-- Preparar los datos del juego en el móvil (fase 22, ROADMAP 22.7, ADR-0005 §8). Traduce nuestras claves (VD_PHONE_*).
+
+-- Inicio de la pantalla de primera vez
+VD_PHONE_OPTION_BAKING = "Preparando los datos en el móvil";
+VD_PHONE_OPTION_BAKING_NOTE = "Paso %u de %u, %u%%";
+VD_PHONE_OPTION_RESUME = "Seguir preparando los datos";
+VD_PHONE_OPTION_RESUME_NOTE = "%u de %u pasos hechos";
+VD_PHONE_OPTION_DONE = "Los datos están listos: jugar";
+VD_PHONE_OPTION_INCOMPLETE = "El WoW de este móvil está incompleto (%u archivos)";
+VD_PHONE_CHECKING = "Comprobando el WoW de este móvil...";
+
+-- Antes de empezar
+VD_PHONE_INTRO_TITLE = "Preparar los datos en el móvil";
+VD_PHONE_INTRO = "VanillaDroid prepara los datos del juego a partir del World of Warcraft 1.12.1 copiado en este móvil, como hace VanillaDroid Setup en un PC. Tarda %s en un móvil como el Xiaomi Mi 11X, más si se calienta, y necesita %s libres.\n\nDéjalo cargando y en un sitio fresco. Puedes salir de la aplicación mientras trabaja: una notificación muestra el progreso. Si Android lo detiene, sigue más tarde desde el último paso terminado.";
+VD_PHONE_ABOUT_MINUTES = "unos %u min";
+VD_PHONE_ABOUT_WHOLE_HOURS = "unas %u h";
+VD_PHONE_ABOUT_HOURS = "unas %u h %u min";
+VD_PHONE_WOW_INCOMPLETE = "El WoW de este móvil no está completo (%s). Vuelve a copiarlo desde el PC: VanillaDroid Setup lo envía (vdsetup adb send-wow, o la opción de copiarlo al descargar).";
+VD_PHONE_NO_SPACE = "No hay espacio suficiente: preparar los datos necesita %s y este móvil tiene %s. Libera espacio y vuelve a intentarlo.";
+VD_PHONE_START = "Empezar";
+
+-- Mientras trabaja
+VD_PHONE_BAKING_TITLE = "Preparando los datos del juego";
+VD_PHONE_STEP_OF = "%s (%u de %u)";
+VD_PHONE_PERCENT = "%u %%";
+VD_PHONE_STARTING = "Empezando...";
+VD_PHONE_BAKING = "Mientras tanto puedes salir de VanillaDroid: una notificación muestra el progreso. Déjalo cargando y en un sitio fresco: se calienta mientras trabaja, y va más despacio si se calienta demasiado.";
+VD_PHONE_WARM = "El móvil está caliente: trabaja con %u de sus %u hilos.";
+VD_PHONE_COOLING = "El móvil está demasiado caliente: esperando a que se enfríe.";
+VD_PHONE_STOP = "Detener";
+
+-- Los pasos (vd_baker bake --only ...)
+VD_PHONE_STEP_DB = "Tablas del juego";
+VD_PHONE_STEP_TEXTURES = "Texturas";
+VD_PHONE_STEP_MODELS = "Edificios y objetos";
+VD_PHONE_STEP_ACTORS = "Personajes y criaturas";
+VD_PHONE_STEP_WORLD = "Terreno";
+VD_PHONE_STEP_COLLISION = "Colisión";
+VD_PHONE_STEP_OBJECTS = "Barcos y ascensores";
+VD_PHONE_STEP_UI = "Interfaz";
+VD_PHONE_STEP_SOUND = "Sonido";
+VD_PHONE_STEP_CINEMATICS = "Cinemáticas";
+VD_PHONE_STEP_GRASS = "Hierba";
+VD_PHONE_STEP_WORLDSOUND = "Sonidos del mundo";
+VD_PHONE_STEP_BODYFX = "Sombras y huellas";
+
+-- Detenido, fallido, terminado
+VD_PHONE_STOPPED_TITLE = "Detenido";
+VD_PHONE_START_OVER = "Empezar de nuevo";
+VD_PHONE_CANCELLED = "Has detenido la preparación de los datos.";
+VD_PHONE_INTERRUPTED = "Android ha detenido la preparación de los datos (para ahorrar batería, porque el móvil se ha calentado demasiado o porque se ha reiniciado).";
+VD_PHONE_NOT_STARTED = "Android no ha dejado empezar el trabajo. Vuelve a intentarlo con VanillaDroid abierto.";
+VD_PHONE_FAILED = "Ha fallado la preparación de «%s»: %s\n\nVuelve a intentarlo. Si vuelve a fallar, copia otra vez el WoW al móvil o prepara los datos en un PC con VanillaDroid Setup.";
+VD_PHONE_KEPT = "Lo terminado se conserva (%u de %u pasos): sigue desde ahí.";
+VD_PHONE_DONE = "Los datos del juego están listos en este móvil. VanillaDroid arranca ahora con ellos.";
+
+-- La notificación (Android)
+VD_PHONE_NOTIFY_CHANNEL = "Preparación de los datos del juego";
+VD_PHONE_NOTIFY_TITLE = "Preparando los datos del juego";
+VD_PHONE_NOTIFY_CANCEL = "Detener";
+VD_PHONE_NOTIFY_COOLING = "El móvil está demasiado caliente: esperando a que se enfríe";
+VD_PHONE_NOTIFY_DONE = "Los datos del juego están listos: toca para jugar";
+VD_PHONE_NOTIFY_FAILED = "Ha fallado la preparación de los datos: abre VanillaDroid para reintentarlo";
+VD_PHONE_NOTIFY_STOPPED = "Android ha detenido la preparación de los datos: abre VanillaDroid para seguir";

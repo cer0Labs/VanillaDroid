@@ -1,0 +1,44 @@
+-- Exchange: group loot rolls and the master looter, mail, player trade and the auction house.
+-- Only what the original client lacks; the rest uses its keys (LOOT_ROLL_*, ERR_MAIL_*, MAIL_*, COD_*, ERR_TRADE_*,
+-- ERR_AUCTION_*, AUCTION_*, BROWSE_*, ...).
+
+-- Group loot: the loot window's note under an item, and a tap on an item the master looter hands out.
+VD_EXCHANGE_LOOT_ROLLING = "Being rolled for";
+VD_EXCHANGE_MASTER_LOOTER_ONLY = "Only the master looter can give out that item.";
+
+-- Mail: why a message cannot go yet (the client's frame disabled its button instead).
+VD_EXCHANGE_NO_MAILBOX = "You must be at a mailbox.";
+VD_EXCHANGE_MAIL_SENDING = "Sending...";
+VD_EXCHANGE_MAIL_NO_RECIPIENT = "Enter a recipient.";
+VD_EXCHANGE_MAIL_NO_SUBJECT = "Enter a subject.";
+VD_EXCHANGE_MAIL_SUBJECT_TOO_LONG = "The subject is too long.";
+VD_EXCHANGE_MAIL_BODY_TOO_LONG = "The message is too long.";
+VD_EXCHANGE_MAIL_COD_NEEDS_ITEM = "C.O.D. needs an attached item.";
+VD_EXCHANGE_MAIL_NOT_IN_BAGS = "You can only attach items from your bags.";
+
+-- Mail: buttons for what the client did by clicking the attachments, the body field's label, an empty inbox.
+VD_EXCHANGE_TAKE_MONEY = "Take Money";
+VD_EXCHANGE_TAKE_ITEM = "Take Item";
+VD_EXCHANGE_PAY_COD = "Pay C.O.D.";
+VD_EXCHANGE_MAKE_COPY = "Make Copy";
+VD_EXCHANGE_MESSAGE = "Message";
+VD_EXCHANGE_NO_MAIL = "No mail.";
+-- The auction house's letters: a sale whose money comes later (%s: the item), and the sender when its house is
+-- not in AuctionHouse.dbc.
+VD_EXCHANGE_MAIL_SALE_PENDING = "Sale pending: %s";
+VD_EXCHANGE_AUCTION_HOUSE = "Auction House";
+
+-- Trade: withdrawing the acceptance, and waiting for the other player to answer (%s: the player).
+VD_EXCHANGE_TRADE_CHANGE = "Change";
+VD_EXCHANGE_TRADE_WAITING = "Waiting for %s...";
+
+-- Auction house.
+VD_EXCHANGE_NO_AUCTIONEER = "You must be at an auctioneer.";
+VD_EXCHANGE_AUCTION_NO_START_PRICE = "Enter a starting price.";
+VD_EXCHANGE_AUCTION_PRICE_TOO_HIGH = "That price is too high.";
+VD_EXCHANGE_AUCTION_NOT_IN_BAGS = "Choose an item from your bags.";
+VD_EXCHANGE_AUCTION_BID_ON_YOURS = "A bid was placed on your auction of %s.";
+VD_EXCHANGE_NO_BIDS_YET = "You have no bids.";
+VD_EXCHANGE_NO_AUCTIONS = "You have no auctions.";
+-- The filter that picks an item class (the client had a list of them beside the results).
+VD_EXCHANGE_CATEGORY = "Category";

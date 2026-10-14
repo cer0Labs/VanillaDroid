@@ -1,0 +1,32 @@
+-- Traducción al castellano de los textos de las ventanas emergentes (StaticPopup: app/PopupScreens): muerte,
+-- resurrección, salir del juego, invocaciones, ligar objetos, comercio, destruir objetos. Son claves del cliente
+-- (GlobalStrings.lua); las que ya traduce otra área (DEATH_RELEASE, RECOVER_CORPSE, INVITATION...) no se repiten.
+
+-- Muerte y resurrección.
+DEATH_RELEASE_TIMER = "%d %s para liberar el espíritu";
+USE_SOULSTONE = "Reencarnar";
+RESURRECT_REQUEST_NO_SICKNESS = "%s quiere resucitarte";
+
+-- Salir del juego.
+CAMP_TIMER = "%d %s para desconectar";
+QUIT_TIMER = "%d %s para salir";
+QUIT_NOW = "Salir ya";
+EXIT_GAME = "Salir del juego";
+ERR_LOGOUT_FAILED = "Ahora no puedes desconectarte.";
+
+-- Invocaciones, comercio.
+TRADE_WITH_QUESTION = "¿Comerciar con %s?";
+
+-- Ligar objetos.
+LOOT_NO_DROP = "Al despojar este objeto quedará ligado a ti.";
+USE_NO_DROP = "Al usar este objeto quedará ligado a ti.";
+
+-- Destruir objetos, el banco.
+DELETE_GOOD_ITEM = "¿Destruir %s?\n\nEscribe \"DELETE\" en el campo para confirmar.";
+CONFIRM_BUY_BANK_SLOT = "¿Quieres comprar un hueco del banco por:";
+
+-- Unidades de tiempo de las cuentas atrás (GetText: el plural acaba en _P1).
+SECONDS = "segundo";
+MINUTES = "minuto";
+MINUTES_P1 = "minutos";
+NO = "No";

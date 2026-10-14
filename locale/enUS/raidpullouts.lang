@@ -1,0 +1,4 @@
+-- Raid pullouts (phase 16): the frames dragged out of the raid tab (Blizzard_RaidUI's RaidPulloutFrameTemplate) and the
+-- party frames in a raid (app/RaidPullouts, app/RaidPulloutWindows). They only read the client's own texts: GROUP for
+-- "Group N", the classes' names (ChrClasses.dbc), UNKNOWN, and the pullout's menu SHOW_BUFFS, SHOW_DEBUFFS,
+-- HIDE_PULLOUT_BG and CLOSE (GlobalStrings.lua). Nothing of our own yet. Syntax and rules: see common.lang.

@@ -1,0 +1,25 @@
+-- Órdenes de barra de la fase 13 (game/ChatCommands, app/SocialScreens): claves propias (VD_SLASH_*) y del
+-- cliente que no traduce otra área.
+
+VD_SLASH_NO_SCRIPT = "Este cliente no puede ejecutar scripts.";
+VD_SLASH_HELP = "/follow /assist /target /inspect /trade [nombre], /pvp, /played, /time, /cast <hechizo>, /readycheck, /gleader <nombre>, /gdisband, /chat (órdenes de canal)";
+
+-- /pvp, /played y /time.
+ERR_PVP_TOGGLE_ON = "Combate JcJ activado";
+ERR_PVP_TOGGLE_OFF = "Combate JcJ desactivado";
+TIME_PLAYED_TOTAL = "Tiempo total jugado: %s";
+TIME_TWELVEHOURAM = "%d:%02d AM";
+TIME_TWELVEHOURPM = "%d:%02d PM";
+
+-- /ginfo: la primera de sus dos líneas (la otra, GUILD_INFO_TEMPLATE, la traduce social.lang).
+GUILD_NAME_TEMPLATE = "Hermandad: %s";
+
+-- /chat: la ayuda de las órdenes de canal.
+CHAT_HELP_TEXT_LINE1 = "Órdenes de chat:";
+CHAT_HELP_TEXT_LINE2 = "/#, /c, /csay - Escribir en el canal # (por ejemplo, /1 ¡Hola!)";
+CHAT_HELP_TEXT_LINE3 = "/chat, /chathelp - Esta ayuda";
+CHAT_HELP_TEXT_LINE5 = "/leave, /chatleave, /chatexit [canal] - Salir de un canal (o de todos)";
+CHAT_HELP_TEXT_LINE7 = "/password, /pass <canal> <contraseña> - Cambiar la contraseña";
+CHAT_HELP_TEXT_LINE8 = "/owner <canal> [jugador] - Ver o cambiar el propietario del canal";
+CHAT_HELP_TEXT_LINE13 = "/ban, /unban <canal> <jugador> - Vetar o readmitir a un jugador en un canal";
+CHAT_HELP_TEXT_LINE16 = "/afk, /dnd - Marcarte como ausente o como no molestar";

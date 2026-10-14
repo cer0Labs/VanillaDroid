@@ -1,0 +1,8 @@
+-- ---------------------------------------------------------------------------------------------------------------
+-- Vegetación del suelo (fase 14): la hierba, las flores, los matorrales y las piedrecitas del terreno (los "ground
+-- effects" del cliente). El 1.12 no tiene opción para ellos (su CVar frillDensity se queda en 16): este control es
+-- nuestro. NONE, LOW y HIGH son claves del cliente (traducidas en otros ficheros).
+-- ---------------------------------------------------------------------------------------------------------------
+
+VD_GROUND_CLUTTER = "Vegetación del suelo";
+VD_GROUND_CLUTTER_NORMAL = "Normal";

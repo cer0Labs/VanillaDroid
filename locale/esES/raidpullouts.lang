@@ -1,0 +1,7 @@
+-- Castellano de los marcos sueltos de la banda (fase 16): el menú del marco (RaidPulloutDropDown). Traduce las claves
+-- del cliente que solo usa esta parte; GROUP (social.lang), CLOSE (common.lang) y UNKNOWN (combat.lang) ya están
+-- traducidas en otros ficheros y no se repiten.
+
+SHOW_BUFFS = "Mostrar beneficios";
+SHOW_DEBUFFS = "Mostrar perjuicios";
+HIDE_PULLOUT_BG = "Ocultar fondo";

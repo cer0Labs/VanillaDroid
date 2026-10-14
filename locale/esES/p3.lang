@@ -1,0 +1,177 @@
+-- Traducción al castellano de los últimos detalles de la interfaz del 1.12 (fase 18, p3): los tutoriales
+-- (TutorialFrame), la barra de latencia, las ventanas de chat, las ventanas emergentes nuevas y las columnas que se
+-- ordenan. Claves del cliente (GlobalStrings.lua) y las nuestras (VD_*) de locale/enUS/p3.lang.
+
+-- TutorialFrame y las opciones de ayuda.
+ENABLE_TUTORIAL_TEXT = "Mostrar consejos";
+SHOW_TUTORIALS = "Mostrar tutoriales";
+RESET_TUTORIALS = "Reiniciar tutoriales";
+OPTION_TOOLTIP_SHOW_TUTORIALS = "Muestra tutoriales que te ayudan a dar tus primeros pasos en WoW.";
+
+-- Los títulos de los tutoriales.
+TUTORIAL_TITLE1 = "Personajes con misiones";
+TUTORIAL_TITLE2 = "Movimiento";
+TUTORIAL_TITLE3 = "Cámaras";
+TUTORIAL_TITLE4 = "Seleccionar objetivos";
+TUTORIAL_TITLE5 = "Modo de combate";
+TUTORIAL_TITLE6 = "Hechizos y habilidades";
+TUTORIAL_TITLE7 = "Despojar";
+TUTORIAL_TITLE8 = "Mochila";
+TUTORIAL_TITLE9 = "Usar objetos";
+TUTORIAL_TITLE10 = "Bolsas";
+TUTORIAL_TITLE11 = "Comida";
+TUTORIAL_TITLE12 = "Bebida";
+TUTORIAL_TITLE13 = "Aprender talentos";
+TUTORIAL_TITLE14 = "Instructores";
+TUTORIAL_TITLE16 = "Reputación";
+TUTORIAL_TITLE17 = "Responder a susurros";
+TUTORIAL_TITLE18 = "Agruparse";
+TUTORIAL_TITLE19 = "Jugadores";
+TUTORIAL_TITLE20 = "Vendedores";
+TUTORIAL_TITLE21 = "Registro de misiones";
+TUTORIAL_TITLE22 = "Amigos";
+TUTORIAL_TITLE23 = "Charlar";
+TUTORIAL_TITLE24 = "Objetos equipables";
+TUTORIAL_TITLE25 = "Muerte";
+TUTORIAL_TITLE26 = "Descansado";
+TUTORIAL_TITLE27 = "Fatiga";
+TUTORIAL_TITLE28 = "Nadar";
+TUTORIAL_TITLE29 = "Respiración";
+TUTORIAL_TITLE30 = "Descansar";
+TUTORIAL_TITLE31 = "Piedras de hogar";
+TUTORIAL_TITLE32 = "Combate jugador contra jugador";
+TUTORIAL_TITLE33 = "Saltar";
+TUTORIAL_TITLE34 = "Completar misiones";
+TUTORIAL_TITLE35 = "Viajar";
+TUTORIAL_TITLE36 = "Objetos dañados";
+TUTORIAL_TITLE37 = "Objetos rotos";
+TUTORIAL_TITLE38 = "Profesiones";
+TUTORIAL_TITLE39 = "Grupos";
+TUTORIAL_TITLE40 = "El libro de hechizos";
+TUTORIAL_TITLE41 = "Misiones de élite";
+TUTORIAL_TITLE43 = "Personajes con misiones no disponibles";
+TUTORIAL_TITLE44 = "Armas a distancia";
+TUTORIAL_TITLE45 = "Munición";
+TUTORIAL_TITLE46 = "Bandas";
+TUTORIAL_TITLE47 = "Piedras de encuentro";
+TUTORIAL_TITLE48 = "Cola de campo de batalla";
+TUTORIAL_TITLE49 = "Entrar en el campo de batalla";
+TUTORIAL_TITLE50 = "Llaveros";
+
+-- Los textos con los controles táctiles (VD_TUTORIAL_TOUCH<n>).
+VD_TUTORIAL_TOUCH1 = "Un signo de exclamación amarillo sobre la cabeza de alguien significa que tiene una misión para ti. Acércate y tócalo dos veces, o toca el botón de contexto de abajo a la derecha, para hablar con él.";
+VD_TUTORIAL_TOUCH2 = "Para andar, apoya el pulgar izquierdo en cualquier punto de la mitad izquierda de la pantalla y deslízalo hacia donde quieras ir.";
+VD_TUTORIAL_TOUCH3 = "Arrastra un dedo por el mundo para girar la cámara y pellizca para acercarla o alejarla. Mientras te mueves, tu personaje se gira hacia donde mira la cámara.";
+VD_TUTORIAL_TOUCH4 = "Toca una criatura o un personaje para convertirlo en tu objetivo. Tócalo una vez más para interactuar con él.";
+VD_TUTORIAL_TOUCH5 = "Para luchar, toca otra vez a tu objetivo, o el botón de contexto de abajo a la derecha, y acércate hasta alcanzarlo. Tu personaje ataca solo en cuanto lo tiene a su alcance.";
+VD_TUTORIAL_TOUCH6 = "Los hechizos y las habilidades especiales están en los botones de acción de la esquina inferior derecha. Toca uno para usarlo contra tu enemigo.";
+VD_TUTORIAL_TOUCH7 = "Toca dos veces una criatura muerta para ver qué llevaba. Toca los objetos de la ventana de botín para guardarlos en la mochila.";
+VD_TUTORIAL_TOUCH8 = "Tienes algo nuevo en la mochila. Toca el botón de la mochila para abrirla y mantén el dedo sobre un objeto para ver qué es.";
+VD_TUTORIAL_TOUCH9 = "Toca un objeto para usarlo. Para tenerlo siempre a mano, mantenlo pulsado y arrástralo a tu barra de acción: así no tendrás que abrir la mochila.";
+VD_TUTORIAL_TOUCH10 = "Las bolsas van en los huecos vacíos junto a la mochila. Una vez puestas, toca una bolsa para abrirla.";
+VD_TUTORIAL_TOUCH11 = "Comer te devuelve la salud más deprisa. Toca la comida en tu barra de acción. No sirve mientras estés luchando.";
+VD_TUTORIAL_TOUCH12 = "Beber te devuelve el maná más deprisa. Toca la bebida en tu barra de acción. Usar otra habilidad o entrar en combate lo interrumpe.";
+VD_TUTORIAL_TOUCH13 = "Ya puedes elegir un talento. Toca el botón de talentos que brilla en la barra de menú para abrir la página de talentos.";
+VD_TUTORIAL_TOUCH15 = "Abre la página de habilidades con su botón de la barra de menú, mantén pulsado el icono de una habilidad y arrástralo a tu barra de acción para dejarlo allí. Un toque en la página usa el hechizo o la habilidad al momento.";
+VD_TUTORIAL_TOUCH17 = "Para contestar a ese jugador, toca su nombre en el chat y escribe la respuesta, o escribe /tell seguido de su nombre y tu mensaje.";
+VD_TUTORIAL_TOUCH18 = "Para invitar a un jugador a tu grupo, mantén el dedo sobre su retrato y elige Invitar en el menú que aparece.";
+VD_TUTORIAL_TOUCH20 = "Con la ventana del mercader abierta, toca uno de sus objetos para comprarlo si te llega el dinero. Tocar un objeto de tu mochila se lo vende al mercader.";
+VD_TUTORIAL_TOUCH21 = "Para volver a leer esta misión, abre tu registro de misiones con el cáliz dorado de la barra de menú.";
+VD_TUTORIAL_TOUCH22 = "¿Te ha gustado jugar con alguien? No le pierdas la pista: toca el botón social de la barra de menú y añádelo a tu lista de amigos.";
+VD_TUTORIAL_TOUCH23 = "Toca el botón del chat y escribe para hablar. Los jugadores que tengas cerca verán lo que dices.";
+VD_TUTORIAL_TOUCH24 = "Abre la ventana de tu personaje con su botón de la barra de menú; después mantén pulsado un objeto de la mochila y arrástralo a tu personaje para ponértelo.";
+VD_TUTORIAL_TOUCH28 = "Nadar es como andar, pero además subes o bajas: basta con girar la cámara hacia donde quieras nadar.";
+VD_TUTORIAL_TOUCH33 = "Toca el botón de salto para saltar. Un salto te lleva por encima de obstáculos pequeños y viene bien para salir del agua a la orilla.";
+VD_TUTORIAL_TOUCH35 = "Este es un maestro de vuelo: sus bestias voladoras llevan viajeros de un pueblo a otro. Por poco dinero puedes volar hasta cualquier maestro de vuelo con el que ya hayas hablado. Busca al maestro de vuelo cada vez que llegues a una ciudad nueva y luego podrás volver enseguida.";
+VD_TUTORIAL_TOUCH40 = "¡Conoces un hechizo o una habilidad nueva! Abre tu libro de hechizos con el botón de hechizos y habilidades de la barra de menú, mantén pulsada una entrada y arrástrala para ponerla en tu barra de acción. Las pestañas del lado derecho del libro ordenan sus páginas por categorías.";
+VD_TUTORIAL_TOUCH42 = "Cada vez que surja algo nuevo, aparecerá un botón de ayuda cerca del centro de la parte inferior de la pantalla. Tócalo para saber cómo funciona esa parte del juego. Los primeros consejos tratan lo básico; los siguientes van más allá a medida que tu personaje crece.\n\n¡Disfruta del juego y buen viaje!";
+VD_TUTORIAL_TOUCH44 = "Ahora llevas un arma a distancia. Equípatela, abre tu libro de hechizos, mantén pulsado Disparar o Lanzar y arrástralo a tu barra de acción para usarla.";
+VD_TUTORIAL_TOUCH45 = "Los arcos y las armas de fuego necesitan munición. La venden los mercaderes de arcos y armas de fuego de las ciudades; tócala en tu mochila para equipártela.";
+VD_TUTORIAL_TOUCH47 = "Estás en la cola de una piedra de encuentro, esperando un grupo. Te lo recuerda una burbuja junto al minimapa: tócala para salir de la cola.";
+VD_TUTORIAL_TOUCH48 = "Estás en la cola de un campo de batalla. Mantén el dedo sobre su icono junto al minimapa para ver cómo va la espera.";
+VD_TUTORIAL_TOUCH49 = "Tu campo de batalla te espera. Toca «Entrar en la batalla» en la ventana o mantén el dedo sobre el icono del campo de batalla junto al minimapa.";
+VD_TUTORIAL_TOUCH50 = "Te han dado un llavero para las llaves de las mazmorras. Está junto a tus bolsas y solo guarda las llaves que conservas para siempre.";
+
+-- La barra de latencia (MainMenuBarPerformanceBar).
+MAINMENUBAR_LATENCY_LABEL = "Latencia:";
+MILLISECONDS_ABBR = "ms";
+
+-- Las ventanas emergentes nuevas (StaticPopup.lua).
+ABANDON_QUEST_CONFIRM_WITH_ITEMS = "¿Abandonar «%s» y destruir %s?";
+DELETE_MAIL_CONFIRMATION = "Borrar esta carta también destruirá %s";
+DELETE_MONEY_CONFIRMATION = "Borrar esta carta también destruirá:";
+
+-- El menú de las pestañas del chat (FCFOptionsDropDown) y NAME_CHAT.
+LOCK_WINDOW = "Bloquear ventana";
+UNLOCK_WINDOW = "Desbloquear ventana";
+RENAME_CHAT_WINDOW = "Renombrar ventana";
+NEW_CHAT_WINDOW = "Crear ventana nueva";
+CLOSE_CHAT_WINDOW = "Quitar ventana";
+FONT_SIZE = "Tamaño de letra";
+FONT_SIZE_TEMPLATE = "%d pt";
+BACKGROUND = "Fondo";
+FILTERS = "Filtros";
+CHANNELS = "Canales";
+COMBAT_MESSAGES = "Mensajes de combate";
+SPELL_MESSAGES = "Mensajes de hechizos";
+PERIODIC_MESSAGES = "Efectos periódicos";
+OTHER_MESSAGES = "Otros mensajes";
+CHAT_NAME_TEMPLATE = "Chat %d";
+VD_P3_CHAT_OPACITY = "Opacidad: %d%%";
+SAY = "Decir";
+CREATURE = "Criaturas";
+CHAT_MSG_SKILL = "Habilidad";
+CHAT_MSG_COMBAT_MISC_INFO = "Información diversa";
+CHAT_MSG_COMBAT_SELF_HITS = "Tus golpes";
+CHAT_MSG_COMBAT_SELF_MISSES = "Tus fallos";
+CHAT_MSG_COMBAT_PET_HITS = "Golpes de tu mascota";
+CHAT_MSG_COMBAT_PET_MISSES = "Fallos de tu mascota";
+CHAT_MSG_COMBAT_PARTY_HITS = "Golpes del grupo";
+CHAT_MSG_COMBAT_PARTY_MISSES = "Fallos del grupo";
+CHAT_MSG_COMBAT_FRIENDLYPLAYER_HITS = "Golpes de jugadores amistosos";
+CHAT_MSG_COMBAT_FRIENDLYPLAYER_MISSES = "Fallos de jugadores amistosos";
+CHAT_MSG_COMBAT_HOSTILEPLAYER_HITS = "Golpes de jugadores hostiles";
+CHAT_MSG_COMBAT_CREATURE_VS_SELF_HITS = "Golpes de criaturas contra ti";
+CHAT_MSG_COMBAT_CREATURE_VS_SELF_MISSES = "Fallos de criaturas contra ti";
+CHAT_MSG_COMBAT_CREATURE_VS_PARTY_HITS = "Golpes de criaturas contra el grupo";
+CHAT_MSG_COMBAT_CREATURE_VS_PARTY_MISSES = "Fallos de criaturas contra el grupo";
+CHAT_MSG_COMBAT_CREATURE_VS_CREATURE_HITS = "Golpes de criaturas contra criaturas";
+CHAT_MSG_COMBAT_CREATURE_VS_CREATURE_MISSES = "Fallos de criaturas contra criaturas";
+CHAT_MSG_COMBAT_FRIENDLY_DEATH = "Muertes amistosas";
+CHAT_MSG_COMBAT_HOSTILE_DEATH = "Muertes hostiles";
+CHAT_MSG_COMBAT_XP_GAIN = "Experiencia ganada";
+CHAT_MSG_COMBAT_HONOR_GAIN = "Honor ganado";
+CHAT_MSG_COMBAT_FACTION_CHANGE = "Facción";
+CHAT_MSG_SPELL_SELF_DAMAGE = "Tus hechizos de daño";
+CHAT_MSG_SPELL_SELF_BUFF = "Tus hechizos beneficiosos";
+CHAT_MSG_SPELL_PET_DAMAGE = "Hechizos de daño de tu mascota";
+CHAT_MSG_SPELL_PET_BUFF = "Hechizos beneficiosos de tu mascota";
+CHAT_MSG_SPELL_PARTY_BUFF = "Hechizos beneficiosos del grupo";
+CHAT_MSG_SPELL_FRIENDLYPLAYER_DAMAGE = "Hechizos de daño de jugadores amistosos";
+CHAT_MSG_SPELL_FRIENDLYPLAYER_BUFF = "Hechizos beneficiosos de jugadores amistosos";
+CHAT_MSG_SPELL_CREATURE_VS_SELF_DAMAGE = "Hechizos de daño de criaturas contra ti";
+CHAT_MSG_SPELL_TRADESKILLS = "Habilidades comerciales";
+CHAT_MSG_SPELL_DAMAGESHIELDS_ON_SELF = "Escudos de daño sobre ti";
+CHAT_MSG_SPELL_AURA_GONE_SELF = "Auras que te dejan";
+CHAT_MSG_SPELL_AURA_GONE_PARTY = "Auras que dejan al grupo";
+CHAT_MSG_SPELL_AURA_GONE_OTHER = "Auras que dejan a otros";
+CHAT_MSG_SPELL_ITEM_ENCHANTMENTS = "Encantamientos de objetos";
+CHAT_MSG_SPELL_BREAK_AURA = "Auras rotas";
+CHAT_MSG_SPELL_PERIODIC_SELF_DAMAGE = "Tu daño periódico";
+CHAT_MSG_SPELL_PERIODIC_SELF_BUFFS = "Tus beneficios periódicos";
+CHAT_MSG_SPELL_PERIODIC_PARTY_DAMAGE = "Daño periódico del grupo";
+CHAT_MSG_SPELL_PERIODIC_PARTY_BUFFS = "Beneficios periódicos del grupo";
+CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_DAMAGE = "Daño periódico de jugadores amistosos";
+CHAT_MSG_SPELL_PERIODIC_FRIENDLYPLAYER_BUFFS = "Beneficios periódicos de jugadores amistosos";
+CHAT_MSG_SPELL_PERIODIC_CREATURE_DAMAGE = "Daño periódico de criaturas";
+CHAT_MSG_SPELL_PERIODIC_CREATURE_BUFFS = "Beneficios periódicos de criaturas";
+CHAT_MSG_SPELL_FAILED_LOCALPLAYER = "Tus errores por falta de recursos";
+
+-- Las columnas que se ordenan (AuctionSortButtonTemplate; las del quién ya están en social.lang).
+RARITY = "Calidad";
+CLOSES_IN = "Tiempo restante";
+AUCTION_CREATOR = "Vendedor";
+CURRENT_BID = "Puja actual";
+BID_STATUS = "Estado de la puja";
+YOUR_BID = "Tu puja:";
+BUYOUT_COST = "Comprar ya";

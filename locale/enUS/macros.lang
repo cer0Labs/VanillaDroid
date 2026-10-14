@@ -1,0 +1,3 @@
+-- Phase 15 (options): the macros (Blizzard_MacroUI, /macro, /macrohelp). Only what the original client lacks: the rest
+-- uses its keys (CREATE_MACROS, GENERAL_MACROS, CHARACTER_SPECIFIC_MACROS, CHANGE_MACRO_NAME_ICON, ENTER_MACRO_LABEL,
+-- MACROFRAME_CHAR_LIMIT, MACRO_POPUP_TEXT, MACRO_POPUP_CHOOSE_ICON, MACROS, MACRO_HELP_TEXT_LINE1..5).

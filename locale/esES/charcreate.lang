@@ -1,0 +1,42 @@
+-- Castellano de la pantalla de creación de personajes (fase 18, creación: app/CharCreateScreens): nuestra clave y las
+-- del cliente que solo usa esta pantalla (GlueStrings.lua: las habilidades raciales y los botones; los textos de las
+-- facciones, razas y clases no se traducen aquí). Las demás que comparte con otras partes (NAME, BACK, MALE, FEMALE,
+-- OKAY, CANCEL, los textos de personalización, CHAR_CREATE_* y CHAR_NAME_*) ya están traducidas en social.lang,
+-- help.lang y common.lang.
+
+VD_CREATE_NO_DATA = "Faltan las tablas del cliente (db.vdpk): no se pueden crear personajes.";
+
+-- Fase 21: el botón «Randomize» del nombre es solo del cliente enUS («for English only», GlueLocalization.lua).
+-- Con un cliente esES el baker lo saca de su GlueLocalization.lua y esta línea no cuenta.
+VD_CREATE_SHOW_RANDOM_NAME = "0";
+RANDOMIZE = "Aleatorio";
+CHARACTER_CREATE_ACCEPT = "Aceptar";
+
+-- Las habilidades de las razas (CharacterCreateRaceAbilityText).
+ABILITY_INFO_HUMAN1 = "- Mayor detección del sigilo.";
+ABILITY_INFO_HUMAN2 = "- Mayor Espíritu.";
+ABILITY_INFO_HUMAN3 = "- Bonificación a la reputación ganada.";
+ABILITY_INFO_HUMAN4 = "- Mayor habilidad con espadas y mazas.";
+ABILITY_INFO_DWARF1 = "- Puede adoptar forma de piedra.";
+ABILITY_INFO_DWARF2 = "- Mayor habilidad con armas de fuego.";
+ABILITY_INFO_DWARF3 = "- Resistencia a la Escarcha.";
+ABILITY_INFO_DWARF4 = "- Encuentra tesoros.";
+ABILITY_INFO_NIGHTELF1 = "- Puede fundirse con las sombras.";
+ABILITY_INFO_NIGHTELF2 = "- Mayor probabilidad de esquivar.";
+ABILITY_INFO_NIGHTELF4 = "- Resistencia al daño de Naturaleza.";
+ABILITY_INFO_GNOME2 = "- Mayor Intelecto.";
+ABILITY_INFO_GNOME4 = "- Mayor habilidad de Ingeniería.";
+ABILITY_INFO_ORC1 = "- Puede enfurecerse: hace más daño pero recibe menos sanación.";
+ABILITY_INFO_ORC2 = "- Resistencia a los aturdimientos.";
+ABILITY_INFO_ORC3 = "- Sus mascotas hacen más daño.";
+ABILITY_INFO_ORC4 = "- Mayor habilidad con hachas.";
+ABILITY_INFO_SCOURGE1 = "- Puede volverse inmune al miedo, al sueño y al embelesamiento.";
+ABILITY_INFO_SCOURGE3 = "- Aguanta más tiempo la respiración bajo el agua.";
+ABILITY_INFO_SCOURGE4 = "- Resistencia al daño de Sombras.";
+ABILITY_INFO_TAUREN2 = "- Mayor salud máxima.";
+ABILITY_INFO_TAUREN3 = "- Mayor habilidad de Herboristería.";
+ABILITY_INFO_TAUREN4 = "- Resistencia al daño de Naturaleza.";
+ABILITY_INFO_TROLL1 = "- Rabiar: mayor velocidad de ataque y de lanzamiento.";
+ABILITY_INFO_TROLL2 = "- Mayor regeneración.";
+ABILITY_INFO_TROLL3 = "- Más daño contra bestias.";
+ABILITY_INFO_TROLL4 = "- Mayor habilidad con armas arrojadizas y arcos.";

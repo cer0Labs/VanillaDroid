@@ -1,0 +1,5 @@
+-- Traducción al castellano de los detalles del 1.12 de la fase 18 (extras). Claves del cliente (GlobalStrings.lua) y
+-- las nuestras (VD_*) de locale/enUS/extras.lang.
+
+-- El selector «Decir:» del chat con los idiomas que habla el jugador (el submenú Language de ChatMenu).
+VD_EXTRAS_LANGUAGE_CHOICE = "Idioma: %s";
